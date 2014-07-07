@@ -2,9 +2,10 @@
 	margin:		0; 
 	padding: 	0;
  }
-body {
+body,html {
 	background:	#EEEEEE;
 	font-family: Microsoft YaHei;
+	height:	100%;
 }
 
 .inner{
@@ -80,18 +81,22 @@ body {
 	background-size:	100%;
 	background-repeat: no-repeat;
 	min-width: 	100%;
-	min-height:	600px;
+	min-height:	78%;
+	max-height: 78%;
+	display:	none;
+	padding-top:90px;
 }
 
-.p1{background-image: url("1.jpg");padding-top:90px;}
+.p1{background-image: url("1.jpg");}
 .p2{background-image: url("2.jpg");}
 .p3{background-image: url("3.jpg");}
 
 .block_left {
 	background-color: rgba(256,256,256,0.6);
+	vertical-align: middle;
 	margin: 	auto;
 	width: 		960px;
-	height:		600px;
+	height:		580px;
 }
 
 .block_left h1{
