@@ -119,20 +119,17 @@ article h2 { font-family: 'Lobster Two'; font-size: 60px; margin: 25px 0; line-h
 
 .story { height: 1000px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.3); border-bottom: 1px solid rgba(0,0,0,0.4); box-shadow: 0 0 15px rgba(0,0,0,0.8);}
 
-#first { background: url(../image/0.png) 50% 0 no-repeat fixed; }
+#first { background: url(../image/first_page.jpg) 50% 0 no-repeat fixed; background-size: 100% 100%;}
 #second { background: url(../image/1.jpg) 50% 0 no-repeat fixed; }
 #fourth { background: url(../image/2.jpg) 50% 0 no-repeat fixed; }
 #third { background: url(../image/3.jpg) 50% 0 no-repeat fixed; }
 #theend { background: url(../image/0.png) 50% bottom no-repeat fixed; }
 
 /* Introduction */
-#first .intro { background: url(../head.jpg) 50% 50px no-repeat fixed; min-height: 1000px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; }
-#first article { width: 100%; top: 300px; position: absolute; text-align: center; }
-#first article p,
-#first article a { color: #ccc; }
-#first article h1 {color:	#FFFFFF;font-size: 50px;}
-#first article a { text-decoration: underline; }
-#first article a:hover { color: #fff; }
+#first { padding: 50px 0;}
+#first article { background: url(../images/grain.png) repeat #333; color: #fff; width: 445px; margin-right: 100px; padding: 10px 20px; text-shadow: 0 -1px 0 rgba(0,0,0,0.5); line-height: 1.5em; box-shadow: 0 0 25px rgba(0,0,0,0.3); border: 1px solid rgba(150,150,150,0.1); }
+#first article p { margin-bottom: 25px; }
+#first article a { color: #ff0;}
 
 /* Background Only */
 #second { padding: 50px 0;}
