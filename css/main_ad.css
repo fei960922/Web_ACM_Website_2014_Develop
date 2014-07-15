@@ -87,9 +87,9 @@ body,html {
 	padding-top:90px;
 }
 
-.p1{background-image: url("1.jpg");}
-.p2{background-image: url("2.jpg");}
-.p3{background-image: url("3.jpg");}
+.p1{background-image: url("../image/1.jpg");}
+.p2{background-image: url("../image/2.jpg");}
+.p3{background-image: url("../image/3.jpg");}
 
 .block_left {
 	background-color: rgba(256,256,256,0.6);
