@@ -132,44 +132,38 @@ article h2 { font-size: 40px; margin: 25px 0; line-height: 1em; text-shadow:0 -1
 #first article a { color: #ff0;}
 
 /* Background Only */
-#second { padding: 50px 0;}
-#second article { 
-	background: url(../image/grain.png) repeat #333; 
-	color: #fff; 
-	width: 400px; 
-	height: 500px; 
-	margin-left: 100px; 
-	padding: 25px 25px; 
-	text-shadow: 0 -1px 0 
-	rgba(0,0,0,0.5); 
-	line-height: 1.5em; 
-	box-shadow: 0 0 25px rgba(0,0,0,0.3); 
-	border: 1px solid rgba(150,150,150,0.1); 
-	background-color: rgba(0,0,0,0.4);
-	margin-top: 10px;
+.second_left {
+	float:left;
+	width: auto;
+	max-width: 40%;
 }
-#second article p { margin-bottom: 10%; }
-#second article a { color: #ff0; text-decoration: none;}
-#second article a:hover {color: #0ff; text-decoration: underline;}
-#second article li {margin-top: 20px; padding: 3px; font-size: 20px;}
-#second article #more {padding: 20px; margin:20px; color: white;float: right;}
-#second div {
+.second_left p { margin-bottom: 10%; }
+.second_left a { color: white; text-decoration: none;}
+.second_left a:hover {color: #0ff; text-decoration: underline;}
+#second ul {list-style-type: none;}
+.second_left li {padding: 3px;border-bottom:1px solid white;}
+#second .btn{background-color: rgba(0,0,0,0);border:1px solid;font-size:14px;}
+#second .btn:hover{background-color: rgba(255,255,255,0.5);border:1px solid;font-size:14px;}
+#second article {
+	position:	absolute;
+	bottom:		0;
+	width: 		100%;
+	font-size:19px;
+	background: url(../image/shadow.png);
+	background-size: 100% 100%;
+	padding: 	0 40px 20px 40px;
+	color: 		white;
+}
+.second_right {
 	float: right;
-	width: 800px;
-	background-color: rgba(0, 0, 0, 0.3);
-	padding: 30px;
-	margin: 20px;
-	margin-top: 15px;
+	padding:	20px;
+	width: 60%;
 }
-#second div a {
-	font-size: 30px;
+.second_right a {
+	font-size: 28px;
 	text-decoration: none;
 	color: white;
 	font-weight: bold;
-}
-#second div p{
-	font-size:20px;
-	color: white;
 }
 
 /* Photograph */
