@@ -1,4 +1,4 @@
-body,html {
+﻿body,html {
 	height:	100%;
 	margin:	0;
 	padding:0;
@@ -169,9 +169,52 @@ article h2 { font-size: 40px; margin: 25px 0; line-height: 1em; text-shadow:0 -1
 }
 
 /* Photograph */
-#third article {  background: url(../image/grain.png) repeat #333; color: #fff; padding: 10px 20px; margin: 50px 0 0 60%; text-shadow: 0 -1px 0 rgba(0,0,0,0.5); line-height: 1.5em; color: #fff; position: absolute; top: 0;box-shadow: 0 0 25px rgba(0,0,0,0.3); border: 1px solid rgba(150,150,150,0.1);}
+#third
+ {
+  color:#fff;
+ }
+#third .item_left
+  {  
+   padding: 10px 20px;
+   margin-left:200px;
+   margin-top:50px;
+   text-shadow: 0 -1px 0 rgba(0,0,0,0.5); 
+   line-height: 1.5em;  
+   box-shadow: 0 0 25px rgba(0,0,0,0.3); 
+   border: 1px solid rgba(150,150,150,0.1);
+   font-size:20px;
+   width:300px;
+   position:relative;
+   float:left;
+  }
+#third .item_right
+  {  
+   padding: 10px 20px;
+   margin-right:200px;
+   margin-top:50px;
+   text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+   line-height: 1.5em;
+   box-shadow: 0 0 25px rgba(0,0,0,0.3);
+   border: 1px solid rgba(150,150,150,0.1);
+   font-size:20px;
+   width:300px;
+   position:relative;
+   float:right;
+  }
+#third .row{clear:both;}
+#third .btn{background-color: rgba(0,0,0,0);border:1px solid;font-size:20px;margin:50px auto;width:300px;}
+#third .btn:hover{background-color: rgba(255,255,255,0.5);border:1px solid;font-size:20px;}
+#third h2
+ {
+  display:block;
+  text-align:center;
+  padding: 10px 20px;
+  margin-left:50px; margin-right:50px;margin-top:50px;
+ }
+/*#third article {  background: url(../image/grain.png) repeat #333; color: #fff; padding: 10px 20px; margin: 50px 0 0 60%; text-shadow: 0 -1px 0 rgba(0,0,0,0.5); line-height: 1.5em; color: #fff; position: absolute; top: 0; box-shadow: 0 0 25px rgba(0,0,0,0.3); border: 1px solid rgba(150,150,150,0.1); }
 #third .photograph { background: url(./image/photo.png) transparent 40% 50px no-repeat fixed; min-height: 1000px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; }
-#third article p { width: 300px; margin-bottom: 25px; }
+#third article p { width: 300px; margin-bottom: 25px; }*/
+
 
 /* HTML5 Video */
 #fourth article {  margin-left: 10%; text-shadow: 0 -1px 0 rgba(0,0,0,0.5); line-height: 1.5em; color: #fff; position: absolute; top: 0; }
