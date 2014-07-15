@@ -119,9 +119,9 @@ article h2 { font-size: 60px; margin: 25px 0; line-height: 1em; text-shadow:0 -1
 
 .story { height: 1000px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.3); border-bottom: 1px solid rgba(0,0,0,0.4); box-shadow: 0 0 15px rgba(0,0,0,0.8);}
 
-#first { background: url(../image/first_page.jpg) 50% 0 no-repeat fixed; background-size: 100% 100%;}
+#first { background: url(../image/2.jpg) 50% 0 no-repeat fixed; background-size: 100% 100%;}
 #second { background: url(../image/1.jpg) 50% 0 no-repeat fixed; background-size:140% auto;}
-#third { background: url(../image/2.jpg) 50% 0 no-repeat fixed; background-size:140% auto;}
+#third { background: url(../image/4.jpg) 50% 0 no-repeat fixed; background-size:140% auto;}
 #fourth { background: url(../image/3.jpg) 50% 0 no-repeat fixed; background-size:140% auto;}
 
 #theend { background: url(../image/0.png) 50% bottom no-repeat fixed; }
