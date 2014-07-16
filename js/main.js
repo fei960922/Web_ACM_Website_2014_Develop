@@ -4,6 +4,7 @@ $(document).ready(function(){
   setTimeout('$(".p2").hide();$(".p3").fadeIn(1000);',3000);
   var winh=(window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight)-50;
   $(".story").css({height:winh});
+  fontmaking();
 })
 
 
@@ -94,6 +95,22 @@ $(document).ready(function(){
 	});	// each data-type
 
 }); // document ready
+
+/*	------------------------------------------
+	Inherit from "www.youziku.com"
+	------------------------------------------  */
+
+    function fontmaking() {
+        var resultStr = $(".Microsoft_YaHei").text();
+        var md5 = "";
+        resultStr = Trim(resultStr);
+        resultStr = SelectWord(resultStr);
+        md5 = $.md5("d6858636a9194575b81f6b3a5b3d1606"+"Microsoft_YaHei" + resultStr);
+        $.getJSON("http://www.youziku.com/webfont/CSSPOST?jsoncallback=?", { "id": md5, "guid": "d6858636a9194575b81f6b3a5b3d1606", "type": "5" }, function (json) {
+            if (json.result == 0) $.post("http://www.youziku.com/webfont/PostCorsCreateFont", { "name": "Microsoft_YaHei", "gid": "d6858636a9194575b81f6b3a5b3d1606", "type": "5", "text": resultStr });
+            else loadExtentFile("http://www.youziku.com/webfont/css?id=" + md5 + "&guid=" + "d6858636a9194575b81f6b3a5b3d1606" + "&type=5");
+        });
+    }
 
 /*	------------------------------------------
 	Inherit from "unslider"
