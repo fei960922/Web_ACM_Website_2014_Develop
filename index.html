@@ -4,26 +4,27 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>上海交通大学ACM班</title>
 	<meta charset="UTF-8">
-	<link href="./css/main_ad.css" media="screen" rel="stylesheet" type="text/css">
-  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js">
-</script>
-  <script>
-  </script>
-  <script src="./js/main.js"></script> 
+	<link href="./source/main_ad.css" media="screen" rel="stylesheet" type="text/css">
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+  <script>  
+  $(document).ready(function(){$(".p1").show("2000");
+    setTimeout('$(".p1").hide();$(".p2").fadeIn(1000);',1500);
+    setTimeout('$(".p2").hide();$(".p3").fadeIn(1000);',3000);});
+  </script> 
 </head>
 <body>
     <div id="heading">
       <div class="inner">
         <h1>
-          <a href=" "><img src="./image/head-logo.png" title="上海交通大学ACM班"></a>
+          <a href=" "><img src="./source/head-logo.png" title="上海交通大学ACM班"></a>
         </h1>
         <div id="nav" class="nav">
           <div class="navlist">
             <ul class="nav">
               <li><a href="http://acm.sjtu.edu.cn">旧版首页</a></li>
-              <li><a href="./new_index.html">新版尝鲜</a></li>
-              <li><a href="./advice.html">修改建议</a></li>
-              <li><a href="./project.html">策划方案</a></li>
+              <li><a href="./new_website/index.html">新版尝鲜</a></li>
+              <li><a href="./plan/advice.html">修改建议</a></li>
+              <li><a href="./plan/project.html">策划方案</a></li>
               <li><a href="http://github.com/ImaginationZ/PPCAWeb2014">网站仓库</a></li>
               <li><a href="" onclick="myFunction()">参与人员</a></li>
             </ul>
@@ -34,7 +35,7 @@
   	<div class="pic p1">
       <div class="block_left">
         <h1>主页</h1>
-        <img src="./image/index_0.jpg">
+        <img src="./source/index_0.jpg">
         <div class="ul_left">
           <ul>
             <li>全新的现代化风格</li>
