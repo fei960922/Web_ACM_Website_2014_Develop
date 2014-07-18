@@ -51,19 +51,17 @@ body {
 .footer{
 	text-align:	center;
 	height:		50px;
-	padding:	10px;
-	line-height:0.9em;
+	line-height:1.2em;
 }
-.footer>div{padding:10px;}
+.footer>div{padding:17px;}
 
 /*	------------------------------------------
 	              CSS for "Index"
 	------------------------------------------  */
 
 .index { 
-	height:	80%;
-	background: url(../images/index_1.jpg) 50% 0 no-repeat fixed;
-	background-size: 140% auto;
+	background: url(../images/index_1.jpg) 50% 0 no-repeat;
+	background-size: cover;
 }
 .index h2 { 
 	font-size: 40px; 
@@ -78,12 +76,14 @@ body {
 	width:		100%;
 	background: url(../images/shadow.png);
 	background-size: 100% 100%;
-	padding: 	0 40px 20px 40px;
+	padding: 	20px;
 	color: 		white;
 }
+
 .bottom_left {
 	float:left;
 	width: auto;
+	padding:0 10px 40px 40px;
 	max-width: 40%;
 }
 .bottom_left p { margin-bottom: 10%; }
@@ -105,17 +105,21 @@ body {
 }
 
 .bottom_right {
-	padding:	20px;
+	padding:20px 40px 40px 20px;
 	width: 60%;
-	position:	absolute;
-	bottom:		0;
-	right:	0;
+	float:right;
+	font-size:18px;
 }
 .bottom_right a {
 	font-size: 28px;
 	text-decoration: none;
 	color: white;
 	font-weight: bold;
+}
+@media (max-width: 480px){
+	.article {background-color: rgba(0,0,0,0,5);}
+	.bottom_left{max-width:100%;padding:0;}
+	.bottom_right{width:100%;padding:0;}
 }
 
 /*	------------------------------------------
@@ -180,8 +184,8 @@ body {
 	------------------------------------------  */
 
 .main_activity { 
-	background: url(../images/activity_1.jpg);
-	background-size:100%;
+	background: url(../images/activity_1.jpg) no-repeat;
+	background-size: cover;
 
 }
 .article_activity .btn{
@@ -195,13 +199,15 @@ body {
 	font-size:20px;
 }
 .article_activity {  
-	padding: 10% 15%; 
-	width:	60%;
-	min-width:	600px;
+	padding: 10% 0 0 15%; 
+	width:	45%;
+	max-width:	600px;
+	min-width:	300px;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.5); 
 	line-height: 1.5em; color: #fff; 
 }
-.article_activity h2 { font-size:	40px;}
+.article_activity h2 { font-size:40px;}
+}
 
 /*	------------------------------------------
 	        CSS for "Academic Center"
@@ -212,9 +218,7 @@ body {
 	background-color: #EEEEEE;
 	text-align: center;
 }
-.academic_left>div:hover{
-	background-color: #CCCCCC;
-}
+.academic_left>div:hover{background-color: #CCCCCC;}
 @media (min-width: 801px){
 .academic_left {
 	float:left;
@@ -236,15 +240,15 @@ body {
 @media (max-width: 800px){
 .academic_left {
 	width:	100%;
-	height:	100px;
+	height:	120px !important; 
 }
 .academic_left>div{
 	float:left;
 	width:20%;
-	height:100px;
+	height:120px;
 	padding:5px;
 }
-.academic_left>div>h1{font-size: 20px;}
+.academic_left>div>h1{font-size: 40px;line-height: 0.5em;}
 .academic_left>div>h2{font-size: 20px;}
 .academic_main {
 	width:	100%;

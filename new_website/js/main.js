@@ -1,8 +1,8 @@
 $(document).ready(function(){
     var winh=(window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight);
     var h = winh - 100;
-    $(".main").css({height:h});
-    $(".academic_main").css({height:h});
+    $(".minh").css({"min-height":h});
+    $(".fixh").css({height:h});
     h = (winh-100)/2;
     $(".block_intro").css({height:h});
     fontmaking();
