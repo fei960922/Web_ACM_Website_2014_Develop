@@ -62,6 +62,7 @@ body {
 .index { 
 	background: url(../images/index_1.jpg) 50% 0 no-repeat;
 	background-size: cover;
+	position:	relative;
 }
 .index h2 { 
 	font-size: 40px; 
@@ -72,12 +73,13 @@ body {
 .index ul {list-style-type: none;}
 .article {
 	position:	absolute;
-	bottom:		50px;
+	bottom:		0;
 	width:		100%;
 	background: url(../images/shadow.png);
 	background-size: 100% 100%;
 	padding: 	20px;
 	color: 		white;
+	display: block;
 }
 
 .bottom_left {
@@ -119,7 +121,7 @@ body {
 @media (max-width: 480px){
 	.article {background-color: rgba(0,0,0,0,5);}
 	.bottom_left{max-width:100%;padding:0;}
-	.bottom_right{width:100%;padding:0;}
+	.bottom_right{width:100%;padding:0;	font-size:14px;}
 }
 
 /*	------------------------------------------

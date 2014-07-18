@@ -1,5 +1,6 @@
 $(document).ready(function(){
     var winh=(window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight);
+    if (winh<600) winh = 600;
     var h = winh - 100;
     $(".minh").css({"min-height":h});
     $(".fixh").css({height:h});
