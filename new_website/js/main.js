@@ -29,11 +29,11 @@ $(function(){
             });
     });
 /* affix the navbar after scroll below header */
-$("#heading").affix({
+$("#headingForIndex").affix({
       offset: {
-        top: $(window).height()-$("#heading").height()
+        top: $(window).height()-$("#headingForIndex").height()
       }
-}); 
+});
 /*	------------------------------------------
 	      Inherit from "www.youziku.com"
 	------------------------------------------  */
