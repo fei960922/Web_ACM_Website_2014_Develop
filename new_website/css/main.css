@@ -373,25 +373,22 @@
 	------------------------------------------  */
 
 .content {
-	float: left;
+	position:fixed;
 	background-color: #EEEEEE;
-	padding: 10px 0;
+	padding: 10px;
+	text-align: center;
 }
 
 .stu_contain{
 	float: right;
 }
 .student_in{
-	height: 300px;
+	background-size: cover;
+	height: 400px;
 	width:100%;
 	overflow: hidden;
 	color: white;
 	text-shadow: 0 0 10px #000000;
-}
-.student_in img{
-	position: fixed;
-	width:100%;
-	z-index: -1;
 }
 .student_in h1{
 	font-size: 60px;
