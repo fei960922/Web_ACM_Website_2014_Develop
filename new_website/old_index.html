@@ -10,7 +10,7 @@
 	    <link rel="stylesheet" href="./css/main.css">
 	</head>
 	<body class = "Microsoft_YaHei">
-	  <div id = "heading">
+	<div id = "heading">
 	    <div class="inners" >
 	      <nav class="navbar" role="navigation">
 	        <div class="navbar-header">
@@ -25,11 +25,11 @@
 	            <li class="dropdown">
 	              <a href="./intro.html">班级介绍</a>
 	              <ul class="dropdown-menu" role="menu">
-	                <li><a href="#">班级历史</a></li>
-	                <li><a href="#">教师名录</a></li>
-					<li><a href="#">学子风采</a></li>
-	                <li><a href="#">荣誉榜</a></li>
-	                <li><a href="#">ACM-ICPC</a></li>
+	                <li><a href="./intros/class.html">班级历史</a></li>
+	                <li><a href="./intros/teachers.html">教师名录</a></li>
+					<li><a href="./intros/students.html">学子风采</a></li>
+	                <li><a href="./intros/honor.html">荣誉榜</a></li>
+	                <li><a href="./intros/acmicpc.html">ACM-ICPC</a></li>
 	              </ul>
 	            </li>
 	            <li class="dropdown">
@@ -73,26 +73,47 @@
 	    </nav>
 	  </div>
 	</div>
-	<div class = "main_activity fixh">
-    	<div class = "article_activity">
-    		<p> &nbsp; </p>
-    		<h2>班级旅行 · 西塘</h2>
-	    	<div class="textbox">    	
-		    	<p>ACM班学生联谊会是ACM班学生的自治组织，它本着“丰富ACM班同学的课余生活，传承ACM班优秀传统，促进各届ACM班同学交流”的宗旨，以定期或不定期的形式，负责组织各类具有ACM班特色的学术、科普、文体活动。</p>
-		    </div>
-		    <button type="button" class="btn btn-block">点击查看更多</button>
-    	</div>
-	</div>	
 
-  <div class = "footer">
-  	<div style ="float:left">Powered By <a href="http://www.bootcss.com">BootStrap</a> written by PPCA2014</div>
-  	<div style ="float:right">Copyright &copy; 2014 <a href="/">ACM Class</a>. All rights reserved.</div>
-  </div>
+	<div class = "index fixh">
+		<img src = "./images/ACM.png" />
+		<div class = "article">
+			<div class = "bottom_left">
+				<h3>最新新闻</h3>
+				<ul>
+					<li><a href = "/">全国中学生信息学特长生夏令营通知</a></li>
+			    	<li><a href = "/">2012年度ACM体育节盛大开幕啦！</a></li>
+			    	<li><a href = "/">ACM班新版班衫开始征订啦！ </a></li>
+			    </ul>
+			    <button type="button" class="btn btn-block">点击查看更多</button>
+			</div>
+			<div class = "bottom_right">
+				<br/>
+				<a href = "/">上海交通大学 · 致远学院 · ACM班</a>
+				<p>
+				ACM班的取名源于国际科学教育计算机组织——美国计算机学会（Association of Computing Machinery），它是世界上第一个、也是最有影响的计算机组织，计算机领域最高奖——图灵奖是由该组织设立和颁发的。这寓意ACM班旨在培养计算机科学家。
+				</p>
+			</div>
+		</div>
+	</div>
 
+	<div class = "footer">
+  		<div style ="float:left">Powered By <a href="http://www.bootcss.com">BootStrap</a> written by PPCA2014
+		<button class="btn btn-primary btn" data-toggle="modal" data-target="#myModal" style = "padding:0;border:0;font-size:6px;">
+  			&nbsp;本页面的期望与实际问题&nbsp;
+		</button>
+  		</div>
+  		<div style ="float:right">Copyright &copy; 2014 <a href="/">ACM Class</a>. All rights reserved.</div>
+	</div>
+
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  	<div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        ACM班班徽的位置待定；响应式有一些bug；内容似乎还不够不知道加些啥。
+    </div></div></div></div></div>
 
 	</body>
 	<script type="text/javascript" src="http://www.youziku.com/UserDownFile/jquery.min.js"></script>
 	<script type="text/javascript" src="http://www.youziku.com/UserDownFile/jquery.md5.js"></script> 
-		<script src="./js/bootstrap.min.js"></script>
-		<script src="./js/main.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/main.js"></script>
 </html>

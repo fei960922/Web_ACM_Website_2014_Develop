@@ -1,16 +1,36 @@
 $(document).ready(function(){
     var winh=(window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight);
     if (winh<600) winh = 600;
-    var h = winh - 100;
+    var h = winh - 102;
     $(".minh").css({"min-height":h});
     $(".fixh").css({height:h});
+    h = winh - 50;
+    $(".fullh").css({height:h});
     h = (winh-100)/2;
     $(".block_intro").css({height:h});
     fontmaking();
 })
 
+/*  ------------------------------------------
+       Inherit from "Show Dropdown Hover"
+    ------------------------------------------  */
+
+$(function(){
+    $(".dropdown").hover(            
+            function() {
+                $('.dropdown-menu', this).fadeIn("fast");
+                $(this).toggleClass('open');
+                $('b', this).toggleClass("caret caret-up");                
+            },
+            function() {
+                $('.dropdown-menu', this).fadeOut("fast");
+                $(this).toggleClass('open');
+                $('b', this).toggleClass("caret caret-up");                
+            });
+    });
+
 /*	------------------------------------------
-	Inherit from "www.youziku.com"
+	      Inherit from "www.youziku.com"
 	------------------------------------------  */
 
     function fontmaking() {
