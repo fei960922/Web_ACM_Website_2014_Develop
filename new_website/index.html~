@@ -83,10 +83,10 @@
 		</div>
 		<div class="index_3">
 			<article>
-            <p>ACM班的取名源于国际科学教育计算机组织——美国计算机学会（Association of Computing Machinery），它是世界上第一个、也是最有影响的计算机组织，计算机领域最高奖——图灵奖是由该组织设立和颁发的。这寓意ACM班旨在培养计算机科学家。</p>
+            <p>&nbsp;&nbsp;ACM班的取名源于国际科学教育计算机组织——美国计算机学会（Association of Computing Machinery），它是世界上第一个、也是最有影响的计算机组织，计算机领域最高奖——图灵奖是由该组织设立和颁发的。这寓意ACM班旨在培养计算机科学家。</p>
             <br>
             <br>
-            <p>今天，计算机科学班（ACM班）的历史将翻开了新的一页。新征程、新挑战，我们共同预祝其拥有更加美好的明天！</p>
+            <p>&nbsp;&nbsp;今天，计算机科学班（ACM班）的历史将翻开了新的一页。新征程、新挑战，我们共同预祝其拥有更加美好的明天！</p>
             </article>
 			<img src = "./images/ACM.png" />
 		</div>
@@ -122,4 +122,5 @@
 	<script type="text/javascript" src="http://www.youziku.com/UserDownFile/jquery.md5.js"></script> 
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/main.js"></script>
+	<script src="js/scripts.js"></script>
 </html>
