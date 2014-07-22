@@ -12,7 +12,7 @@ $(document).ready(function(){
 })
 
 /*  ------------------------------------------
-       Inherit from "Show Dropdown Hover"
+             JavaScript of Nav-bar 
     ------------------------------------------  */
 
 $(function(){
@@ -28,7 +28,12 @@ $(function(){
                 $('b', this).toggleClass("caret caret-up");                
             });
     });
-
+/* affix the navbar after scroll below header */
+$("#heading").affix({
+      offset: {
+        top: $(window).height()-$("#heading").height()
+      }
+}); 
 /*	------------------------------------------
 	      Inherit from "www.youziku.com"
 	------------------------------------------  */
