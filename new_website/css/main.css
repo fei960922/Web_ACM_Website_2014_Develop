@@ -5,6 +5,9 @@
 	font-family: Arial,"Microsoft YaHei","微软雅黑",sans-serif;
 	background-color:white;
 }
+body {
+	padding-top:50px;
+}
 /*	------------------------------------------
 	   CSS of "Header & Footer & container"
 	------------------------------------------  */
