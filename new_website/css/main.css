@@ -5,10 +5,6 @@
 	font-family: Arial,"Microsoft YaHei","微软雅黑",sans-serif;
 	background-color:white;
 }
-body {
-	padding-top: 50px;
-}
-
 /*	------------------------------------------
 	   CSS of "Header & Footer & container"
 	------------------------------------------  */
@@ -27,11 +23,19 @@ body {
 #heading{
 	color     : #C4E7FF;
 	background: #2E5D9C;
-	position  :	fixed;
+	position  :	absolute;
 	z-index   :	1000;
-	top       :	0px;
+	bottom:                 0px;
 	width     :	100%;
 	min-height: 51px;
+}
+
+#heading.affix {
+   position: fixed;
+   top: 0;
+   z-index:10;
+   max-height:51px;
+   -webkit-transition: all .6s ease-in-out;
 }
 
 #inners img{
@@ -63,6 +67,7 @@ body {
 .index_1{
 	background     : url(../images/index_1.jpg) 50% 0 no-repeat;
 	background-size: cover;
+	margin:0 0 50px 0;
 }
 .index_2{
 	height         :150px;
