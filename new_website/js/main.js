@@ -1,44 +1,57 @@
 $(document).ready(function(){
     var winh=(window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight);
-    if (winh<600) winh = 600;
+    if (winh<700) winh = 700;
     var h = winh - 102;
     $(".minh").css({"min-height":h});
     $(".fixh").css({height:h});
     h = winh - 50;
     $(".fullh").css({height:h});
-    h = (winh-100)/2;
-    $(".block_intro").css({height:h});
+    h = (winh-102)/2;
+    $(".block_intro_out").css({height:h});
+    $(".block_intro").css("display","none");
     fontmaking();
-})
+
+/*  ------------------------------------------
+             JavaScript of Introduction 
+    ------------------------------------------  */
+
+    $(".block_intro_out").hover(            
+        function() {
+            $(this).children().fadeIn("fast");                         
+        },
+        function() {
+            $(this).children().fadeOut("fast");                         
+        });
 
 /*  ------------------------------------------
              JavaScript of Nav-bar 
     ------------------------------------------  */
 
-$(function(){
     $(".dropdown").hover(            
-            function() {
-                $('.dropdown-menu', this).fadeIn("fast");
-                $(this).toggleClass('open');
-                $('b', this).toggleClass("caret caret-up");                
+        function() {
+            $('.dropdown-menu', this).fadeIn("fast");
+            $(this).toggleClass('open');
+            $('b', this).toggleClass("caret caret-up");                
             },
-            function() {
-                $('.dropdown-menu', this).fadeOut("fast");
-                $(this).toggleClass('open');
-                $('b', this).toggleClass("caret caret-up");                
-            });
-    });
+        function() {
+            $('.dropdown-menu', this).fadeOut("fast");
+            $(this).toggleClass('open');
+            $('b', this).toggleClass("caret caret-up");                
+        });
+})   
+
 /* affix the navbar after scroll below header */
+
 $("#headingForIndex").affix({
-      offset: {
+     offset: {
         top: $(window).height()-$("#headingForIndex").height()
-      }
+    }
 });
 /*	------------------------------------------
 	      Inherit from "www.youziku.com"
 	------------------------------------------  */
 
-    function fontmaking() {
+function fontmaking() {
         var resultStr = $(".Microsoft_YaHei").text();
         var md5 = "";
         resultStr = Trim(resultStr);
@@ -48,4 +61,4 @@ $("#headingForIndex").affix({
             if (json.result == 0) $.post("http://www.youziku.com/webfont/PostCorsCreateFont", { "name": "Microsoft_YaHei", "gid": "d6858636a9194575b81f6b3a5b3d1606", "type": "5", "text": resultStr });
             else loadExtentFile("http://www.youziku.com/webfont/css?id=" + md5 + "&guid=" + "d6858636a9194575b81f6b3a5b3d1606" + "&type=5");
         });
-    }
+}

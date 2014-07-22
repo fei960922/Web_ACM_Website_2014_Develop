@@ -1,4 +1,9 @@
-﻿body,html {
+﻿
+/*	------------------------------------------
+	                CSS of "Overall"
+	------------------------------------------  */
+
+body,html {
 	height     : 100%;
 	margin     : 0;
 	padding    : 0;
@@ -8,6 +13,20 @@
 body {
 	padding-top:50px;
 }
+.padding_0{padding:0 !important;}
+.btn_new{
+	background-color: rgba(0,0,0,0);
+	border          :1px solid;
+	font-size       :20px;
+}
+.btn_new:hover{
+	background-color: rgba(255,255,255,0.5);
+	border          :1px solid;
+	font-size       :20px;
+}
+
+a:hover {text-decoration: none;}
+
 /*	------------------------------------------
 	   CSS of "Header & Footer & container"
 	------------------------------------------  */
@@ -73,7 +92,6 @@ body {
 }
 .footer>div{padding:17px;}
 
-
 /*	------------------------------------------
 	              CSS for "Index"
 	------------------------------------------  */
@@ -81,6 +99,10 @@ body {
 	background     : url(../images/index_1.jpg) 50% 0 no-repeat;
 	background-size: cover;
 	margin:0 0 50px 0;
+}
+.index_1 img {
+	margin:14%;
+	width:50%;
 }
 .index_2{
 	height         :150px;
@@ -175,16 +197,8 @@ body {
 	border-bottom:1px solid white;
 }
 .bottom_left .btn{
-	background-color: rgba(0,0,0,0);
-	border:1px solid;
 	font-size:14px;
 }
-.bottom_left .btn:hover{
-	background-color: rgba(255,255,255,0.5);
-	border:1px solid;
-	font-size:14px;
-}
-
 .bottom_right {
 	padding:20px 40px 40px 20px;
 	width: 60%;
@@ -217,6 +231,13 @@ body {
 	background-color: rgba(255,255,255,0.6);
 	height: 100%;
 }
+.block_intro .btn {
+	width:50%;
+	margin:auto;
+}
+.block_intro p{
+	padding:5% 20% 0 20%;
+}
 .bi1 {background: url(../images/intro_1.jpg);}
 .bi2 {background: url(../images/intro_2.jpg);}
 .bi3 {background: url(../images/intro_3.jpg);}
@@ -224,6 +245,9 @@ body {
 .bi1,.bi2,.bi3,.bi4{
 	background-size:	cover;
 	padding:	0;
+	-webkit-filter: alpha(opacity = 30);
+	-o-filter: alpha(opacity = 30);
+	filter: alpha(opacity = 30);
 }
 .bi1 h1{position:absolute;bottom:0;right:10px;}
 .bi2 h1{position:absolute;bottom:0;left:10px;}
@@ -270,13 +294,6 @@ body {
 
 }
 .article_activity .btn{
-	background-color: rgba(0,0,0,0);
-	border          :1px solid;
-	font-size       :20px;
-}
-.article_activity .btn:hover{
-	background-color: rgba(255,255,255,0.5);
-	border          :1px solid;
 	font-size       :20px;
 }
 .article_activity {  
@@ -308,9 +325,9 @@ body {
 .academic_left>div{
 	width  :100%;
 	height :20%;
-	padding:20px;
+	padding:5px;
 }
-
+.academic_now{background-color: #DDDDDD !important;}
 .academic_main {
 	float:right;
 	overflow: auto;
@@ -375,28 +392,45 @@ body {
 	        CSS for "SUB intro. students"
 	------------------------------------------  */
 
-.content {
-	position:fixed;
-	background-color: #EEEEEE;
-	padding: 10px;
+.content h5,.content h3{
 	text-align: center;
+	margin    :20px auto;
 }
-
-.stu_contain{
-	float: right;
-}
+@media(max-width:991px){.content{display:none;}}
 .student_in{
 	background-size: cover;
-	height: 400px;
-	width:100%;
-	overflow: hidden;
-	color: white;
-	text-shadow: 0 0 10px #000000;
+	height         : 500px;
+	width          : 100%;
+	display        : block;
+	overflow       : hidden;
+	color          : white;
+	text-shadow    : 0 0 10px #000000;
 }
 .student_in h1{
 	font-size: 60px;
-	padding: 50px;
+	padding  : 30px;
 }
 .student_in p{
-	padding: 50px;
+	width  :50%;
+	padding: 5px 30px;
+}
+.teacher_in{
+	min-height: 500px;
+}
+.teacher_in:nth-child(even) {
+	background-color: #EEEEEE;
+}
+@media(min-width:480px){.teacher_in img{float:right;}}
+.teacher_in img{
+	margin    :10%;
+	width     :30%;
+	border    : 10px solid #FFFFFF;
+	box-shadow: 0 0 30px #000000;
+}
+.teacher_in h1{
+	font-size: 60px;
+	padding  : 50px 5%;
+}
+.teacher_in p{
+	padding: 0 5%;
 }
