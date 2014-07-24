@@ -288,11 +288,14 @@ a:hover {text-decoration: none;}
 	        CSS for "Activity Center"
 	------------------------------------------  */
 
-.main_activity { 
-	background: url(../images/activity_1.jpg) no-repeat;
+.activity_1,.activity_2,.activity_3 { 
 	background-size: cover;
-
+	height:100%;
 }
+.activity_1{background: url(../images/activity_1.jpg) no-repeat;}
+.activity_2{background: url(../images/activity_2.jpg) no-repeat;}
+.activity_3{background: url(../images/activity_3.jpg) no-repeat;}
+
 .article_activity .btn{
 	font-size       :20px;
 }
@@ -389,8 +392,31 @@ a:hover {text-decoration: none;}
 }
 
 /*	------------------------------------------
-	        CSS for "SUB intro. students"
+	        CSS for "SUB intro. Pages"
 	------------------------------------------  */
+.student_slide{
+	height:100%;
+}
+.student_slide div {
+	height:70%;
+	background-size: 100%;
+	background-position: center;
+	width:70%;
+	margin:30px auto;
+	box-shadow:0 0 30px #000000;
+}
+.student_slide img {
+	height:30px;
+	width:70%;
+	margin:10px auto;
+	box-shadow:0 0 30px #000000;
+}
+.student_slide h1{
+	float:left;
+	padding:2%;
+	font-size:100px;
+}
+.student_slide p{padding:2%;}
 
 .content h5,.content h3{
 	text-align: center;
