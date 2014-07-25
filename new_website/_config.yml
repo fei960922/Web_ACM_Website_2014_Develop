@@ -4,14 +4,10 @@ paginate:       10
 paginate_path:	"news/page:num"
 
 title:          ACM HONORED CLASS
-baseurl:        "http://fei960922.github.io/ACM_Website_2014/new_website/"
-url:            "http://fei960922.github.io/ACM_Website_2014/new_website/"
+baseurl:        ""
+url:            ""
 permalink:      /:categories/:title/
 
-author:
-    name:       GilbertHeywood
-    email:      5304618a@gmail.com
-    twitter:    none
     
 footer:
       
