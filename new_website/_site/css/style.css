@@ -1,0 +1,578 @@
+/* @override 
+	http://appdev.appden.com/lib/appden.css
+	http://www.appden.com/lib/appden.css
+	http://appden.com/lib/appden.css
+	http://localhost:4000/lib/appden.css/
+*/
+
+/* @group Defaults */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+:focus {
+	outline: 0;
+}
+
+body, input, textarea, option, select {
+	font-family: Arial, sans-serif;
+	line-height: 1;
+	font-size: 13px;
+}
+
+body {
+	color: #464646;
+	opacity:  1;
+	background-attachment:fixed
+}
+
+a {
+	font-weight: bold;
+}
+
+input, textarea {
+	border: 0;
+	outline: 0;
+	margin: 0;
+	padding: 4px 6px;
+	color: #272727;
+	background-image: url(../lib/images/input.png);
+}
+
+textarea {
+	overflow: auto;
+}
+
+code, pre {
+	font-family: monospace;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+ins {
+	text-decoration: none;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+sub {
+	vertical-align: sub;
+}
+
+sup {
+	vertical-align: super;
+	font-size: 0.7em;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a, h1, h2, h3, h4, h5, h6 {
+	color: #175158;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h4, h5 {
+	font-weight: bold;
+}
+
+h2, h3, h6 {
+	font-weight: normal;
+}
+
+h2 {
+	font-size: 21px;
+	margin-bottom: 14px;
+}
+
+h3 {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+/* @end */
+
+/* @group Utility Classes */
+
+.left {
+	text-align: left;
+}
+.right {
+	text-align: right;
+}
+.floatleft {
+	float: left;
+}
+.floatright {
+	float: right;
+}
+.clear {
+	clear: both;
+}
+.hidden {
+	display: none;
+}
+
+.clearfix {
+	overflow: hidden;
+	display: inline-block;
+}
+.clearfix {
+	display: block;
+}
+
+.spinner {
+	display: none;
+	width: 16px;
+	height: 16px;
+	background: url(../lib/images/spinner.gif) no-repeat center right;
+}
+
+.invalid {
+	background-image: url(../lib/images/invalid.png) !important;
+}
+
+.placeholder {
+	color: #8a8a8a;
+}
+
+/* @end */
+
+/* @group Header */
+
+#header {
+	margin : 15px auto 25px;
+	width: 100%;
+	height: 60px;
+	background-color: #2e5d9c;
+	position: relative;
+	overflow: hidden;
+	margin-top: 0px;
+	color: white;
+}
+
+#header  h1{
+	float: left;
+	color: white;
+}
+
+#header div img {
+	float: left;
+}
+
+#header a {
+	color: white;
+	text-decoration: none;
+}
+
+/* @end */
+
+/* @group Nav */
+
+#nav {
+	position: absolute;
+	bottom: 44px;
+	left: 350px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#nav a {
+	padding: 5px 10px;
+	color: white;
+	text-decoration: none;
+	cursor: default;
+}
+
+#nav a:link, #nav a:visited {
+	cursor: pointer;
+}
+
+#nav li {
+	float: left;
+	text-transform: uppercase;
+	position: relative;
+	padding: 10px;
+}
+
+#nav li a {
+	width: 100px;
+}
+
+#nav li ul {
+	position: absolute;
+	top: 100%;
+	left: 10px;
+	padding: 5px 10px 20px;
+	background: url(../lib/images/nav_arrow.png) no-repeat 0px 8px;
+	width: 1000px;
+	display: none;
+	z-index: 1;
+}
+
+#nav li:hover ul {
+	display: block;
+}
+
+#nav li:hover a {
+	color: #71f2fe;
+}
+
+#nav a.active, #nav a:active,
+#nav a:link:hover, #nav a:visited:hover {
+	color: #a7ff84 !important;
+}
+
+/* @end */
+
+/* @group Content */
+
+#content {
+	width: 870px;
+	margin: 0 auto;
+	position: relative;
+	background: url(../lib/images/vertical.png) repeat-y 655px 0px;
+}
+
+#alpha {
+	float: left;
+	width: 620px;
+	background-color: rgba(255,255,255,0.8);
+	padding: 15px;
+	padding-top: 50px;
+}
+
+#beta {
+	float: right;
+	width: 250px;
+	background-color: rgb(255,255,255, 0.8);
+	color: black;
+}
+
+/* @group Entry */
+
+.entry, #pagination, #comments {
+	margin: 55px;
+}
+
+.entry {
+	margin-bottom: 45px;
+	box-shadow: 0px 0px 20px #888888;
+	padding: 30px;
+}
+
+.entry-date {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 10px;
+	margin-top: 10px;
+	margin-bottom: auto;
+}
+
+.entry-date div {
+	font-size: 20px;
+	color: #175158;
+}
+
+.entry-left {
+	float: left;
+}
+
+.entry-footer {
+	background: url(../lib/images/horizontal.png) repeat-x;
+	margin-top: 10px;
+	padding-top: 8px;
+	font-size: 12px;
+	line-height: 15px;
+}
+
+.entry-comments {
+	background-image: url(../lib/images/bubble.png);
+	float: left;
+	width: 40px;
+	height: 36px;
+	line-height: 28px;
+	margin-right: 8px;
+	text-align: center;
+	font-size: 16px;
+	color: white;
+}
+
+/* @group Entry Contents */
+
+.entry-contents {
+	line-height: 1.5;
+	padding-top: 5px;
+}
+
+.entry-contents .entry-more {
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.entry-contents .entry-more:hover {
+	text-decoration: underline;
+}
+
+.entry-contents p,
+.entry-contents pre,
+.entry-contents > ul,
+.entry-contents > ol {
+	margin: 0em 0;
+}
+
+.entry-contents h3 {
+	margin: 1em 0 0.5em;
+}
+
+.entry-contents a {
+	text-decoration: underline;
+}
+
+.entry-contents sup.footnote a {
+	text-decoration: none;
+}
+
+.entry-contents p.footnote,
+.entry-contents blockquote {
+	font-size: 0.9em;
+}
+
+.entry-contents blockquote {
+	margin: 1em 2em;
+	padding: 0 1em;
+	border-left: 1px dotted #DDDDD9;
+}
+
+.entry-contents table {
+	margin: 1em auto;
+}
+
+.entry-contents th {
+	font-weight: bold;
+	text-align: center;
+	border-bottom: 2px solid black;
+}
+
+.entry-contents td,
+.entry-contents th {
+	padding: 0 1em;
+}
+
+.entry-contents td + td,
+.entry-contents th + th {
+	border-left: 1px solid black;
+}
+
+.entry-contents tr + tr {
+	border-top: 1px solid black;
+}
+
+.entry-contents pre {
+	padding: 0.5em 1em;
+	line-height: 1.4;
+	overflow: auto;
+	background: transparent url(../lib/images/code.png) !important;
+}
+
+.entry-contents ul {
+	list-style: disc outside;
+}
+
+.entry-contents ul ul {
+	list-style: circle outside;
+}
+
+.entry-contents ol {
+	list-style: decimal outside;
+}
+
+.entry-contents ol ol {
+	list-style: lower-alpha outside;
+}
+
+.entry-contents li {
+	margin-left: 3em;
+}
+
+.entry-contents .double-space li {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.entry-contents hr {
+	background: url(../lib/images/horizontal.png) repeat-x;
+	height: 3px;
+	border: 0;
+	margin: 0.5em 0;
+}
+
+/* @end */
+
+/* @group Pagination */
+
+#pagination {
+	text-align: center;
+}
+
+#pagination .prev {
+	float: left;
+}
+
+#pagination .next {
+	float: right;
+}
+
+/* @end */
+
+/* @group Comments */
+
+#comments {
+	clear: both;
+	padding-top: 40px;
+}
+
+#comments #dsq-new-post {
+	padding-bottom: 20px;
+}
+
+#comments input, #comments textarea {
+	background: none;
+	resize: none;
+}
+
+#comments .dsq-header-avatar img {
+	display: block;
+}
+
+#comments .dsq-comment-body,
+#comments .dsq-comment-footer {
+	padding-left: 4px;
+}
+
+/* @end */
+
+/* @end */
+
+/* @end */
+
+/* @group Sidebar */
+
+.widget {
+	line-height: 1.2;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.widget h3 {
+	font-size: 20px;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+.widget p {
+	line-height: 1.3;
+}
+
+.widget li {
+	margin: 10px;
+}
+
+.widget li span {
+	padding-right: 10px;
+	font-size: 10px;
+}
+
+.widget a {
+	color: #4d6c70;
+	font-size: 20px;
+}
+
+#tweets .tweet {
+	padding-bottom: 10px;
+}
+
+#search {
+	margin-left: -24px;
+	width: 320px;
+	height: 40px;
+	background-image: url(../lib/images/search.png);
+}
+
+#search input {
+	padding: 0;
+	margin: 13px 0 0 43px;
+	width: 155px;
+	background: none;
+	color: #464646;
+}
+
+/* @end */
+
+/* @group Footer */
+
+#footer {
+	clear: both;
+	margin: 25px auto;
+	width: 940px;
+	overflow: hidden;
+	font-size: 13px;
+	line-height: 1.3;
+	color: #555;
+	background: url(../lib/images/footer.png) no-repeat;
+}
+
+#about {
+	float: left;
+	margin: 25px 0 0 90px;
+}
+
+#about h6 {
+	display: inline;
+	margin-right: 0.25em;
+	font-size: 14px;
+}
+
+#copyright {
+	clear: left;
+	position: relative;
+	text-align: right;
+	top: 0px;
+	margin-right: 30px;
+	font-size: 12px;
+	color: #8a8a8a;
+}
+
+/* @end */
+
+
