@@ -19,7 +19,7 @@ copyright:
     - "&copy; Copyright 2014, ACM HONORED CLASS. All Rights Reserved."
       
 css:
-    - /lib/style.css
-    - /lib/syntax.css
-    - /lib/buttons.css
+    - /css/style.css
+    - /css/syntax.css
+    - /css/buttons.css
     
