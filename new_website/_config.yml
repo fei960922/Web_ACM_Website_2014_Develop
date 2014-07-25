@@ -1,6 +1,7 @@
 highlighter:    pygments
 markdown: 		kramdown
 paginate:       10
+paginate_path:	news_index.html
 
 title:          ACM HONORED CLASS
 baseurl:        ""
@@ -19,7 +20,7 @@ copyright:
     - "&copy; Copyright 2014, ACM HONORED CLASS. All Rights Reserved."
       
 css:
-    - /css/style.css
-    - /css/syntax.css
-    - /css/buttons.css
+    - /lib/style.css
+    - /lib/syntax.css
+    - /lib/buttons.css
     
