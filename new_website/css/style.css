@@ -172,7 +172,7 @@ h3 {
 
 #header {
 	margin : auto;
-	width: 100%;
+	width: 45%;
 	height: 60px;
 	position: fixed;
 	overflow: hidden;
@@ -184,7 +184,7 @@ h3 {
 #header  h1{
 	float: left;
 	color: white;
-	margin-left: 27%;
+	margin-left: 60%;
 	margin-top: 5px;
 }
 
