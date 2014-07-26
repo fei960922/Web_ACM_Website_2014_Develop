@@ -4,6 +4,9 @@
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="{{ site.description }}">
+    <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}" type="text/css" />
+	<link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}" type="text/css" />
 	<link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}" type="text/css" />
 	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}" type="text/css" />
+
 </head>
