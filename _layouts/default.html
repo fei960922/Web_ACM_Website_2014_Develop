@@ -1,58 +1,9 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-		
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="generator" content="Jekyll" />
-		<meta name="author" content="{{ site.author.name }}" />
-		<meta name="description" content="{{ site.description }}" />
-
-		<link rel="alternate" type="application/atom.xml" title="Recent Entries" href="{{ site.feed }}" />
-
-		<link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}" type="text/css" />
-		<link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}" type="text/css" />
-		<link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}" type="text/css" />
-		<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}" type="text/css" />
-	</head>
-	<body style = "padding-top: 0px;">
-		{% include navigation.html %}
-		<div id="header">
-			<h1>
-				<span> <a href = "/news/">新闻中心</a></span>
-			</h1>
-		</div>
-		
-		<div id="content">
-			<div id="alpha">
-				{{ content }}
-			</div>
-			
-			<div id="beta">
-				<div class="widget">
-					<h3>新闻列表</h3>
-						<ul>
-						{% for post in site.posts limit:10 %}
-							<li>
-							<span class="entry-date">{{ post.date | date:'%b <div>%d</div> %Y' | replace:'>0','>' }}</span>
-							<a href="{{ post.url | prepend: site.baseurl}}">{{ post.title }}</a>
-							</li>
-						{% endfor %}
-						</ul>
-				</div>
-			</div>
-		</div>
-		
-		<div id="footer">
-			<div id="about">
-				ABOUT
-				<div></div>
-			</div>
-			<div id="copyright">
-				{% for line in site.copyright %}
-					<div>{{ line }}</div>
-				{% endfor %}
-			</div>
-		</div>
-	</body>
-</html>
+  {% include head.html %}
+    <body class = "Microsoft_YaHei">
+    <div id = "heading">
+    {% include navigation.html %}
+    </div>
+    {{ content }}
+    {% include footer.html %}

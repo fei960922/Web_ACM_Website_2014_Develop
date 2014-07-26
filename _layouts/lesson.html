@@ -1,17 +1,10 @@
 ﻿<!DOCTYPE html>
 <html>
-	<head>
-	    <meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <title>上海交通大学ACM班</title>
-	    <meta name="viewport" content="width=device-width">
-	    <meta name="description" content="{{ site.description }}">
-		<link rel="stylesheet" href="./css/bootstrap.min.css">
-	    <link rel="stylesheet" href="./css/main.css">
-	</head>
+	{% include head.html %}
 	<body class = "Microsoft_YaHei">
-	{% include navigation.html %}
-
+	<div id="heading">
+		{% include navigation.html %}
+	</div>
 	<div class="lesson_main container">
 		<div class = "lesson_top">
 			课程中心<br/>Lesson Center
@@ -65,16 +58,4 @@
 			<h1>PPCA</h1>
 		</div>
 	</div>
-
-  <div class = "footer">
-  	<div style ="float:left">Powered By <a href="http://www.bootcss.com">BootStrap</a> written by PPCA2014</div>
-  	<div style ="float:right">Copyright &copy; 2014 <a href="/">ACM Class</a>. All rights reserved.</div>
-  </div>
-
-
-	</body>
-	<script type="text/javascript" src="http://www.youziku.com/UserDownFile/jquery.min.js"></script>
-	<script type="text/javascript" src="http://www.youziku.com/UserDownFile/jquery.md5.js"></script> 
-		<script src="./js/bootstrap.min.js"></script>
-		<script src="./js/main.js"></script>
-</html>
+{% include footer.html %}
