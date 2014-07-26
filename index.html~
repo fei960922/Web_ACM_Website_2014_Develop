@@ -1,18 +1,18 @@
+<<<<<<< HEAD
 ---
 title: 上海交通大学ACM班
 bugs: ACM班班徽的位置待定；响应式有一些bug；内容似乎还不够不知道加些啥。
 ---
 <!DOCTYPE html>
+=======
+﻿<!DOCTYPE html>
+>>>>>>> ed44be2747199ed8c56af10646736c672e1026c9
 <html>
 	{% include head.html %}
 	<body class = "Microsoft_YaHei" style = "padding-top:0;">
 	<div id = "headingForIndex">
 	    {% include navigation.html %}
 	</div>
----
-title:
-
----
 	<div class = "minh">
 		<div class="index_1 fullh">
 			<img src="./images/handwriting.png" />
