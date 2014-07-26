@@ -388,6 +388,8 @@ a:hover {text-decoration: none;}
 
 .lesson_right {
 	padding-left: 100px;
+	margin-top:	100px;
+	box-shadow:	0px 0px 20px #888888;
 }
 
 .lesson_right div {
