@@ -9,10 +9,10 @@ layout: news
 
 <div id="pagination">
 	{% if page.previous %}
-		<a class="prev" href="{{ page.previous.url }}">&laquo; {{ page.previous.title | truncatewords:10 }}</a>
+		<a class="prev" href="{{ page.previous.url | prepend: site.baseurl}}">&laquo; {{ page.previous.title | truncatewords:10 }}</a>
 	{% endif %}
 	
 	{% if page.next %}
-		<a class="next" href="{{ page.next.url }}">{{ page.next.title | truncatewords:10 }} &raquo;</a>
+		<a class="next" href="{{ page.next.url | prepend: site.baseurl}}">{{ page.next.title | truncatewords:10 }} &raquo;</a>
 	{% endif %}
 </div>
