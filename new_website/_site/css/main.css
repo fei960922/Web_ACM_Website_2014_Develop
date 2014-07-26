@@ -386,6 +386,10 @@ a:hover {text-decoration: none;}
 	box-shadow: 0 0 30px #000000;
 }
 
+.lesson_right {
+	padding-left: 100px;
+}
+
 .lesson_right div {
 	min-height:300px;
 	padding:20px;
