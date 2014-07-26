@@ -4,8 +4,8 @@ paginate:       10
 paginate_path:	"news/page:num"
 
 title:          ACM HONORED CLASS
-baseurl:        ""
-url:            ""
+baseurl:        "http://fei960922.github.io/ACM_Website_2014/new_website"
+url:            "http://fei960922.github.io/ACM_Website_2014/new_website"
 permalink:      /:categories/:title/
 
 footer:
