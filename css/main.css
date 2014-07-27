@@ -290,11 +290,12 @@ a:hover {text-decoration: none;}
 
 .activity_1,.activity_2,.activity_3 { 
 	background-size: cover;
+	background-repeat: no-repeat;
 	height:100%;
 }
-.activity_1{background: url(../images/activity_1.jpg) no-repeat;}
-.activity_2{background: url(../images/activity_2.jpg) no-repeat;}
-.activity_3{background: url(../images/activity_3.jpg) no-repeat;}
+.activity_1{background-image: url(../images/activity_1.jpg);}
+.activity_2{background-image: url(../images/activity_2.jpg);}
+.activity_3{background-image: url(../images/activity_3.jpg);}
 
 .article_activity .btn{
 	font-size       :20px;
@@ -405,15 +406,10 @@ a:hover {text-decoration: none;}
 .student_slide div {
 	height:70%;
 	background-size: 100%;
+	background-repeat: no-repeat;
 	background-position: center;
 	width:70%;
 	margin:30px auto;
-	box-shadow:0 0 30px #000000;
-}
-.student_slide img {
-	height:30px;
-	width:70%;
-	margin:10px auto;
 	box-shadow:0 0 30px #000000;
 }
 .student_slide h1{
