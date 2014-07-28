@@ -1,10 +1,14 @@
 ---
-layout: indexdefault
+layout: default
 ---
 
-{% for post in paginator.posts %}
-	{% include post.html %}
-{% endfor %}
+<div class="container">
+    <ul class="timeline">
+    {% for post in paginator.posts %}
+		{% include post.html %}
+	{% endfor %}  
+	</ul>
+</div>	
 
 {% if paginator.total_pages > 1 %}
 	<div id="pagination">
