@@ -5,6 +5,7 @@
 	</div>
 	
 <div class = "minh container">
+	<div class="col-md-4">&nbsp;</div>
 	<div class="lesson_left col-md-4">
 		<h1>课程</h1>
 		<img src = "../images/lesson_1.jpg" />

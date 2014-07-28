@@ -1,5 +1,5 @@
 	<div class = "footer">
-  		<div id = "left">Powered By <a href="http://www.bootcss.com">BootStrap</a> written by <a href="{{ "/designer/designer.html" | prepend: site.baseurl }}">PPCA2014</a>
+  		<div id = "left">Powered By <a href="http://www.bootcss.com">BootStrap</a> written by PPCA2014
 		<button class="btn btn-primary btn" data-toggle="modal" data-target="#myModal" style = "padding:0;border:0;font-size:6px;">
   			&nbsp;本页面的期望与实际问题&nbsp;
 		</button>

@@ -92,6 +92,11 @@ a:hover {text-decoration: none;}
 }
 .footer>div{padding:17px;}
 
+@media (min-width: 960px) {
+	.footer #left {float:left;}
+	.footer #right{float:right;}
+}
+
 /*	------------------------------------------
 	              CSS for "Index"
 	------------------------------------------  */
@@ -115,7 +120,7 @@ a:hover {text-decoration: none;}
 	vertical-align: middle;
 	margin:0;
 }
-.index_3{
+.index_3, .index_5{
 	background-color: #FFFFFF;
 }
 .index_3 article {
@@ -125,8 +130,15 @@ a:hover {text-decoration: none;}
 	width: 52%;
 	margin: 5%;
 }
-.index_3 img{
+.index_3 img,.index_5 img{
 	width  : 20%;
+	margin: 5%;
+}
+.index_5 article {
+	text-indent:2em;
+    font-size: 14px;
+	float: right;
+	width: 52%;
 	margin: 5%;
 }
 .index_4{
@@ -187,17 +199,17 @@ a:hover {text-decoration: none;}
 	float:left;
 	width: auto;
 	padding:0 10px 40px 40px;
-	max-width: 40%;
+	font-size: 20px;
 }
 .bottom_left p { margin-bottom: 10%; }
-.bottom_left a { color: white; text-decoration: none;}
+.bottom_left a { color: black; text-decoration: none;}
 .bottom_left a:hover {color: #0ff; text-decoration: underline;}
 .bottom_left li {
 	padding: 3px;
 	border-bottom:1px solid white;
 }
 .bottom_left .btn{
-	font-size:14px;
+	font-size:20px;
 }
 .bottom_right {
 	padding:20px 40px 40px 20px;
@@ -375,10 +387,6 @@ a:hover {text-decoration: none;}
 /*	------------------------------------------
 	        CSS for "SUB Lesson Pages"
 	------------------------------------------  */
-
-.lesson_left {
-	position:fixed;
-}
 
 .lesson_left img{
 	width     : 90%;

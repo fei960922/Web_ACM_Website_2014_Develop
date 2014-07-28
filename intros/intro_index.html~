@@ -17,7 +17,7 @@ title: Introduction
 <div class = "bi3 col-md-6 block_intro_out"><div class = "block_intro">
 	<h1>生</h1>
 	<p>十年来，ACM班学生获得了国内外荣誉和奖项数百人次：继2002年后2005、2010年又两次获得ACM国际大学生程序设计竞赛世界冠军，成为全球该赛事第三个“三冠王”；以第一作者身份在NIPS、WWW、SIGIR、SIGMOD、SIGKDD、ICML、AAAI等重要的国际会议和期刊上发表了40余篇学术论文，并获得国际会议最佳学生论文和最佳候选学生论文各1篇；2005、2009年两次获得国家级教学成果二等奖。</p>
-    <button type="button" class="btn btn_new btn-block" onclick="window.open('{{ "/intros/students.html" | prepend: site.baseurl }}')"点击查看更多</button>
+    <button type="button" class="btn btn_new btn-block" onclick="window.location.href('{{ "/intros/students.html" | prepend: site.baseurl }}')"点击查看更多</button>
 </div></div>
 <div class = "bi4 col-md-6 block_intro_out"><div class = "block_intro">
 	<h1>赛</h1>
