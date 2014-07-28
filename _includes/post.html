@@ -7,6 +7,6 @@
 		<div class="col-md-6 timeline-body">
 	  		{{ post.content  | split:'<!--break-->' | first }}
 		</div>
-		<div class="timeline-footer"><a class="pull-left">点击查看更多</a></div>
+		<div class="timeline-footer"><a class="pull-left" href="{{ post.url | prepend: site.baseurl }}">点击查看更多</a></div>
 	</div>
 </li>
