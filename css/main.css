@@ -469,3 +469,19 @@ a:hover {text-decoration: none;}
 .teacher_in p{
 	padding: 0 5%;
 }
+
+/*	------------------------------------------
+	             CSS of "Designer"
+	------------------------------------------  */
+.design {
+	text-align: center;
+}
+.design_left {
+	background-color: #EEEEEE;
+}
+.design img{
+	margin    :10%;
+	width     :80%;
+	border    : 10px solid #FFFFFF;
+	box-shadow: 0 0 30px #000000;
+}
