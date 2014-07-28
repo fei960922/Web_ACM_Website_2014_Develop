@@ -473,15 +473,22 @@ a:hover {text-decoration: none;}
 /*	------------------------------------------
 	             CSS of "Designer"
 	------------------------------------------  */
-.design {
+.design_left,.design_right {
 	text-align: center;
 }
 .design_left {
 	background-color: #EEEEEE;
 }
-.design img{
+.design_left img{
 	margin    :10%;
 	width     :80%;
+	border    : 10px solid #FFFFFF;
+	box-shadow: 0 0 30px #000000;
+}
+.design_right img{
+	margin    :2px;
+	width     :90%;
+	height    :80%;
 	border    : 10px solid #FFFFFF;
 	box-shadow: 0 0 30px #000000;
 }
