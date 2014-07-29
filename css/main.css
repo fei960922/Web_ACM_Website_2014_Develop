@@ -100,7 +100,6 @@ a:hover {text-decoration: none;}
 .index_1{
 	background     : url(../images/index_1.jpg) 50% 0 no-repeat;
 	background-size: cover;
-	margin:0 0 50px 0;
 }
 .index_1 img {
 	margin:8%;
