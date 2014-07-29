@@ -42,24 +42,31 @@ a:hover {text-decoration: none;}
 }
 @media (max-width: 960px) {.inners	{width:100%;}}
 
-#heading{
-	color     : #C4E7FF;
+#headingDefault{
 	background: #2E5D9C;
 	position  :	fixed;
 	z-index   :	1000;
-	top:                 0px;
+	top       : 0px;
 	width     :	100%;
 	min-height: 51px;
 }
-
+#headingFull{
+	background: rgba(0,0,0,0);
+	position  :	fixed;
+	z-index   :	1000;
+	top       : 0px;
+	width     :	100%;
+	min-height: 51px;
+	text-shadow:0 0 10px #000000;
+}
 #headingForIndex{
-	color     : #C4E7FF;
-	background: #2E5D9C;
+	background: rgba(0,0,0,0);
 	position  :	absolute;
 	z-index   :	1000;
 	width     :	100%;
 	bottom 	  : 0px;
 	min-height: 51px;
+	text-shadow:0 0 10px #000000;
 }
 
 #headingForIndex.affix {
@@ -69,21 +76,11 @@ a:hover {text-decoration: none;}
    max-height:51px;
    -webkit-transition: all .6s ease-in-out;
 }
-
-#inners img{
-}
-
 .navbar{margin:0;}
 .navbar-toggle{margin-bottom:0;}
 
-.nav{
-	font-size:		14px;
-}
-.nav>li>a{
-	background: #2E5D9C;
-	color:#FFFFFF;
-}
-.nav a:hover{color:#2E5D9C;}
+.nav>li>a{color:#FFFFFF;}
+.nav a:hover{color:#2E5D9C; }
 
 .footer{
 	text-align : center;

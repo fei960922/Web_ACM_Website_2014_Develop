@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+    <body class = "Microsoft_YaHei">
+    <div id = "headingFull">
+    	{% include navigation.html %}
+    </div>
+    {{ content }}
+    </body>
+	<script src="{{ "/js/jquery.min.js" | prepend: site.baseurl }}"></script>
+	<script src="{{ "/js/jquery.md5.js" | prepend: site.baseurl }}"></script> 
+	<script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
+	<script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
+</html>
