@@ -47,15 +47,6 @@ a:hover {text-decoration: none;}
 	width     :	100%;
 	min-height: 51px;
 }
-#headingFull{
-	background: rgba(0,0,0,0);
-	position  :	fixed;
-	z-index   :	1000;
-	top       : 0px;
-	width     :	100%;
-	min-height: 51px;
-	text-shadow:0 0 10px #000000;
-}
 #headingForIndex{
 	background: rgba(0,0,0,0);
 	position  :	absolute;
@@ -64,15 +55,18 @@ a:hover {text-decoration: none;}
 	bottom 	  : 0px;
 	min-height: 51px;
 	text-shadow:0 0 10px #000000;
+	-webkit-transition: background-color .6s ease-in-out;
 }
 
 #headingForIndex.affix {
    position: fixed;
+   background: #2E5D9C;
    top: 0;
    z-index:10;
    max-height:51px;
    -webkit-transition: all .6s ease-in-out;
 }
+
 .navbar{margin:0;}
 .navbar-toggle{margin-bottom:0;}
 
