@@ -34,7 +34,7 @@ a:hover {text-decoration: none;}
 }
 .container{
 	width     : 100%;
-	max-width : 1200px;
+	max-width : 970px;
 	padding   : 0;
 }
 @media (max-width: 960px) {.inners	{width:100%;}}
