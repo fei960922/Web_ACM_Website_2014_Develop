@@ -32,9 +32,9 @@ a:hover {text-decoration: none;}
 	width 	: 80%;
 	margin  : 0 auto;
 }
-.container{
+.container_big{
 	width     : 100%;
-	max-width : 970px;
+	max-width : 1200px;
 	padding   : 0;
 }
 @media (max-width: 960px) {.inners	{width:100%;}}
