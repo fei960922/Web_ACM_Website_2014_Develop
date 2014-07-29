@@ -599,5 +599,5 @@ a:hover {text-decoration: none;}
 	line-height: 0.5em;
   	position: absolute;
   	left:-100px;
-  	top:120px;	
+  	top:60px;	
 }

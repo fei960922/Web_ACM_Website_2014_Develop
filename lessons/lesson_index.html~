@@ -9,7 +9,7 @@ title: Lesson Center
 	</div>
 	<div class = "col-md-4">
 		<img src = "{{site.baseurl}}/images/lesson_1.jpg">
-		<a href = "{{site.baseurl}}/lessons/lesson_1.html"><h1>PPCA</h1></a>
+		<a href = "{{site.baseurl}}/lessons/ppca.html"><h1>PPCA</h1></a>
 	</div>
 	<div class = "col-md-4">
 		<img src = "../images/lesson_1.jpg">

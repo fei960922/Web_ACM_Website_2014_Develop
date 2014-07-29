@@ -12,7 +12,7 @@
         <li class="dropdown">
           <a href = "{{ "/intros/intro_index.html" | prepend: site.baseurl }}">班级介绍</a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href = "{{ "/intros/class.html" | prepend: site.baseurl }}">班级理念</a></li>
+            <li><a href = "{{ "/intros/class.html" | prepend: site.baseurl }}">班级历史</a></li>
             <li><a href = "{{ "/intros/teachers.html" | prepend: site.baseurl }}">教师名录</a></li>
 			<li><a href = "{{ "/intros/students.html" | prepend: site.baseurl }}">学子风采</a></li>
             <li><a href = "{{ "/intros/honor.html" | prepend: site.baseurl }}">荣誉榜</a></li>
