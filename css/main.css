@@ -10,9 +10,6 @@ body,html {
 	font-family: Arial,"Microsoft YaHei","微软雅黑",sans-serif;
 	background-color:white;
 }
-body {
-	padding-top:50px;
-}
 .padding_0{padding:0 !important;}
 .btn_new{
 	background-color: rgba(0,0,0,0);
@@ -80,7 +77,7 @@ a:hover {text-decoration: none;}
 .navbar-toggle{margin-bottom:0;}
 
 .nav>li>a{color:#FFFFFF;}
-.nav a:hover{color:#2E5D9C; }
+.nav a:hover{color:#2E5D9C;}
 
 .footer{
 	text-align : center;
