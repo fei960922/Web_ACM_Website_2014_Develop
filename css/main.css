@@ -132,16 +132,14 @@ a:hover {text-decoration: none;}
 	background-size: cover;
 }
 .index_1 img {
-	margin:8%;
-	width:50%;
+	margin:5%;
+	width:90%;
 }
 .index_2{
-	height         :150px;
 	text-align     :center;
 	background-color: #DDDDDD;
 }
 .index_2 h1{
-	font-size:75px;
 	line-height: 2em;
 	vertical-align: middle;
 	margin:0;
@@ -149,23 +147,29 @@ a:hover {text-decoration: none;}
 .index_3, .index_5{
 	background-color: #FFFFFF;
 }
-.index_3 article {
+.index_3 div {
     text-indent:2em;
-    font-size: 14px;
-	float: left;
-	width: 52%;
-	margin: 5%;
+	padding: 8% 3%;
 }
-.index_3 img,.index_5 img{
-	width  : 20%;
-	margin: 5%;
-}
-.index_5 article {
-	text-indent:2em;
-    font-size: 14px;
+.index_3 img{
+	width : 20%;
+	margin:3%;
 	float: right;
-	width: 52%;
-	margin: 5%;
+}
+
+.index_5 img{
+	width  : 96%;
+	margin: 2%;
+}
+.index_5 > div {
+	float:right;
+	width:96%;
+	text-indent:2em;
+	margin: 2%;
+}
+.index_5 .btn {
+	padding:10px 40px;
+	margin:10px 30px;
 }
 .index_4{
 	background           : url(../images/index_1.jpg) 50% 0 no-repeat;
@@ -174,9 +178,8 @@ a:hover {text-decoration: none;}
 	box-shadow: 0 0 20px #000000 inset; 	
 }
 .index_4 h1{
-	font-size  :75px;
 	color      :white;
-	padding    :200px 0 40px 0;
+	padding    :150px 0 40px 0;
 	text-shadow:0 0 30px #000000;
 	text-align :center;
 }
@@ -184,10 +187,17 @@ a:hover {text-decoration: none;}
 	width: 100%;
 	position:fixed;
 	top:0;
-
 	z-index:-1;
 }
-
+@media(min-width:640px){
+	.index_1 img {
+		margin:8%;
+		width:50%;
+	}
+	.index_2 h1,.index_4 h1{font-size:75px;}
+	.index_5 img {width:45%;}
+	.index_5>div {width:45%;}
+}
 /*	------------------------------------------
 	            CSS for "Old Index"
 	------------------------------------------  */
@@ -225,7 +235,6 @@ a:hover {text-decoration: none;}
 	float:left;
 	width: auto;
 	padding:0 10px 40px 40px;
-	font-size: 20px;
 }
 .bottom_left p { margin-bottom: 10%; }
 .bottom_left a { color: black; text-decoration: none;}
@@ -233,9 +242,6 @@ a:hover {text-decoration: none;}
 .bottom_left li {
 	padding: 3px;
 	border-bottom:1px solid white;
-}
-.bottom_left .btn{
-	font-size:20px;
 }
 .bottom_right {
 	padding:20px 40px 40px 20px;
