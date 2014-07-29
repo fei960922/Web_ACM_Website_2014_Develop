@@ -33,9 +33,9 @@ a:hover {text-decoration: none;}
 	margin  : 0 auto;
 }
 .container_big{
-	width     : 100%;
-	max-width : 1200px;
-	padding   : 0;
+	width    : 100%;
+	max-width: 1200px;
+	margin   : auto;
 }
 @media (max-width: 960px) {.inners	{width:100%;}}
 
