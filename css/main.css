@@ -37,6 +37,10 @@ a:hover {text-decoration: none;}
 	max-width: 1200px;
 	margin   : auto;
 }
+.container{
+	width    : 100%;
+	max-width: 970px;
+}
 @media (max-width: 960px) {.inners	{width:100%;}}
 
 #headingDefault{
