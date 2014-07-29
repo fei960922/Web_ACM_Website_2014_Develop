@@ -57,6 +57,11 @@ $("#headingForIndex").affix({
         top: $(window).height()-$("#headingForIndex").height()
     }
 });
+$("#headingForPost").affix({
+     offset: {
+        top: $(".big_top").height()*0.5
+    }
+});
 /*	------------------------------------------
 	      Inherit from "www.youziku.com"
 	------------------------------------------  */

@@ -80,6 +80,32 @@ a:hover {text-decoration: none;}
    -webkit-transition: all .6s ease-in-out;
 }
 
+#headingForPost{
+	background: rgba(0,0,0,0);
+	position  :	fixed;
+	z-index   :	1000;
+	top       : 0px;
+	width     :	100%;
+	min-height: 51px;
+	text-shadow:0 0 10px #000000;
+	-webkit-transition: background-color .6s ease-in-out;
+}
+
+#headingForPost.affix {
+   background: #2E5D9C;
+	position  :	fixed;
+	z-index   :	1000;
+	top       : 0px;
+	width     :	100%;
+	min-height: 51px;
+	text-shadow:0 0 10px #000000;
+   -webkit-transition: all .6s ease-in-out;
+}
+.big_top
+ {
+  padding-top:50px !important;
+ }
+
 .navbar{margin:0;}
 .navbar-toggle{margin-bottom:0;}
 
