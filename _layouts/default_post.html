@@ -5,7 +5,7 @@
     <div id = "headingForPost">
     	{% include navigation.html %}
     </div>
-    <div class = "big_top" {% if page.pic %}style = "url({{site.baseurl}}/images/{{ page.pic }});"{% endif %}>
+    <div class = "big_top" {% if page.pic %}style = "background-image:url({{site.baseurl}}/images/{{ page.pic }});"{% endif %}>
 		{% if page.title_full %}{{ page.title_full}}{% else %}{{page.title}}{% endif %}<br/>
 	</div>
     {{ content }}
