@@ -273,6 +273,21 @@ a:hover {text-decoration: none;}
 .lesson_main {
 	background-color: #EEFDFF;
 }
+.online_judge{
+	position:absolute;
+	right:-150px;
+	top:90px;
+	background-color: rgba(255,255,255,0.4);
+	color:#FFFFFF;
+	font-size:30px;
+	padding:10px 150px;
+	transform: rotate(45deg);
+	-ms-transform: rotate(45deg);		
+	-webkit-transform: rotate(45deg);	
+	-o-transform: rotate(45deg);		
+	-moz-transform: rotate(45deg);	
+}
+@media(max-width:480px){.online_judge{font-size:14px;}}
 
 /*	------------------------------------------
 	        CSS for "Activity Center"
