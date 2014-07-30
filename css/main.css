@@ -69,6 +69,8 @@ a:hover {text-decoration: none;}
 	min-height: 51px;
 	text-shadow:0 0 10px #000000;
 	-webkit-transition: background-color .6s ease-in-out;
+	-o-transition: background-color .6s ease-in-out;
+	transition: background-color .6s ease-in-out;
 }
 
 #headingForIndex.affix {
@@ -80,6 +82,8 @@ a:hover {text-decoration: none;}
 	z-index           :10;
 	min-height        :51px;
 	-webkit-transition: all .6s ease-in-out;
+	-o-transition: all .6s ease-in-out;
+	transition: all .6s ease-in-out;
 }
 
 #headingForPost{
@@ -91,6 +95,8 @@ a:hover {text-decoration: none;}
 	min-height: 51px;
 	text-shadow:0 0 10px #000000;
 	-webkit-transition: background-color .6s ease-in-out;
+	-o-transition: background-color .6s ease-in-out;
+	transition: background-color .6s ease-in-out;
 }
 
 #headingForPost.affix {
@@ -101,7 +107,9 @@ a:hover {text-decoration: none;}
 	width     :	100%;
 	min-height: 51px;
 	text-shadow:0 0 10px #000000;
-   -webkit-transition: all .6s ease-in-out;
+	-webkit-transition: all .6s ease-in-out;
+	-o-transition: all .6s ease-in-out;
+	transition: all .6s ease-in-out;
 }
 .big_top {
   	width          :100%;
@@ -486,17 +494,18 @@ a:hover {text-decoration: none;}
     color: inherit;
 }
 .timeline-pic{
-	background-size: 100% 100%;
-	background-repeat:no-repeat;
-	height         : 100%;
-	min-width:50%;
-	z-index:10;
-	float          : right;
+	background-size    : cover;
+	background-position: center;
+	background-repeat  : no-repeat;
+	height             : 100%;
+	min-width          : 50%;
+	z-index            : 10;
+	float              : right;
 }
 .timeline-panel {
   width: 80%;
   margin:20px;
-  height:400px;
+  height:350px;
   position: relative;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
 }
