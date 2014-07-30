@@ -76,7 +76,7 @@ a:hover {text-decoration: none;}
    background: #2E5D9C;
    top: 0;
    z-index:10;
-   max-height:51px;
+   height:51px;
    -webkit-transition: all .6s ease-in-out;
 }
 
@@ -112,15 +112,14 @@ a:hover {text-decoration: none;}
 	text-shadow    :0 0 30px #000000;
  }
 
-.navbar{margin:0;}
+.navbar{margin:0;color:#FFFFFF;}
 .navbar-toggle{margin-bottom:0;}
-
 .nav>li>a{color:#FFFFFF;}
 .dropdown>a:hover,.nav li>a:hover{
 	background-color:rgba(0,0,0,0.3)!important;
 }
 .dropdown-menu>li{text-shadow:0 0 0 ;}
-
+@media (max-width: 844px){.dropdown-menu{display:none !important;}}
 .footer{
 	text-align : center;
 	height     : 50px;
