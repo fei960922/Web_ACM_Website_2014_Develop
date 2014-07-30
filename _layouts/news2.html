@@ -121,8 +121,8 @@ Read usage license on for this template on http://www.bootstraptor.com
 <!-- pagination -->
  <div class="col-12 col-lg-12">
         <ul class="pager">
-		  <li class="previous"><a href="{{ page.previous.url | prepend: site.baseurl}}" style="color:grey;">&larr; Older</a></li>
-		  <li class="next"><a href="{{ page.next.url | prepend: site.baseurl}}" style="color:grey;">Newer &rarr;</a></li>
+		 {% if page.previous %} <li class="previous"><a href="{{ page.previous.url | prepend: site.baseurl}}" style="color:grey;">&larr; Older</a></li>{% endif %}
+		  {% if page.next %}<li class="next"><a href="{{ page.next.url | prepend: site.baseurl}}" style="color:grey;">Newer &rarr;</a></li>{% endif %}
 		</ul>
       </div>
 <!-- /pagination -->
@@ -133,4 +133,3 @@ Read usage license on for this template on http://www.bootstraptor.com
 
 {% include footer.html %}
         
-
