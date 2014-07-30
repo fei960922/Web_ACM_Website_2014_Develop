@@ -175,7 +175,11 @@ a:hover {text-decoration: none;}
 	float      : right;
 	width      : 96%;
 	text-indent: 2em;
+	line-height: 2em;
 	margin     : 2%;
+}
+.index_5 ul>li:first-child {
+	font-size :20px;
 }
 .index_5 .btn {
 	padding: 10px 40px;
