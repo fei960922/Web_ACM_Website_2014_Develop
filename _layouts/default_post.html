@@ -8,5 +8,7 @@
     <div class = "big_top" {% if page.pic %}style = "background-image:url({{site.baseurl}}/images/{{ page.pic }});"{% endif %}>
 		{% if page.title_full %}{{ page.title_full}}{% else %}{{page.title}}{% endif %}<br/>
 	</div>
-    {{ content }}
-    {% include footer.html %}
+    <div class = "{% if page.size_big %}container_big{% else %}container{% endif %} minh">
+        {{ content }}
+    </div>
+{% include footer.html %}

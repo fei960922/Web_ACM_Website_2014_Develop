@@ -1,4 +1,4 @@
-﻿
+
 /*	------------------------------------------
 	                CSS of "Overall"
 	------------------------------------------  */
@@ -72,14 +72,14 @@ a:hover {text-decoration: none;}
 }
 
 #headingForIndex.affix {
-   position: fixed;
-   background: #2E5D9C;
-   top: 0;
-   bottom:auto;
-   width:100%;
-   z-index:10;
-   min-height:51px;
-   -webkit-transition: all .6s ease-in-out;
+	position          : fixed;
+	background        : #2E5D9C;
+	top               : 0;
+	bottom            :auto;
+	width             :100%;
+	z-index           :10;
+	min-height        :51px;
+	-webkit-transition: all .6s ease-in-out;
 }
 
 #headingForPost{
