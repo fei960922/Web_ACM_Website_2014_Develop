@@ -117,6 +117,16 @@ Read usage license on for this template on http://www.bootstraptor.com
 <!-- CONTENT SIDE-->
 <div class="col-sm-8 col-lg-8 lead">
 	{{ content }}
+<hr>
+<!-- pagination -->
+ <div class="col-12 col-lg-12">
+        <ul class="pager">
+		 {% if page.previous %} <li class="previous"><a href="{{ page.previous.url | prepend: site.baseurl}}" style="color:grey;">&larr; Older</a></li>{% endif %}
+		  {% if page.next %}<li class="next"><a href="{{ page.next.url | prepend: site.baseurl}}" style="color:grey;">Newer &rarr;</a></li>{% endif %}
+		</ul>
+      </div>
+<!-- /pagination -->
+<hr />
 </div>
 </div>
 <!--/ CONTENT -->

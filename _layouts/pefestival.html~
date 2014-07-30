@@ -109,7 +109,7 @@ Read usage license on for this template on http://www.bootstraptor.com
 					</div>
 					<div class="panel-footer">
 						<div class="row">
-								<a class="btn btn-link btn-sm btn-block hidden-xs" href="{{ "/news/index.html" | prepend: site.baseurl }}"  style="color:grey;text-align:right;">更多>></a> 
+								<a class="btn btn-link btn-sm btn-block hidden-xs" href="{{ "/activity/pefestival/index.html" | prepend: site.baseurl }}"  style="color:grey;text-align:right;">更多>></a> 
 						</div>
 					</div>
 	</div>

@@ -1,0 +1,291 @@
+﻿body,html {
+	height:	100%;
+	margin:	0;
+	padding:0;
+	font-family:	Arial,"Microsoft YaHei","微软雅黑",sans-serif
+}
+body {
+	padding-top:	50px;
+}
+
+.inners{
+	width:		80%;
+	margin: 	0 auto;
+}
+@media (max-width: 960px) {.inners{width:100%;}}
+
+#heading{
+    color: 		#C4E7FF;
+    background: #2E5D9C;
+    position:	fixed;
+    z-index:	1000;
+	top:		0px;
+    width:		100%;
+    min-height: 	51px;
+}
+
+#inners img{
+}
+
+.navbar{margin:0;}
+.navbar-toggle{margin-bottom:0;}
+
+.nav{
+	font-size:		14px;
+}
+.nav>li>a{
+	background: #2E5D9C;
+	color:#FFFFFF;
+}
+.nav a:hover{color:#2E5D9C;}
+
+.footer{
+	text-align:	center;
+	padding: 10px;
+}
+.footer>div{padding:10px;}
+
+
+/*	------------------------------------------
+	Inherit from "ACM Website Project"
+	------------------------------------------  */
+
+.pic{
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	background-size:	100%;
+	background-repeat: no-repeat;
+	min-width: 	100%;
+	min-height:	90%;
+	height: 90%;
+}
+
+.p1{background-image: url("../image/1_w.jpg");}
+
+.block_main {
+	background-color: rgba(256,256,256,0.6);
+	vertical-align: middle;
+	margin: 	0 auto;
+	width: 		90%;
+	height:		100%;
+}
+
+.block_main>p{margin: 0;}
+
+.block_inside {
+	text-align:	center;
+	height:		96%;
+	padding:	2%;
+	overflow:	auto;
+}
+
+.block_left {
+	border:	5px dotted #DDDDDD;
+	margin: 40px;
+}
+
+.ul_left{
+	float:		right;
+	font-size:	40px;
+	width:		540px;
+	color:		#333333;
+	line-height:2em;
+}
+
+.post,.home {
+	overflow:	auto;
+	height:		93%;
+	width:		90%;
+	margin:		20px;
+}
+
+.block_2 h1{
+	color:	#FFFFFF;
+	text-align: center;
+	font-family: YouYuan;
+	font-size:	40px;
+	padding: 12% 0;
+}
+
+.footer{
+	text-align: center;
+	padding:	10px;
+}
+
+/*	------------------------------------------
+	Inherit from "Parallax Scrolling Tutorial"
+	------------------------------------------  */
+
+article h2 { font-size: 40px; margin: 25px 0; line-height: 1em; text-shadow:0 -1px 300px #000000;}
+
+.story { height: 1000px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.3); box-shadow: 0 0 15px rgba(0,0,0,0.8) inset;}
+
+#first { background: url(../image/1.jpg) 50% 0 no-repeat fixed; background-size: 140% auto;}
+#second { background: url(../image/2.jpg) 50% 0 no-repeat fixed;background-size: 140% auto;}
+#third { background: url(../image/3.jpg) 50% 0 no-repeat fixed; background-size:140% auto;}
+#fourth { background: url(../image/4.jpg) 50% 0 no-repeat fixed; background-size:140% auto;}
+
+
+/* Introduction */
+#first { padding: 50px 0;}
+#first article { background: url(../image/grain.png) repeat #333; color: #fff; width: 445px; margin-right: 100px; padding: 10px 20px; text-shadow: 0 -1px 0 rgba(0,0,0,0.5); line-height: 1.5em; box-shadow: 0 0 25px rgba(0,0,0,0.3); border: 1px solid rgba(150,150,150,0.1); }
+#first article p { margin-bottom: 25px; }
+#first article a { color: #ff0;}
+
+/* Background Only */
+.second_left {
+	float:left;
+	width: auto;
+	max-width: 40%;
+}
+.second_left p { margin-bottom: 10%; }
+.second_left a { color: white; text-decoration: none;}
+.second_left a:hover {color: #0ff; text-decoration: underline;}
+#second ul {list-style-type: none;}
+.second_left li {padding: 3px;border-bottom:1px solid white;}
+#second .btn{background-color: rgba(0,0,0,0);border:1px solid;font-size:14px;}
+#second .btn:hover{background-color: rgba(255,255,255,0.5);border:1px solid;font-size:14px;}
+#second article {
+	position:	absolute;
+	bottom:		0;
+	width: 		100%;
+	font-size:	14px;
+	background: url(../image/shadow.png);
+	background-size: 100% 100%;
+	padding: 	0 40px 20px 40px;
+	color: 		white;
+}
+.second_right {
+	padding:	20px;
+	width: 60%;
+	position:	absolute;
+	bottom:		0;
+	right:	0;
+}
+.second_right a {
+	font-size: 28px;
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+
+/* Photograph */
+#third
+ {
+  color:#fff;
+ }
+#third .item_left
+  {  
+   padding: 10px 20px;
+   margin-left:200px;
+   margin-top:50px;
+   text-shadow: 0 -1px 0 rgba(0,0,0,0.5); 
+   line-height: 1.5em;  
+   box-shadow: 0 0 25px rgba(0,0,0,0.3); 
+   border: 1px solid rgba(150,150,150,0.1);
+   font-size:20px;
+   width:300px;
+   position:relative;
+   float:left;
+  }
+#third .item_right
+  {  
+   padding: 10px 20px;
+   margin-right:200px;
+   margin-top:50px;
+   text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+   line-height: 1.5em;
+   box-shadow: 0 0 25px rgba(0,0,0,0.3);
+   border: 1px solid rgba(150,150,150,0.1);
+   font-size:20px;
+   width:300px;
+   position:relative;
+   float:right;
+  }
+#third .row{clear:both;}
+#third .btn{background-color: rgba(0,0,0,0);border:1px solid;font-size:20px;margin:50px auto;width:300px;}
+#third .btn:hover{background-color: rgba(255,255,255,0.5);border:1px solid;font-size:20px;}
+#third h2
+ {
+  display:block;
+  text-align:center;
+  padding: 10px 20px;
+  margin-left:50px; margin-right:50px;margin-top:50px;
+ }
+/*#third article {  background: url(../image/grain.png) repeat #333; color: #fff; padding: 10px 20px; margin: 50px 0 0 60%; text-shadow: 0 -1px 0 rgba(0,0,0,0.5); line-height: 1.5em; color: #fff; position: absolute; top: 0; box-shadow: 0 0 25px rgba(0,0,0,0.3); border: 1px solid rgba(150,150,150,0.1); }
+#third .photograph { background: url(./image/photo.png) transparent 40% 50px no-repeat fixed; min-height: 1000px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; }
+#third article p { width: 300px; margin-bottom: 25px; }*/
+
+
+/* HTML5 Video */
+#fourth article {  margin-left: 10%; text-shadow: 0 -1px 0 rgba(0,0,0,0.5); line-height: 1.5em; color: #fff; position: absolute; top: 0; }
+#fourth article p { width: 300px; margin: 50px 0; }
+#fourth h2 { font-size:	40px;}
+#fourth .btn{background-color: rgba(0,0,0,0);border:1px solid;font-size:20px;}
+#fourth .btn:hover{background-color: rgba(255,255,255,0.5);border:1px solid;font-size:20px;}
+
+/* The End */
+#theend .byebye { background: url(./image/theend.png) 40% 50px no-repeat fixed; height: 1000px; padding: 0; margin: 0; width: 100%; max-width: 1920px; position: relative; margin: 0 auto; }
+
+
+/*	------------------------------------------
+	            CSS for "Old Index"
+	------------------------------------------  */
+
+.index { 
+	background     : url(../images/index_1.jpg) 50% 0 no-repeat;
+	background-size: cover;
+	position       : relative;
+}
+.index h2 { 
+	font-size  : 40px; 
+	margin     : 25px 0; 
+	line-height: 1em; 
+	text-shadow: 0 -1px 300px #000000;
+}
+.index ul {list-style-type: none;}
+.index>img {
+	float: right;
+	width: 25%;
+	margin: 5%;
+	color: white;
+}
+.article {
+	position       : absolute;
+	bottom         : 0;
+	width          : 100%;
+	background     : url(../images/shadow.png);
+	background-size: 100% 100%;
+	padding        : 20px;
+	color          : white;
+	display        : block;
+}
+
+.bottom_left {
+	float:left;
+	width: auto;
+	padding:0 10px 40px 40px;
+}
+.bottom_left p { margin-bottom: 10%; }
+.bottom_left a { color: black; text-decoration: none;}
+.bottom_left a:hover {color: #0ff; text-decoration: underline;}
+.bottom_left li {
+	padding: 3px;
+	border-bottom:1px solid white;
+}
+.bottom_right {
+	padding:20px 40px 40px 20px;
+	width: 60%;
+	float:right;
+	font-size:18px;
+}
+.bottom_right a {
+	font-size: 28px;
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+@media (max-width: 480px){
+	.article {background-color: rgba(0,0,0,0,5);}
+	.bottom_left{max-width:100%;padding:0;}
+	.bottom_right{width:100%;padding:0;	font-size:14px;}
+}

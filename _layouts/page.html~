@@ -1,0 +1,7 @@
+---
+layout: index2
+---
+
+<div id="page" class="entry entry-contents">
+	{{ content }}
+</div>

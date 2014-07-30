@@ -50,7 +50,7 @@
         <li class="dropdown">
           <a href = "{{ "/activity.html" | prepend: site.baseurl }}">活动中心</a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href = "{{ "/activity/PEFestival/index.html" | prepend: site.baseurl }}">体育节</a></li>
+            <li><a href = "{{ "/activity/PEFestival.html" | prepend: site.baseurl }}">体育节</a></li>
             <li><a href = "#">旅游</a></li>
             <li><a href = "#">夏令营</a></li>
           </ul>
