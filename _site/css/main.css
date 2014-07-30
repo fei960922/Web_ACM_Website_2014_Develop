@@ -1,4 +1,4 @@
-﻿
+
 /*	------------------------------------------
 	                CSS of "Overall"
 	------------------------------------------  */
@@ -72,12 +72,14 @@ a:hover {text-decoration: none;}
 }
 
 #headingForIndex.affix {
-   position: fixed;
-   background: #2E5D9C;
-   top: 0;
-   z-index:10;
-   max-height:51px;
-   -webkit-transition: all .6s ease-in-out;
+	position          : fixed;
+	background        : #2E5D9C;
+	top               : 0;
+	bottom            :auto;
+	width             :100%;
+	z-index           :10;
+	min-height        :51px;
+	-webkit-transition: all .6s ease-in-out;
 }
 
 #headingForPost{
@@ -95,7 +97,7 @@ a:hover {text-decoration: none;}
    background: #2E5D9C;
 	position  :	fixed;
 	z-index   :	1000;
-	top       : 0px;
+	top       : 0;
 	width     :	100%;
 	min-height: 51px;
 	text-shadow:0 0 10px #000000;
@@ -112,15 +114,14 @@ a:hover {text-decoration: none;}
 	text-shadow    :0 0 30px #000000;
  }
 
-.navbar{margin:0;}
+.navbar{margin:0;color:#FFFFFF;}
 .navbar-toggle{margin-bottom:0;}
-
 .nav>li>a{color:#FFFFFF;}
 .dropdown>a:hover,.nav li>a:hover{
 	background-color:rgba(0,0,0,0.3)!important;
 }
 .dropdown-menu>li{text-shadow:0 0 0 ;}
-
+@media (max-width: 844px){.dropdown-menu{display:none !important;}}
 .footer{
 	text-align : center;
 	height     : 50px;
@@ -174,7 +175,11 @@ a:hover {text-decoration: none;}
 	float      : right;
 	width      : 96%;
 	text-indent: 2em;
+	line-height: 2em;
 	margin     : 2%;
+}
+.index_5 ul>li:first-child {
+	font-size :20px;
 }
 .index_5 .btn {
 	padding: 10px 40px;
@@ -459,21 +464,14 @@ a:hover {text-decoration: none;}
   position: absolute;
   content: " ";
   width: 3px;
-  background-color: #eeeeee;
+  background-color: #EEEEEE;
   left: 0;
 }
 .timeline > li {
   margin-bottom: 20px;
   position: relative;
 }
-.timeline > li:before,
-.timeline > li:after {
-  content: " ";
-  display: table;
-}
-.timeline > li:after {
-  clear: both;
-}
+
 .timeline > li:before,
 .timeline > li:after {
   content: " ";
@@ -484,11 +482,15 @@ a:hover {text-decoration: none;}
 }
 .timeline-panel h2{
     padding:20px;
+    margin:0;
     color: inherit;
 }
 .timeline-pic{
-	background-size: cover;
+	background-size: 100% 100%;
+	background-repeat:no-repeat;
 	height         : 100%;
+	min-width:50%;
+	z-index:10;
 	float          : right;
 }
 .timeline-panel {
@@ -528,17 +530,15 @@ a:hover {text-decoration: none;}
 .timeline-body {
 	padding:20px;
 }
-.timeline-body > p,
-.timeline-body > ul {
-    padding:20px;
-    margin-bottom: 0;
-}
-.timeline-body > p + p {
-  margin-top: 5px;
+.timeline-body p:after {
+	content:"......";
 }
 .timeline-footer{
+	position:absolute;
+	bottom:0;
+	width:100%;
     padding:20px;
-    background-color:#f4f4f4;
+    background-color:#DDDDDD;
 }
 .timeline-footer > a{
     cursor: pointer;

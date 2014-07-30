@@ -1,0 +1,10 @@
+--- 
+layout:   travel
+title:    班级旅行·西塘
+category: travel
+feature: 
+---
+
+balabalabalabala<!--break-->
+
+<img class="img-responsive" src="{{ "/images/activity_1.jpg" | prepend: site.baseurl }}" />
