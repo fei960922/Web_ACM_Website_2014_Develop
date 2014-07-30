@@ -75,8 +75,10 @@ a:hover {text-decoration: none;}
    position: fixed;
    background: #2E5D9C;
    top: 0;
+   bottom:auto;
+   width:100%;
    z-index:10;
-   height:51px;
+   min-height:51px;
    -webkit-transition: all .6s ease-in-out;
 }
 
@@ -95,7 +97,7 @@ a:hover {text-decoration: none;}
    background: #2E5D9C;
 	position  :	fixed;
 	z-index   :	1000;
-	top       : 0px;
+	top       : 0;
 	width     :	100%;
 	min-height: 51px;
 	text-shadow:0 0 10px #000000;
