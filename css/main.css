@@ -110,7 +110,10 @@ a:hover {text-decoration: none;}
 .navbar-toggle{margin-bottom:0;}
 
 .nav>li>a{color:#FFFFFF;}
-.nav a:hover{color:#2E5D9C;}
+.dropdown>a:hover,.nav li>a:hover{
+	background-color:rgba(0,0,0,0.3)!important;
+}
+.dropdown-menu>li{text-shadow:0 0 0 ;}
 
 .footer{
 	text-align : center;
@@ -133,132 +136,67 @@ a:hover {text-decoration: none;}
 }
 .index_1 img {
 	margin:5%;
-	width:90%;
+	width :90%;
 }
 .index_2{
-	text-align     :center;
+	text-align      :center;
 	background-color: #DDDDDD;
 }
 .index_2 h1{
-	line-height: 2em;
+	line-height   : 2em;
 	vertical-align: middle;
-	margin:0;
+	margin        : 0;
 }
 .index_3, .index_5{
 	background-color: #FFFFFF;
 }
 .index_3 div {
-    text-indent:2em;
-	padding: 8% 3%;
+	text-indent:2em;
+	padding    : 8% 3%;
 }
 .index_3 img{
 	width : 20%;
-	margin:3%;
-	float: right;
+	margin: 3%;
+	float : right;
 }
 
 .index_5 img{
-	width  : 96%;
+	width : 96%;
 	margin: 2%;
 }
 .index_5 > div {
-	float:right;
-	width:96%;
-	text-indent:2em;
-	margin: 2%;
+	float      : right;
+	width      : 96%;
+	text-indent: 2em;
+	margin     : 2%;
 }
 .index_5 .btn {
-	padding:10px 40px;
-	margin:10px 30px;
+	padding: 10px 40px;
+	margin : 10px 30px;
 }
 .index_4{
 	background           : url(../images/index_1.jpg) 50% 0 no-repeat;
 	background-size      : cover;
-	background-attachment:fixed;
-	box-shadow: 0 0 20px #000000 inset; 	
+	background-attachment: fixed;
+	box-shadow           : 0 0 20px #000000 inset; 	
 }
 .index_4 h1{
-	color      :white;
-	padding    :50px 0 40px 0;
-	text-shadow:0 0 30px #000000;
-	text-align :center;
+	color      : white;
+	padding    : 50px 0 40px 0;
+	text-shadow: 0 0 30px #000000;
+	text-align : center;
 }
 .index_4 img{
-	width: 100%;
-	position:fixed;
-	top:0;
-	z-index:-1;
+	width   : 100%;
+	position: fixed;
+	top     : 0;
+	z-index : -1;
 }
 @media(min-width:640px){
-	.index_1 img {
-		margin:8%;
-		width:50%;
-	}
+	.index_1 img {margin:8%;width:50%;}
 	.index_2 h1,.index_4 h1{font-size:75px;}
 	.index_5 img {width:45%;}
 	.index_5>div {width:45%;}
-}
-/*	------------------------------------------
-	            CSS for "Old Index"
-	------------------------------------------  */
-
-.index { 
-	background     : url(../images/index_1.jpg) 50% 0 no-repeat;
-	background-size: cover;
-	position       : relative;
-}
-.index h2 { 
-	font-size  : 40px; 
-	margin     : 25px 0; 
-	line-height: 1em; 
-	text-shadow: 0 -1px 300px #000000;
-}
-.index ul {list-style-type: none;}
-.index>img {
-	float: right;
-	width: 25%;
-	margin: 5%;
-	color: white;
-}
-.article {
-	position       : absolute;
-	bottom         : 0;
-	width          : 100%;
-	background     : url(../images/shadow.png);
-	background-size: 100% 100%;
-	padding        : 20px;
-	color          : white;
-	display        : block;
-}
-
-.bottom_left {
-	float:left;
-	width: auto;
-	padding:0 10px 40px 40px;
-}
-.bottom_left p { margin-bottom: 10%; }
-.bottom_left a { color: black; text-decoration: none;}
-.bottom_left a:hover {color: #0ff; text-decoration: underline;}
-.bottom_left li {
-	padding: 3px;
-	border-bottom:1px solid white;
-}
-.bottom_right {
-	padding:20px 40px 40px 20px;
-	width: 60%;
-	float:right;
-	font-size:18px;
-}
-.bottom_right a {
-	font-size: 28px;
-	text-decoration: none;
-	color: white;
-	font-weight: bold;
-}
-@media (max-width: 480px){
-	.article {background-color: rgba(0,0,0,0,5);}
-	.bottom_left{max-width:100%;padding:0;}
-	.bottom_right{width:100%;padding:0;	font-size:14px;}
 }
 
 /*	------------------------------------------
