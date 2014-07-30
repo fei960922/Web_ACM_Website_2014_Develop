@@ -347,7 +347,7 @@ a:hover {text-decoration: none;}
 @media (max-width: 800px){
 .academic_left {
 	width:	100%;
-	min-height:	120px !important; 
+	height:	120px !important; 
 }
 .academic_left>div{
 	float:left;
