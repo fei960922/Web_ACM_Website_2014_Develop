@@ -464,21 +464,14 @@ a:hover {text-decoration: none;}
   position: absolute;
   content: " ";
   width: 3px;
-  background-color: #eeeeee;
+  background-color: #EEEEEE;
   left: 0;
 }
 .timeline > li {
   margin-bottom: 20px;
   position: relative;
 }
-.timeline > li:before,
-.timeline > li:after {
-  content: " ";
-  display: table;
-}
-.timeline > li:after {
-  clear: both;
-}
+
 .timeline > li:before,
 .timeline > li:after {
   content: " ";
@@ -494,6 +487,7 @@ a:hover {text-decoration: none;}
 .timeline-pic{
 	background-size: cover;
 	height         : 100%;
+	z-index:10;
 	float          : right;
 }
 .timeline-panel {
@@ -542,8 +536,11 @@ a:hover {text-decoration: none;}
   margin-top: 5px;
 }
 .timeline-footer{
+	position:absolute;
+	bottom:0;
+	width:100%;
     padding:20px;
-    background-color:#f4f4f4;
+    background-color:#DDDDDD;
 }
 .timeline-footer > a{
     cursor: pointer;
