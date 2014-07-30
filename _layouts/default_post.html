@@ -5,5 +5,8 @@
     <div id = "headingForPost">
     	{% include navigation.html %}
     </div>
+    <div class = "big_top" {% if page.picture %}style = "url({{site.baseurl}}/images/{{ page.picture }});"{% endif %}>
+		ACM-ICPC<br/>
+	</div>
     {{ content }}
     {% include footer.html %}
