@@ -129,7 +129,7 @@ a:hover {text-decoration: none;}
 	background-color:rgba(0,0,0,0.3)!important;
 }
 .dropdown-menu>li{text-shadow:0 0 0 ;}
-@media (max-width: 844px){.dropdown-menu{display:none !important;}}
+@media (max-width: 768px){.dropdown-menu{display:none !important;}}
 .footer{
 	text-align : center;
 	height     : 50px;
@@ -145,6 +145,7 @@ a:hover {text-decoration: none;}
 /*	------------------------------------------
 	              CSS for "Index"
 	------------------------------------------  */
+
 .index_1{
 	background     : url(../images/index_1.jpg) 50% 0 no-repeat;
 	background-size: cover;
@@ -273,21 +274,6 @@ a:hover {text-decoration: none;}
 .lesson_main {
 	background-color: #EEFDFF;
 }
-.online_judge{
-	position:absolute;
-	right:-150px;
-	top:90px;
-	background-color: rgba(255,255,255,0.2);
-	color:#FFFFFF;
-	font-size:30px;
-	padding:10px 150px;
-	transform: rotate(45deg);
-	-ms-transform: rotate(45deg);		
-	-webkit-transform: rotate(45deg);	
-	-o-transform: rotate(45deg);		
-	-moz-transform: rotate(45deg);	
-}
-@media(max-width:480px){.online_judge{font-size:14px;}}
 
 /*	------------------------------------------
 	        CSS for "Activity Center"
@@ -333,7 +319,7 @@ a:hover {text-decoration: none;}
 }
 .academic_left>div{
 	width  :100%;
-	min-height :20%;
+	height :20%;
 	padding:5px;
 }
 .academic_now{background-color: #DDDDDD !important;}
@@ -352,7 +338,7 @@ a:hover {text-decoration: none;}
 .academic_left>div{
 	float:left;
 	width:20%;
-	min-height:120px;
+	height:120px;
 	padding:5px;
 }
 .academic_left>div>h1{font-size: 40px;line-height: 0.5em;}
