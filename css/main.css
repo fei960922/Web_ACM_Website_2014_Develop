@@ -528,16 +528,8 @@ a:hover {text-decoration: none;}
 .timeline-body {
 	padding:20px;
 }
-.timeline-body:after {
+.timeline-body p:after {
 	content:"......";
-}
-.timeline-body > p,
-.timeline-body > ul {
-    padding:20px;
-    margin-bottom: 0;
-}
-.timeline-body > p + p {
-  margin-top: 5px;
 }
 .timeline-footer{
 	position:absolute;
