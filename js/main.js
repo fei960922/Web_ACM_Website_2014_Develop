@@ -1,4 +1,4 @@
-$(document).resize(function(){
+$(window).resize(function(){
     var winh=(window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight);
     $(".fullh").css({height:winh});
     if (winh<700) winh = 700;
