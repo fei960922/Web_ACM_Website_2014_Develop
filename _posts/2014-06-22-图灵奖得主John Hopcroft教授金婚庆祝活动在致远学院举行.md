@@ -1,4 +1,4 @@
---- 
+---
 layout:   news
 title:    图灵奖得主John Hopcroft教授金婚庆祝活动在致远学院举行
 category: news
