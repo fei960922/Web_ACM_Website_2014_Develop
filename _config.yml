@@ -1,7 +1,7 @@
-markdown: 		kramdown
+markdown:       kramdown
 highlighter:    pygments
 paginate:       10
-paginate_path:	"news/page:num"
+paginate_path:  "news/page:num"
 
 title:          ACM HONORED CLASS
 baseurl:        "http://fei960922.github.io/ACM_Website_2014"
