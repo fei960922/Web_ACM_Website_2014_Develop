@@ -586,13 +586,11 @@ a:hover {text-decoration: none;}
 }
 
 #pagination .prev {
-	padding-bottom: 100px;
 	padding-left: 200px;
 	float: left;
 }
 
 #pagination .next {
-	padding-bottom: 100px;
 	padding-right: 200px;
 	float: right;
 }
