@@ -134,6 +134,7 @@ a:hover {text-decoration: none;}
 	text-align : center;
 	height     : 50px;
 	line-height: 1.2em;
+	margin-bottom: 0;
 }
 .footer>div{padding:17px;}
 
