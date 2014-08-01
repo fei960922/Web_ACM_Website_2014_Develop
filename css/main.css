@@ -577,3 +577,307 @@ a:hover {text-decoration: none;}
   	left:-100px;
   	top:120px;	
 }
+
+/* @group Pagination */
+
+#pagination {
+	text-align: center;
+}
+
+#pagination .prev {
+	float: left;
+}
+
+#pagination .next {
+	float: right;
+}
+/* @end */
+
+/* @group Entry Contents */
+
+.entry-contents {
+	line-height: 1.4;
+}
+
+.entry-contents .entry-more {
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.entry-contents .entry-more:hover {
+	text-decoration: underline;
+}
+
+.entry-contents p,
+.entry-contents pre,
+.entry-contents > ul,
+.entry-contents > ol {
+	margin: 1em 0;
+}
+
+.entry-contents h3 {
+	margin: 1em 0 0.5em;
+}
+
+.entry-contents a {
+	text-decoration: underline;
+}
+
+.entry-contents sup.footnote a {
+	text-decoration: none;
+}
+
+.entry-contents p.footnote,
+.entry-contents blockquote {
+	font-size: 0.9em;
+}
+
+.entry-contents blockquote {
+	margin: 1em 2em;
+	padding: 0 1em;
+	border-left: 1px dotted #DDDDD9;
+}
+
+.entry-contents table {
+	margin: 1em auto;
+}
+
+.entry-contents th {
+	font-weight: bold;
+	text-align: center;
+	border-bottom: 2px solid black;
+}
+
+.entry-contents td,
+.entry-contents th {
+	padding: 0 1em;
+}
+
+.entry-contents td + td,
+.entry-contents th + th {
+	border-left: 1px solid black;
+}
+
+.entry-contents tr + tr {
+	border-top: 1px solid black;
+}
+
+.entry-contents pre {
+	padding: 0.5em 1em;
+	line-height: 1.4;
+	overflow: auto;
+	background: transparent url(../lib/images/code.png) !important;
+}
+
+.entry-contents ul {
+	list-style: disc outside;
+}
+
+.entry-contents ul ul {
+	list-style: circle outside;
+}
+
+.entry-contents ol {
+	list-style: decimal outside;
+}
+
+.entry-contents ol ol {
+	list-style: lower-alpha outside;
+}
+
+.entry-contents li {
+	margin-left: 3em;
+}
+
+.entry-contents .double-space li {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.entry-contents hr {
+	background: url(../lib/images/horizontal.png) repeat-x;
+	height: 3px;
+	border: 0;
+	margin: 0.5em 0;
+}
+
+/* @end */
+
+/* @group Header */
+
+#header {
+	margin : 15px auto 25px;
+	width: 960px;
+	height: 190px;
+	background-image: url(../lib/images/header.png);
+	background-size: 100% 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+#header div, #header h1 a, #subscribe {
+	position: absolute;
+}
+
+#header div {
+	width: 300px;
+	left: 50px;
+	bottom: 100px;
+	text-align: center;
+	font-family: Monaco, "Lucida Console",  monospace;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 16px;
+	color: black;
+	padding: 10px 1px;
+}
+
+#header div span {
+	color: #71f2fe;
+}
+
+#header h1 a, #subscribe {
+	display: block;
+	text-indent: -9999px;
+	bottom: 45px;
+}
+
+#header h1 a {
+	left: 65px;
+	height: 50px;
+	width: 270px;
+}
+
+#subscribe {
+	width: 75px;
+	height: 11px;
+	right: 50px;
+	background-image: url(../lib/images/subscribe.png);
+}
+
+/* @end */
+
+/* @group Nav */
+
+#nav {
+	position: absolute;
+	bottom: 44px;
+	left: 350px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#nav a {
+	padding: 5px 10px;
+	color: white;
+	text-decoration: none;
+	cursor: default;
+}
+
+#nav a:link, #nav a:visited {
+	cursor: pointer;
+}
+
+#nav li {
+	float: left;
+	text-transform: uppercase;
+	position: relative;
+	padding: 10px;
+}
+
+#nav li a {
+	width: 100px;
+}
+
+#nav li ul {
+	position: absolute;
+	top: 100%;
+	left: 10px;
+	padding: 5px 10px 20px;
+	background: url(../lib/images/nav_arrow.png) no-repeat 0px 8px;
+	width: 1000px;
+	display: none;
+	z-index: 1;
+}
+
+#nav li:hover ul {
+	display: block;
+}
+
+#nav li:hover a {
+	color: #71f2fe;
+}
+
+#nav a.active, #nav a:active,
+#nav a:link:hover, #nav a:visited:hover {
+	color: #a7ff84 !important;
+}
+
+/* @end */
+
+/* @group Content */
+
+#content {
+	width: 870px;
+	margin: 0 auto;
+	position: relative;
+	background: url(../lib/images/vertical.png) repeat-y 655px 0px;
+}
+
+#alpha {
+	float: left;
+	width: 620px;
+	background-color: rgba(255,255,255,0.8);
+	padding: 15px;
+	padding-top: 50px;
+}
+
+#beta {
+	float: right;
+	width: 190px;
+	background-color: rgba(255,255,255,0.8);
+}
+
+/* @group Entry */
+
+.entry, #pagination, #comments {
+	margin-left: 55px;
+}
+
+.entry {
+	margin-bottom: 45px;
+}
+
+.entry-date {
+	float: left;
+	margin-left: -55px;
+	padding-top: 5px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.entry-date div {
+	font-size: 27px;
+	color: #175158;
+}
+
+.entry-footer {
+	background: url(../lib/images/horizontal.png) repeat-x;
+	margin-top: 10px;
+	padding-top: 8px;
+	font-size: 12px;
+	line-height: 15px;
+}
+
+.entry-comments {
+	background-image: url(../lib/images/bubble.png);
+	float: left;
+	width: 40px;
+	height: 36px;
+	line-height: 28px;
+	margin-right: 8px;
+	text-align: center;
+	font-size: 16px;
+	color: white;
+}
