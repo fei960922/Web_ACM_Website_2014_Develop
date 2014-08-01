@@ -585,10 +585,12 @@ a:hover {text-decoration: none;}
 }
 
 #pagination .prev {
+	padding-left: 100px;
 	float: left;
 }
 
 #pagination .next {
+	padding-right: 100px;
 	float: right;
 }
 /* @end */
