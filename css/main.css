@@ -24,11 +24,14 @@ body,html {
 
 a:hover {text-decoration: none;}
 
-h2,h3,h4,h5,h6 {
+.acm_article h1,.acm_article h2 {
+	border-bottom:1px solid #DDDDDD;
+}
+h1,h2,h3,h4,h5,h6 {
 	line-height: 2em;
 }
 p {
-	line-height: 1.5em;
+	line-height: 1.6em;
 	text-indent: 2em;
 }
 
@@ -524,8 +527,7 @@ p {
 	background-position: center;
 	background-repeat  : no-repeat;
 	height             : 100%;
-	min-width          : 40%;
-	max-width          : 40%;
+	min-width          : 50%;
 	z-index            : 10;
 	float              : right;
 }
