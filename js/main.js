@@ -62,7 +62,7 @@ $("#headingForPost").affix({
         top: $(".big_top").height()*0.5
     }
 });
-$(".lead img").addClass("img-responsive");
+$(".signForNews img").addClass("img-responsive");
 /*	------------------------------------------
 	      Inherit from "www.youziku.com"
 	------------------------------------------  */
