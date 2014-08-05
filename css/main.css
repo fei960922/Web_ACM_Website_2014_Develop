@@ -1142,3 +1142,84 @@ p {
 .one_team_intro img {
 	width: 100%;
 }
+
+/*CSS For Timeline in Intro_index*/
+#dates a {
+	color: black;
+	text-decoration: none;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+	transition: 0.5s;
+	margin: 0;
+	padding: 0;
+}
+	#dates a:hover,
+	#dates a.selected {
+		font-size:20px;
+		margin: 0;
+	padding: 0;
+	}
+
+	#timeline {
+		width: 800px;
+		height: 100px;
+		overflow: hidden;
+		margin: 50px auto;
+		background: url('../images/dot.gif') left 45px repeat-x;
+	}
+		#dates {
+			width: 800px;
+			height: 60px;
+			overflow: hidden;
+			margin: 0;
+	    padding: 0;
+		}
+			#dates li {
+				list-style: none;
+				float: left;
+				width: 100px;
+				height: 50px;
+				font-size: 14px;
+				text-align: center;
+				background: url('../images/biggerdot.png') center bottom no-repeat;
+				margin: 0;
+	padding: 0;
+			}
+				#dates a {
+					line-height: 38px;
+					padding-bottom: 10px;
+					margin: 0;
+				}
+				#dates .selected {
+			        font-size: 20px;
+			        margin: 0;
+	padding: 0;
+				}
+		
+		#issues {
+			width: 800px;
+			height: 350px;
+			overflow: hidden;
+			margin: 0;
+	padding: 0;
+		}	
+			#issues li {
+				width: 800px;
+				height: 350px;
+				list-style: none;
+				float: left;
+				margin: 0;
+	padding: 0;
+			}
+				#issues li p {
+				text-align:center;
+					font-size: 14px;
+					margin-right: 70px;
+					font-weight: normal;
+					line-height: 22px;
+					text-shadow: #000 1px 1px 2px;
+					margin: 0;
+	padding: 0;
+				}
