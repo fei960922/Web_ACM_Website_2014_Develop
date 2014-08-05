@@ -319,7 +319,7 @@ p {
 .bi3 h1{position:absolute;top:0;right:10px;}
 .bi4 h1{position:absolute;top:0;left:10px;}
 
-
+.intro_1,.intro_2,.intro_3,.intro_4{padding:40px 10px;}
 .intro_1>h1{
 	font-size:200px;
 	margin: 0 50px 0 20px;
