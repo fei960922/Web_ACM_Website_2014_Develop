@@ -22,25 +22,30 @@ Bugs: ACM班班徽的位置待定；响应式有一些bug；内容似乎还不�
         <p>ACM班的取名源于国际科学教育计算机组织——美国计算机学会（Association of Computing Machinery），它是世界上第一个、也是最有影响的计算机组织，计算机领域最高奖——图灵奖是由该组织设立和颁发的。这寓意ACM班旨在培养计算机科学家。</p>
         <br/>
         <p>今天，计算机科学班（ACM班）的历史将翻开了新的一页。新征程、新挑战，我们共同预祝其拥有更加美好的明天！</p>
+        <button type="button" class="btn btn_new">了解班级</button>
+        <button type="button" class="btn btn_new">加入ACM</button>
+        <button type="button" class="btn btn_new">了解课程</button>
       </div> 
     </div>
-    <div class="index_4">
+    <div class="index_4 fixh">
       <h1>新闻中心</h1>
-    </div>
-    <div class="index_5">
-      <img src = "./images/index_5.jpg" />
-      <div>
-        <h1>最新新闻</h1>
-        <ul>
-          <li><a href = "{{ "/news/图灵奖得主John%20Hopcroft教授金婚庆祝活动在致远学院举行/" | prepend: site.baseurl }}">图灵奖得主John Hopcroft教授金婚庆祝活动成功举行</a></li>
-          <li><a href = "/">2014届毕业生毕业感悟</a></li>
-          <li><a href = "{{ "/news/ACM班学子获第38届ACM国际大学生程序设计竞赛总决赛银牌/" | prepend: site.baseurl }}">ACM班学子获第38届ACM国际大学生程序设计竞赛总决赛银牌  </a></li>
-          <li><a href = "/">2014年度ACM学术节成功举行</a></li>
-          <li><a href = "/">2014年度ACM体育节盛大开幕啦！</a></li>
-          <li><a href = "/">ACM班新版班衫开始征订啦！ </a></li>
-        </ul>
-        <button type="button" class="btn btn_new" onclick="window.open('./news/index.html')">点击查看更多</button>
-      </div>
+      <article>
+        <div class = "second_right">
+          <a href = "/">我校特聘教授，图灵奖获得者John Hopcroft金婚庆典</a>
+          <p>
+          6月18日下午，包括张杰校长在内的致远学院领导以及许多ACM班同学为我校特聘教授John Hopcroft举行了一场别开生面的金婚庆典，纪念John和她夫人多年来矢志不渝的爱情。庆典现场十分热闹，大家有说有笑，非常愉快。
+          </p>
+        </div>
+        <div class = "second_left">
+          <h3>最新新闻</h3>
+          <ul>
+            <li><a href = "/">全国中学生信息学特长生夏令营通知</a></li>
+              <li><a href = "/">2012年度ACM体育节盛大开幕啦！</a></li>
+              <li><a href = "/">ACM班新版班衫开始征订啦！ </a></li>
+            </ul>
+            <button type="button" class="btn btn_new btn-block">点击查看更多</button>
+        </div>
+      </article>
     </div>
   </div>
 {% include footer.html %}

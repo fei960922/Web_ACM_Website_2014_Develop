@@ -37,6 +37,7 @@ a:hover {text-decoration: none;}
 
 h1,h2,h3,h4,h5,h6 {
 	line-height: 2em;
+	margin:0;
 }
 p {
 	line-height: 1.6em;
@@ -182,7 +183,7 @@ p {
 	vertical-align: middle;
 	margin        : 0;
 }
-.index_3, .index_5{
+.index_3, .index_4{
 	background-color: #FFFFFF;
 }
 .index_3 div {
@@ -194,49 +195,92 @@ p {
 	margin: 2%;
 	float : right;
 }
+.index_3 .btn {
+	width:20%;
+	font-size:14px;
+	margin:20px;
+}
 @media (min-width:1100px) {.index_3 img {width:200px;}}
-.index_5 img{
+.index_4 img{
 	width : 96%;
 	margin: 2%;
 }
-.index_5 > div {
+.index_4 > div {
 	float      : right;
 	width      : 96%;
 	text-indent: 2em;
 	line-height: 2em;
 	margin     : 2%;
 }
-.index_5 ul>li:first-child {
+.index_4 ul>li:first-child {
 	font-size :20px;
 }
-.index_5 .btn {
-	padding: 10px 40px;
-	margin : 10px 30px;
-}
-.index_4{
-	background           : url(../images/index_2.jpg) 50% 0 no-repeat;
-	background-size      : cover;
-	background-attachment: fixed;
-	box-shadow           : 0 0 20px #000000 inset; 	
-}
+
 .index_4 h1{
 	color      : white;
 	padding    : 50px 0 40px 0;
 	text-shadow: 0 0 30px #000000;
 	text-align : center;
 }
-.index_4 img{
-	width   : 100%;
-	position: fixed;
-	top     : 0;
-	z-index : -1;
+.index_4 { 
+	padding: 0; 
+	margin: 0; 
+	width: 100%;
+	position: relative; 
+	margin: 0 auto; 
+	border-top: 1px solid rgba(255,255,255,0.3); 
+	box-shadow: 0 0 15px rgba(0,0,0,0.8) inset;
+	background: url(../images/index_4.jpg) 50% 0 no-repeat fixed;
+	background-size: cover;
 }
+.second_left {
+	float:left;
+	width: auto;
+	max-width: 100%;
+	width:100%;
+}
+.second_left p { margin-bottom: 10%; }
+.second_left a { color: white; text-decoration: none;}
+.second_left a:hover {color: #999999; text-decoration: none;}
+.index_4 ul {list-style-type: none;}
+.second_left li {padding: 3px;border-bottom:1px solid white;}
+
+.index_4 article {
+	position:	absolute;
+	bottom:		0;
+	width: 		100%;
+	font-size:	14px;
+	background: url(../images/shadow.png);
+	background-size: 100% 100%;
+	padding: 	0 40px 20px 40px;
+	color: 		white;
+}
+.second_right {
+	width:100%;
+	position:relative;
+	float:right;
+}
+.second_right a {
+	font-size: 28px;
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+.second_left h3,.second_left ul {display:none;}
 @media(min-width:640px){
 	.index_1 img {margin:8%;width:50%;}
 	.index_2 h1,.index_4 h1{font-size:75px;}
-	.index_5 img {width:45%;}
-	.index_5>div {width:45%;}
+	.second_left {max-width:40%;}
+	.second_left h3,.second_left ul {display:block;}
+	.second_right {
+		padding : 20px;
+		width   : 60%;
+		position: absolute;
+		bottom  : 0;
+		right   : 0;
+	}
 }
+
 
 /*	------------------------------------------
 	        CSS for "Introduction"
