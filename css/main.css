@@ -984,3 +984,48 @@ p {
 	font-size: 16px;
 	color: white;
 }
+
+/* honor */
+
+.cup-left {
+	margin-top: 50px;
+	vertical-align: middle;
+	float: left;
+	width: 20%;
+	position: fixed;
+}
+
+.cup-left img {
+	width: 100%;
+}
+
+.winner_image {
+	float: left;
+	width: 50%;
+	height: 100%;
+	background-image: url(../images/ACMFinal2014.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	vertical-align: middle;
+}
+
+.winner_script {
+	padding: 6px;
+	background-color: rgba(255, 255, 255, 0.8);
+	float: right;
+}
+
+.winner_script div {
+	vertical-align: middle;
+}
+
+.winner_title {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.winner_info {
+	width: 30%;
+	padding: 10px;
+	float: left;
+}
