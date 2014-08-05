@@ -1,10 +1,9 @@
-<!---
+---
 layout:	default
 title: honor
 ---
--->
 
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -17,7 +16,74 @@ title: honor
 </head>
 <body class = "Microsoft_YaHei">
 
-<div class = "acm_size">
+<div id = "headingDefault">
+<div class="inners" >
+  <nav class="navbar" role="navigation">
+    <div class="navbar-header">
+      <a href = "{{ "/index.html" | prepend: site.baseurl }}"><img src = "{{"/images/head-logo.png" | prepend: site.baseurl }}" style = "float:left;width:180px;height:45px;"></a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        导航<span class="sr-only">Toggle navigation</span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href = "{{ "/index.html" | prepend: site.baseurl }}">首页</a></li>
+        <li class="dropdown">
+          <a href = "{{ "/intros/intro_index.html" | prepend: site.baseurl }}">班级介绍</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href = "{{ "/intros/class.html" | prepend: site.baseurl }}">班级理念</a></li>
+            <li><a href = "{{ "/intros/teachers.html" | prepend: site.baseurl }}">教师名录</a></li>
+			<li><a href = "{{ "/intros/students.html" | prepend: site.baseurl }}">学子风采</a></li>
+            <li><a href = "{{ "/intros/honor.html" | prepend: site.baseurl }}">荣誉榜</a></li>
+            <li><a href = "{{ "/intros/acmicpc.html" | prepend: site.baseurl }}">ACM-ICPC</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href = "{{ "/enroll.html" | prepend: site.baseurl }}">招生信息</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href = "#">招生简章</a></li>
+            <li><a href = "#">招生条件</a></li>
+            <li><a href = "#">招生政策</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href = "{{ "/lessons/lesson_index.html" | prepend: site.baseurl }}">课程中心</a>
+          <ul class="dropdown-menu" role="menu">
+			<li><a href = "http://acm.sjtu.edu.cn/OnlineJudge">Online Judge系统</a></li>
+            <li class="divider"></li>
+            <li><a href = "{{ "/lessons/lesson_1.html" | prepend: site.baseurl }}">PPCA</a></li>
+            <li><a href = "{{ "/lessons/lesson_2.html" | prepend: site.baseurl }}">数据结构</a></li>
+            <li><a href = "{{ "/lessons/lesson_3.html" | prepend: site.baseurl }}">程序设计</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href = "{{ "/academics/academic_1.html" | prepend: site.baseurl }}">学术中心</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href = "{{ "/academics/academic_1.html" | prepend: site.baseurl }}">科研成果</a></li>
+            <li><a href = "{{ "/academics/academic_2.html" | prepend: site.baseurl }}">学术交流</a></li>
+            <li><a href = "{{ "/academics/academic_3.html" | prepend: site.baseurl }}">学长讲坛</a></li>
+			<li><a href = "{{ "/academics/academic_4.html" | prepend: site.baseurl }}">学术节</a></li>
+            <li><a href = "{{ "/academics/academic_5.html" | prepend: site.baseurl }}">实习版块</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href = "{{ "/activity.html" | prepend: site.baseurl }}">活动中心</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href = "{{ "/activity/PEFestival/index.html" | prepend: site.baseurl }}">体育节</a></li>
+            <li><a href = "{{ "/activity/travel/index.html" | prepend: site.baseurl }}">旅游</a></li>
+            <li><a href = "{{ "/activity/camp/index.html" | prepend: site.baseurl }}">夏令营</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href = "{{ "/news/index.html" | prepend: site.baseurl }}">新闻中心</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+</div>-->
+
+<div class = "acm_size" style = "margin-right: 0px">
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators acm_bottom">
@@ -63,12 +129,57 @@ title: honor
 </div>
 </div>
 
+<div class = "acm_history bs-example">
+	<ul class="nav nav-pills nav-stacked acm_history_list" role="tablist">
+		<li>
+			<a href = "#">2014年&emsp;ACM-ICPC&emsp;竞赛</a>
+		</li>
+		<li>
+			<a href = "#">2013年&emsp;ACM-ICPC&emsp;竞赛</a>
+		</li>
+		<li>
+			<a href = "#">2012年&emsp;ACM-ICPC&emsp;竞赛</a>
+		</li>
+		<li>
+			<a href = "#">2011年&emsp;ACM-ICPC&emsp;竞赛</a>
+		</li>
+		<li>
+			<a href = "#">2010年&emsp;ACM-ICPC&emsp;竞赛</a>
+		</li>
+		<li>
+			<a href = "#">2009年&emsp;ACM-ICPC&emsp;竞赛</a>
+		</li>
+		<li>
+			<a href = "#">2008年&emsp;ACM-ICPC&emsp;竞赛</a>
+		</li>
+		<li>
+			<a href = "#">2007年&emsp;ACM-ICPC&emsp;竞赛</a>
+		</li>
+	</ul>
+</div>
 
-</body>
+<div class="teams_intro">
+    <div>
+      <div class="one_team_intro">
+        <img src="../images/intro_4.jpg" alt="">
+        <h3><a href = "#">Mithril</a></h3>
+      </div>
+       <div class="one_team_intro">
+        <img src="../images/intro_4.jpg" alt="">
+        <h3><a href = "#">Mithril</a></h3>
+      </div>
+       <div class="one_team_intro">
+        <img src="../images/intro_4.jpg" alt="">
+        <h3><a href = "#">Mithril</a></h3>
+      </div>
+    </div>
+</div>
+
+<!--</body>
 
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/jquery.md5.js"></script> 
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/main.js"></script>
 
-</html>
+</html>-->
