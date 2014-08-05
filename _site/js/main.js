@@ -1,11 +1,12 @@
-$(document).resize(function(){
+$(window).resize(function(){
     var winh=(window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight);
     $(".fullh").css({height:winh});
     if (winh<700) winh = 700;
     var h = winh - 102;
     $(".minh").css({"min-height":h});
     $(".fixh").css({height:h});
-    h = (winh-102)/2;
+    h = (winh-102)*2/3;
+    $(".halfh").css({height:h});
     $(".block_intro_out").css({height:h});
     $(".block_intro").css("display","none");
 })
@@ -16,7 +17,8 @@ $(document).ready(function(){
     var h = winh - 102;
     $(".minh").css({"min-height":h});
     $(".fixh").css({height:h});
-    h = (winh-102)/2;
+    h = (winh-102)*2/3;
+    $(".halfh").css({height:h});
     $(".block_intro_out").css({height:h});
     $(".block_intro").css("display","none");
     fontmaking();
@@ -62,7 +64,7 @@ $("#headingForPost").affix({
         top: $(".big_top").height()*0.5
     }
 });
-$(".lead img").addClass("img-responsive");
+$(".signForNews img").addClass("img-responsive");
 /*	------------------------------------------
 	      Inherit from "www.youziku.com"
 	------------------------------------------  */
