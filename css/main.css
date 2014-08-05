@@ -27,6 +27,14 @@ a:hover {text-decoration: none;}
 .acm_article h1,.acm_article h2 {
 	border-bottom:1px solid #DDDDDD;
 }
+.acm_article li {
+	line-height:1.6em;
+}
+.acm_article ul {
+	list-style: none;
+	display: block;
+}
+
 h1,h2,h3,h4,h5,h6 {
 	line-height: 2em;
 }
@@ -418,34 +426,32 @@ p {
 	line-height: 1.5em; color: #fff; 
 }
 .article_activity h2 { font-size:40px;}
-}
+
 
 /*	------------------------------------------
 	        CSS for "Academic Center"
 	------------------------------------------  */
 
-.academic_left {padding:0;}
-.academic_left>div{
+.academic_left>div {
 	background-color: #EEEEEE;
 	text-align      : center;
+	padding:5px;
 }
 .academic_left>div:hover{background-color: #CCCCCC;}
 @media (min-width: 801px){
 .academic_left {
 	float:left;
-	width:	20%;
+	position:fixed;
+	width: 15%;
 }
+.academic_left h1,.academic_left h2{line-height: 1em;}
 .academic_left>div{
 	width  :100%;
 	height :20%;
-	padding:5px;
 }
 .academic_now{background-color: #DDDDDD !important;}
 .academic_main {
-	float:right;
-	overflow: auto;
-	width:	80%;
-	padding:20px;
+	margin: 20px 20px 20px 18%;
 }
 }
 @media (max-width: 800px){
@@ -456,11 +462,9 @@ p {
 .academic_left>div{
 	float:left;
 	width:20%;
-	height:120px;
-	padding:5px;
 }
 .academic_left>div>h1{font-size: 40px;line-height: 0.5em;}
-.academic_left>div>h2{font-size: 20px;}
+.academic_left>div>h2{font-size: 20px;line-height: 0.5em;}
 .academic_main {
 	width:	100%;
 }
