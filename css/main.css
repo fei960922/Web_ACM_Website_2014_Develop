@@ -268,6 +268,89 @@ p {
 .bi3 h1{position:absolute;top:0;right:10px;}
 .bi4 h1{position:absolute;top:0;left:10px;}
 
+
+.intro_1>h1{
+	font-size:200px;
+	margin: 0 50px 0 20px;
+	line-height: 1.6em;
+	float:left;
+	border-bottom: 15px solid #CCCCCC;
+}
+.intro_2 h1{
+	font-size:200px;
+	float:right;
+	line-height:1em;
+	padding: 0 40px;
+	border-right: 15px solid #CCCCCC;
+}
+.intro_3 h1{
+	font-size:200px;
+	float:left;
+	line-height:1em;
+	padding: 0 40px;
+	border-left: 15px solid #CCCCCC;
+}
+.intro_4 h1{
+	font-size:200px;
+	float:right;
+	line-height:1.6em;
+	padding: 0 20px 0 50px;
+	border-top: 15px solid #CCCCCC;
+}
+.intro_2 {background-color: rgba(46,93,156,0.3);}
+.intro_3 {background-color: rgba(46,93,156,0.6);color:white;}
+.intro_4 {background-color: rgba(46,93,156,0.9);color:white;}
+.intro_1>img {
+	width:30%;
+	float:right;
+	margin:20px 20px 0 50px;
+}
+.intro_1 p{font-size:14px;}
+.intro_1>div>img {padding:20px;}
+
+.intro_2 div {padding:20px;}
+.intro_2 h2{font-size:50px;}
+.intro_2>div>div>h3{
+	text-align:center;
+	line-height:1em;
+}
+.intro_2 img{
+	width:90%;
+	box-shadow:0 0 30px #000000;
+	margin:5% 5%;
+}
+.intro_2 h4 {font-size:35px;}
+.intro_3 img {width:100%;}
+.intro_3 p,.intro_4 p {
+	font-size:14px;
+	margin:0;
+}
+.intro_slide {
+	height:100%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	width:100%;
+}
+.intro_3 h2{
+	color:#000000;
+	font-size: 50px;
+	margin:0;
+	padding:20px;
+	text-shadow: 0 0 20px #000000;
+}
+.intro_4 h2 {margin-top:0;}
+.intro_4>img {
+	float:left;
+	padding:20px;
+}
+.intro_4 table {
+	margin:20px auto;
+}
+.intro_4 td {
+	padding:10px 30px;
+}
+
 /*	------------------------------------------
 	        CSS for "Lesson Center"
 	------------------------------------------  */
@@ -409,8 +492,7 @@ p {
 	background-repeat: no-repeat;
 	background-position: center;
 	width:70%;
-	margin:30px auto;
-	box-shadow:0 0 30px #000000;
+	box-shadow: 0 0 30px #000000;
 }
 .student_slide h1{
 	float:left;

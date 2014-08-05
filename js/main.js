@@ -5,7 +5,8 @@ $(window).resize(function(){
     var h = winh - 102;
     $(".minh").css({"min-height":h});
     $(".fixh").css({height:h});
-    h = (winh-102)/2;
+    h = (winh-102)*2/3;
+    $(".halfh").css({height:h});
     $(".block_intro_out").css({height:h});
     $(".block_intro").css("display","none");
 })
@@ -16,7 +17,8 @@ $(document).ready(function(){
     var h = winh - 102;
     $(".minh").css({"min-height":h});
     $(".fixh").css({height:h});
-    h = (winh-102)/2;
+    h = (winh-102)*2/3;
+    $(".halfh").css({height:h});
     $(".block_intro_out").css({height:h});
     $(".block_intro").css("display","none");
     fontmaking();
