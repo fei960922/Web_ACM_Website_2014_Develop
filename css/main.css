@@ -331,14 +331,14 @@ p {
 	font-size:200px;
 	float:right;
 	line-height:1em;
-	padding: 0 40px;
+	padding: 20px 40px;
 	border-right: 15px solid #CCCCCC;
 }
 .intro_3 h1{
 	font-size:200px;
 	float:left;
 	line-height:1em;
-	padding: 0 40px;
+	padding:20px 40px;
 	border-left: 15px solid #CCCCCC;
 }
 .intro_4 h1{
