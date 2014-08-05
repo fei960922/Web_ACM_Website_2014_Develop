@@ -999,6 +999,13 @@ p {
 	position: fixed;
 }
 
+.cup-left .left-script {
+	text-align: center;
+	font-size: 100px;
+	font-family: "黑体";
+	font-weight: bold;
+}
+
 .cup-left img {
 	margin-top: 80%;
 	width: 100%;
