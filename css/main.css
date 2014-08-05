@@ -1010,10 +1010,9 @@ p {
 	margin-left: 20%;
 	float: left;
 	width: 50%;
-	height: 80%;
 	background-image: url(../images/ACMFinal2014.jpg);
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-width: 100% 100%;
 	vertical-align: middle;
 	margin-top: 5%;
 	margin-bottom: 5%;
