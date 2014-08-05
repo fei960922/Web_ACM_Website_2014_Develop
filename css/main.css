@@ -298,7 +298,6 @@ p {
 	border-top: 15px solid #CCCCCC;
 }
 .intro_2 {background-color: rgba(46,93,156,0.3);}
-.intro_3 {background-color: rgba(46,93,156,0.6);color:white;}
 .intro_4 {background-color: rgba(46,93,156,0.9);color:white;}
 .intro_1>img {
 	width:30%;
@@ -319,7 +318,11 @@ p {
 	box-shadow:0 0 30px #000000;
 	margin:5% 5%;
 }
-.intro_2 h4 {font-size:35px;}
+.intro_2 h4 {
+	font-size:35px;
+	padding:0 1%;
+	text-align: right;
+}
 .intro_3 img {width:100%;}
 .intro_3 p,.intro_4 p {
 	font-size:14px;
@@ -349,6 +352,10 @@ p {
 }
 .intro_4 td {
 	padding:10px 30px;
+}
+.intro_4 button {
+	padding:0 20px;
+	margin:10px;
 }
 
 /*	------------------------------------------
