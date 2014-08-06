@@ -383,6 +383,7 @@ p {
 	height: 100px;
 	overflow: hidden;
 	margin: 50px auto;
+	padding: 0;
 	background: url('../images/dot.gif') left 45px repeat-x;
 }
 #dates {
