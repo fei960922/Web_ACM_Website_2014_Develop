@@ -56,7 +56,7 @@ p {
 	width    : 100%;
 	max-width: 1200px;
 	margin   : auto;
-	padding:20px;
+	padding  :0 20px;
 }
 .container{
 	width    : 100%;
@@ -1191,46 +1191,50 @@ padding: 0;
 	float: left;
 	margin-top: 0px;
 }
-
-.item img {
+.acm_size_slide{
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	height:500px;
 	width: 100%;
-	height: 500px;
 	position: relative;
 }
 
 .acm_caption_bac {
-	background-image: url(../images/shadow.png);
+	position:	absolute;
+	bottom:		0;
+	width: 		100%;
+	height:25%;
+	font-size:	14px;
+	background: url(../images/shadow.png);
 	background-size: 100% 100%;
-	bottom: 0px;
-	position: absolute;
+	padding: 	24px 40px;
+	color: 		white;
+	text-align: center;
 }
 
 .acm_bottom {
-	bottom: 5px;
+	bottom: 2px;
 }
 
 .acm_history {
 	width: 33%;
 	float: right;
-	padding-top: 1%;
-	background-color: rgba(46,93,156,0.3);
-	padding-left: 20px;
+	background-color: rgba(46,93,156,0.8);
 }
-
 .acm_history li {
-	padding-top: 0px;
 	font-size: 20px;
-	height: 11%;
+	height: 10%;
+	margin-top:0 !important;
 }
 
 .acm_history_list {
-	margin-top: 0px;
-	height: 520px;
+	height: 500px;
 }
 
 .acm_history_list li a {
 	border: 0px solid #ddd;
-	color: #08c;
+	color:white;
 	text-align: center;
 }
 
@@ -1239,6 +1243,7 @@ padding: 0;
 	float: left;
 	margin-top: 0;
 	padding-top: 3%;
+	background-color: #EEEEEE;
 }
 
 .team_frame {
@@ -1250,24 +1255,13 @@ padding: 0;
 .team_frame div {
 	padding-top: 5px;
 	font-size: 20px;
-	font-weight: bold;
 }
 
+.one_team_intro {margin:20px 0;}
 .one_team_intro img {
 	box-shadow: 0px 0px 20px #000;
 }
 
-.teams_intro .one_team_intro {
-	width: 32%;
-	padding-left: 2%;
-	float: left;
-	text-align: center;
-}
-
 .one_team_intro img {
 	width: 100%;
-}
-
-.acm_history ul>li:last-child a {
-	text-align: right;
 }
