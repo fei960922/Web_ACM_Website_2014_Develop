@@ -144,7 +144,7 @@ p {
 
 .navbar{margin:0;color:#FFFFFF;}
 .navbar-toggle{margin-bottom:0;}
-.nav>li>a{color:#FFFFFF;padding:10px 10px;}
+.nav>li>a{color:#FFFFFF;padding:15px 14px;}
 .dropdown>a:hover,.nav li>a:hover{
 	background-color:rgba(0,0,0,0.3)!important;
 }
@@ -1157,6 +1157,10 @@ padding: 0;
 	margin-right: 0px;
 	float: left;
 	margin-top: 0px;
+}
+@media(max-width: 768px) {
+	.acm_size{width:100%;}
+	.acm_history {width:100%;}
 }
 .acm_size_slide{
 	background-size: cover;
