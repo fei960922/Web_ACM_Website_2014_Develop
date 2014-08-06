@@ -56,6 +56,7 @@ p {
 	width    : 100%;
 	max-width: 1200px;
 	margin   : auto;
+	padding:20px;
 }
 .container{
 	width    : 100%;
@@ -278,11 +279,12 @@ p {
 .bi4 h1{position:absolute;top:0;left:10px;}
 
 
-.intro_1>h1{
+.intro_1 h1{
 	font-size:200px;
-	margin: 0 50px 0 20px;
-	line-height: 1.6em;
+	padding:20px;
+	line-height: 1.4em;
 	float:left;
+	margin:30px;
 	border-bottom: 15px solid #CCCCCC;
 }
 .intro_2 h1{
@@ -296,7 +298,10 @@ p {
 	font-size:200px;
 	float:left;
 	line-height:1em;
-	padding: 0 40px;
+	padding: 20px;
+	position:absolute;
+	bottom:3%;
+	left :3%;
 	border-left: 15px solid #CCCCCC;
 }
 .intro_4 h1{
@@ -306,19 +311,30 @@ p {
 	padding: 0 20px 0 50px;
 	border-top: 15px solid #CCCCCC;
 }
-.intro_2 {background-color: rgba(46,93,156,0.3);}
+.intro_1 {
+	background-color: rgba(46,93,156,1);
+	color:white;
+	padding:5% 0;
+}
+.intro_2 {background-color: rgba(46,93,156,0.2);}
+.intro_3 {
+	background-color: rgba(46,93,156,0.5);
+	position:relative;
+}
 .intro_4 {background-color: rgba(46,93,156,0.9);color:white;}
-.intro_1>img {
-	width:30%;
+.intro_1 h2 {padding-top:10%;}
+.intro_1>div>img {
+	width:360px;
+	max-width:40%;
 	float:right;
-	margin:20px 20px 0 50px;
+	margin:6%;
 }
 .intro_1 p{font-size:14px;}
-.intro_1>div>img {padding:20px;}
+.intro_1>div>div>img {padding:20px;}
 
-.intro_2 div {padding:20px;}
+.intro_2>div>div {padding:5% 20px;}
 .intro_2 h2{font-size:50px;}
-.intro_2>div>div>h3{
+.intro_2 h3{
 	text-align:center;
 	line-height:1em;
 }
@@ -339,10 +355,16 @@ p {
 }
 .intro_slide {
 	height:100%;
+	width:100%;
+}
+.intro_slide_pic {
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-position: center;
-	width:100%;
+}
+.intro_slide_text {
+	text-align: right;
+	padding:5%;
 }
 .intro_3 h2{
 	color:#000000;
@@ -351,8 +373,9 @@ p {
 	padding:20px;
 	text-shadow: 0 0 20px #000000;
 }
+.intro_4 {padding-top:10%;}
 .intro_4 h2 {margin-top:0;}
-.intro_4>img {
+.intro_4 img {
 	float:left;
 	padding:20px;
 }
@@ -366,6 +389,90 @@ p {
 	padding:0 20px;
 	margin:10px;
 }
+
+/*CSS For Timeline in Intro_index*/
+#dates a {
+	color: black;
+	text-decoration: none;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+	transition: 0.5s;
+	margin: 0;
+	padding: 0;
+}
+#dates a:hover,
+#dates a.selected {
+	font-size:20px;
+	margin: 0;
+	padding: 0;
+}
+
+#intro_timeline {
+	max-width: 800px;
+	width:100%;
+	height: 100px;
+	overflow: hidden;
+	margin: 7% auto 0 auto;
+	background: url('../images/dot.gif') left 45px repeat-x;
+}
+#dates {
+	width: 800px;
+	height: 60px;
+	overflow: hidden;
+	margin: 0;
+padding: 0;
+}
+#dates li {
+	list-style: none;
+	float: left;
+	width: 100px;
+	height: 50px;
+	font-size: 14px;
+	text-align: center;
+	background: url('../images/biggerdot.png') center bottom no-repeat;
+	margin: 0;
+	padding: 0;
+}
+#dates a {
+	line-height: 38px;
+	padding-bottom: 10px;
+	margin: 0;
+}
+#dates .selected {
+    font-size: 20px;
+    margin: 0;
+	padding: 0;
+}
+
+#issues {
+	width: 800px;
+	height: 350px;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}	
+#issues li {
+	width: 800px;
+	height: 350px;
+	list-style: none;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+#issues li p {
+	text-align:center;
+	font-size: 14px;
+	margin-right: 70px;
+	font-weight: normal;
+	line-height: 22px;
+	text-shadow: #000 1px 1px 2px;
+	margin: 0;
+	padding: 0;
+}
+@media (max-width: 800px){#intro_timeline{display:none !important;}}
+
 
 
 /*	------------------------------------------
@@ -1144,85 +1251,3 @@ p {
 	width: 100%;
 }
 
-/*CSS For Timeline in Intro_index*/
-#dates a {
-	color: black;
-	text-decoration: none;
-	-webkit-transition: 0.5s;
-	-moz-transition: 0.5s;
-	-o-transition: 0.5s;
-	-ms-transition: 0.5s;
-	transition: 0.5s;
-	margin: 0;
-	padding: 0;
-}
-	#dates a:hover,
-	#dates a.selected {
-		font-size:20px;
-		margin: 0;
-	padding: 0;
-	}
-
-	#timeline {
-		max-width: 800px;
-		width:100%;
-		height: 100px;
-		overflow: hidden;
-		margin: 50px auto;
-		background: url('../images/dot.gif') left 45px repeat-x;
-	}
-		#dates {
-			width: 800px;
-			height: 60px;
-			overflow: hidden;
-			margin: 0;
-	    padding: 0;
-		}
-			#dates li {
-				list-style: none;
-				float: left;
-				width: 100px;
-				height: 50px;
-				font-size: 14px;
-				text-align: center;
-				background: url('../images/biggerdot.png') center bottom no-repeat;
-				margin: 0;
-	padding: 0;
-			}
-				#dates a {
-					line-height: 38px;
-					padding-bottom: 10px;
-					margin: 0;
-				}
-				#dates .selected {
-			        font-size: 20px;
-			        margin: 0;
-	padding: 0;
-				}
-		
-		#issues {
-			width: 800px;
-			height: 350px;
-			overflow: hidden;
-			margin: 0;
-	padding: 0;
-		}	
-			#issues li {
-				width: 800px;
-				height: 350px;
-				list-style: none;
-				float: left;
-				margin: 0;
-	padding: 0;
-			}
-				#issues li p {
-				text-align:center;
-					font-size: 14px;
-					margin-right: 70px;
-					font-weight: normal;
-					line-height: 22px;
-					text-shadow: #000 1px 1px 2px;
-					margin: 0;
-	padding: 0;
-				}
-	@media (max-width: 800px){#timeline{display:none !important;}}
