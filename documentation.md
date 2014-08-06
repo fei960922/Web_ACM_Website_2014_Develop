@@ -1,7 +1,8 @@
 ---
 layout:	default_post
-title: Enrollment
+title: Documentation
 title_full: 文档<br/>Documentation
+pic: btop_documantation.jpg
 ---
 
 #引言
@@ -529,6 +530,8 @@ title_full: 文档<br/>Documentation
 ###学术中心
 
 >修改中
+
+###课程中心
 
 ###活动中心
 
