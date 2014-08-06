@@ -327,9 +327,7 @@ Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用�
 
 ###Jekyll运行原理
 
-Jekyll的核心其实是一个文本转换引擎。通过Jekyll语言将各不同的标记语言，排版布局等整合起来。只需要纯文本编辑，最终生成静态成品页面。
-
-Jekyll用Ruby实现，这就是安装Jekyll必须要安装Ruby的原因。
+Jekyll的核心其实是一个文本转换引擎。通过Jekyll语言将各不同的标记语言，排版布局等整合起来。只需要纯文本编辑，最终生成静态成品页面。Jekyll用Ruby实现，这就是安装Jekyll必须要安装Ruby的原因。
 
 ###Jekyll的目录规范
 
