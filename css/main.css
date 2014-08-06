@@ -1158,10 +1158,6 @@ padding: 0;
 	float: left;
 	margin-top: 0px;
 }
-@media(max-width: 768px) {
-	.acm_size{width:100%;}
-	.acm_history {width:100%;}
-}
 .acm_size_slide{
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -1235,4 +1231,8 @@ padding: 0;
 
 .one_team_intro img {
 	width: 100%;
+}
+@media(max-width: 768px) {
+	.acm_size{width:100%;}
+	.acm_history {width:100%;}
 }
