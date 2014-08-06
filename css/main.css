@@ -1223,3 +1223,4 @@ p {
 					margin: 0;
 	padding: 0;
 				}
+	@media (max-width: 800px){#timeline{display:none !important;}}
