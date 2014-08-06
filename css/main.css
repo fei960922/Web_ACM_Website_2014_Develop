@@ -444,9 +444,10 @@ p {
 .academic_left {
 	float:left;
 	position:fixed;
-	width: 15%;
+	width: 17%;
+	max-width:200px;
 }
-.academic_left h1,.academic_left h2{line-height: 1em;}
+.academic_left h1,.academic_left h2{line-height: 1.7em;}
 .academic_left>div{
 	width  :100%;
 	height :20%;
