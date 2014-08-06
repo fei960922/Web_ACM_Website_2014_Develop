@@ -325,6 +325,10 @@ Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用�
 
 安装之后，运行命令<code>gem install jekyll</code>即可完成Jekyll的安装。
 
+###Jekyll运行原理
+
+Jekyll的核心其实是一个文本转换引擎。通过Jekyll语言将各不同的标记语言，排版布局等整合起来。只需要纯文本编辑，最终生成静态成品页面。Jekyll用Ruby实现，这就是安装Jekyll必须要安装Ruby的原因。
+
 ###Jekyll的目录规范
 
 如果要在目录下搭建本地静态网站，那么在该目录下必须要含有如下的文件和文件夹。
@@ -350,12 +354,91 @@ Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用�
 
 ###本地运行Jekyll
 
-
 Jekyll的运行非常简单：在已搭建的本地静态网站的根目录下，输入cmd命令：<code>jekyll serve</code>或者<code>jekyll server --watch</code>即可运行。前者只会建立当前的网站页面，后者则可以实时更新。这两者各有利弊，在维护时慎重选择。
 
 在运行中，网页构建者可以在<code>localhost:4000</code>这个本地服务器上看网页的效果。
 
-####Jekyll路径问题
+###Jekyll的编写规范（Jekyll文档）
+
+关于Jekyll的一些编写规范，最好的方案是查看官方<a href = "http://jekyllcn.com/">Jekyll文档</a>。
+
+那里包含了大量需要了解的内容。在这里，并不进行完全的照搬。只是在下文中列举几个要点。
+
+####命令
+jekyll的命令包括了上文介绍的两种命令：<code>jekyll serve</code>和<code>jekyll server --watch</code>。但这两个命令只是所有jekyll命令中的冰山一角，具体可以看文档里的基本用法。
+
+主要有应用的是有关<code>build</code>、<code>serve</code>的命令。
+
+####配置
+对于_config.yml的配置。有以下几个要点：
+
+> 1. 不能在_config.yml中使用tab制表符，这会造成解析失败。
+> 2. 有关site source和site destination。这两个命令十分形象，即Jekyll从哪读入文件以及生成好的网站放在哪个目录下。推荐使用默认设置，默认设置在当前根目录下读入，并在当前根目录下面生成一个_site的文件夹，放置生成好的网站。
+> 3. exclude：xxx。这个主要用来告诉jekyll哪些文件是不需要转换的。将不需要或者不想要转换的文件放在xxx位置即可。
+> 4. encoding：xxx。这个配置会将所有文章和html都被转成xxx格式，比如utf-8、gbk等格式。
+> 5. port：4000。这用来设端口的，默认端口为4000。
+> 6. markdown选项推荐使用的是<code>kramdown</code>
+
+####头信息
+头信息，全称是yaml头信息。这些信息包含在两行虚线之间。头信息是在使用Jekyll样式时的必要使用信息。
+
+jekyll在扫描html、md等文件时，会根据文章顶端的的头信息进行编译。例如：<br/>
+
+<img src = "images/headinfo.png" />
+
+虚线之间包含的变量可以有很多，甚至可以是维护者进行自定义的。下面将介绍几个常用变量。（值得注意的是，如果使用utf-8格式，不要出现BOM头字符）
+
+> 1. layout: xxx。定义样式。xxx一定要是_layout文件夹里的html文件名，而且不用.html后缀。
+> 2. title: xxx。定义page或post的标题。
+> 3. permalink: xxx。用来指定这篇page或post的url。方便以后使用超链接时进行链接。
+> 4. category: xxx。有时候并不需要指定一个完整的路径，那么写category就足够了。category本质上是给文章指定一个类别。jekyll会在_site文件夹下生成一个xxx的文件夹，这时转换好的文章就会放在其中。
+> 5. <b>自定义变量。</b>jekyll提供的这个功能是十分有用的。举例来说，比如我现在写一个课程中心，课程包含的信息有名称，老师，上课时间等等，但这些肯定不会是保留属性。那么我们可以自己起。比如cirriculum_name: xxx，teacher: xxx, class hour: xxx，等等
+
+在样式html中直接调用就可以直接使用这些变量了（这一点有点像c++中的define）。调用方式是{{page.property}}，如果是_post里面的post，那么就要用{{post.property}}。
+
+值得注意的是，头信息可以是空的，jekyll仍然会处理。
+
+####常用变量
+
+#####全局变量
+<b>`site：`</b>来自`_config.yml`文件，全站范文的信息和配置
+
+<b>`page：`</b>页面的专属信息+yaml头信息。包含上文所述的头信息变量
+
+<b>`content：`</b>被 layout 包裹的那些 Post 或者 Page 渲染生成的内容，但是又没定义在 Post 或者 Page 文件中的变量。
+
+<b>`paginator：`</b>这是一个分页变量。若新闻首页只想放10篇，剩下的会有最下面的1、2、3、4……页码，那就要用到这个变量。在`_config.yml`中设置`paginate: 10;`就可以使用这个变量了。（不一定是10，视个人爱好或具体要求决定）
+
+#####全站变量（site）
+这里主要是site下面的一些常用变量。
+
+1. site.time &emsp;&emsp; 当前时间
+2. site.pages &emsp;&emsp; 网站包含的pages清单
+3. site.posts &emsp;&emsp; 按时间倒序的posts清单
+
+其他还有一些，可以在<http://jekyllcn.com/docs/variables/>查询。
+
+#####页面变量（page）
+这里主要是page下面的一些常用变量。
+
+1. page.content &emsp;&emsp; 页面内容
+2. page.title &emsp;&emsp; 页面标题
+3. page.excerpt &emsp;&emsp; 页面摘要
+4. page.date &emsp;&emsp; 页面时间
+5. page.url &emsp;&emsp; 页面的相对路径
+
+其他还有一些，可以在<http://jekyllcn.com/docs/variables/>查询。
+
+#####分页器（paginator）
+这里主要是paginator下面的一些常用变量。
+
+1. paginator.posts  &emsp;&emsp;这一页可用的posts
+2. paginator.previous_page &emsp;&emsp; 前一页的页号
+3. paginator.next_page &emsp;&emsp; 下一页的页号
+4. paginator.previous_page_path &emsp;&emsp; 上一页的地址
+5. paginator.next_page_path &emsp;&emsp; 上一页的地址
+
+####Jekyll路径
 
 值得注意的是，在本地运行jekyll与在网络上运行时，有不同的路径。举一个简单的例子，当前网页上有一个照片：<code>me.jpg</code>。本地的设置路径是“<code>/images/me.jpg</code>”；而在网络上运行的时候（比如在Github上运行），地址改变为“<code>username.github.io/images/me</code>”。
 
@@ -375,87 +458,6 @@ Jekyll的运行非常简单：在已搭建的本地静态网站的根目录下�
 并且在路径书写时，加入：<code>{{site.baseurl}}</code>，比如上文中出现的例子，地址应书写为：<code>"{{site.baseurl}}/images/me.jpg"</code>
 
 类似的，在有关超链接、css、js的引用、图片的引用时都要注意相应的路径问题。
-
-###Jekyll的编写规范（Jekyll文档）
-
-&emsp;&emsp;关于Jekyll的一些编写规范，最好的方案是查看官方<a href = "http://jekyllcn.com/">Jekyll文档</a>。
-
-&emsp;&emsp;那里包含了大量需要了解的内容。在这里，并不进行完全的照搬。只是在下文中列举几个要点。
-
-####命令
-&emsp;&emsp;jekyll的命令包括了上文介绍的两种命令：<code>jekyll serve</code>和<code>jekyll server --watch</code>。但这两个命令只是所有jekyll命令中的冰山一角，具体可以看文档里的基本用法。
-
-&emsp;&emsp;主要有应用的是有关<code>build</code>、<code>serve</code>的命令。
-
-####配置
-&emsp;&emsp;对于_config.yml的配置。有以下几个要点：
-
-> 1. 不能在_config.yml中使用tab制表符，这会造成解析失败。
-> 2. 有关site source和site destination。这两个命令十分形象，即Jekyll从哪读入文件以及生成好的网站放在哪个目录下。推荐使用默认设置，默认设置在当前根目录下读入，并在当前根目录下面生成一个_site的文件夹，放置生成好的网站。
-> 3. exclude：xxx。这个主要用来告诉jekyll哪些文件是不需要转换的。将不需要或者不想要转换的文件放在xxx位置即可。
-> 4. encoding：xxx。这个配置会将所有文章和html都被转成xxx格式，比如utf-8、gbk等格式。
-> 5. port：4000。这用来设端口的，默认端口为4000。
-> 6. markdown选项推荐使用的是<code>kramdown</code>
-
-####头信息
-&emsp;&emsp;头信息，全称是yaml头信息。这些信息包含在两行虚线之间。头信息是在使用Jekyll样式时的必要使用信息。
-
-&emsp;&emsp;jekyll在扫描html、md等文件时，会根据文章顶端的的头信息进行编译。例如：<br/>
-
-<img src = "images/headinfo.png" />
-
-&emsp;&emsp;虚线之间包含的变量可以有很多，甚至可以是维护者进行自定义的。下面将介绍几个常用变量。（值得注意的是，如果使用utf-8格式，不要出现BOM头字符）
-
-> 1. layout: xxx。定义样式。xxx一定要是_layout文件夹里的html文件名，而且不用.html后缀。
-> 2. title: xxx。定义page或post的标题。
-> 3. permalink: xxx。用来指定这篇page或post的url。方便以后使用超链接时进行链接。
-> 4. category: xxx。有时候并不需要指定一个完整的路径，那么写category就足够了。category本质上是给文章指定一个类别。jekyll会在_site文件夹下生成一个xxx的文件夹，这时转换好的文章就会放在其中。
-> 5. <b>自定义变量。</b>jekyll提供的这个功能是十分有用的。举例来说，比如我现在写一个课程中心，课程包含的信息有名称，老师，上课时间等等，但这些肯定不会是保留属性。那么我们可以自己起。比如cirriculum_name: xxx，teacher: xxx, class hour: xxx，等等
-
-&emsp;&emsp;在样式html中直接调用就可以直接使用这些变量了（这一点有点像c++中的define）。调用方式是{{page.property}}，如果是_post里面的post，那么就要用{{post.property}}。
-
-&emsp;&emsp;值得注意的是，头信息可以是空的，jekyll仍然会处理。
-
-####常用变量
-
-#####全局变量
-<b>`site：`</b>来自`_config.yml`文件，全站范文的信息和配置
-
-<b>`page：`</b>页面的专属信息+yaml头信息。包含上文所述的头信息变量
-
-<b>`content：`</b>被 layout 包裹的那些 Post 或者 Page 渲染生成的内容，但是又没定义在 Post 或者 Page 文件中的变量。
-
-<b>`paginator：`</b>这是一个分页变量。若新闻首页只想放10篇，剩下的会有最下面的1、2、3、4……页码，那就要用到这个变量。在`_config.yml`中设置`paginate: 10;`就可以使用这个变量了。（不一定是10，视个人爱好或具体要求决定）
-
-#####全站变量（site）
-&emsp;&emsp;这里主要是site下面的一些常用变量。
-
-1. site.time &emsp;&emsp; 当前时间
-2. site.pages &emsp;&emsp; 网站包含的pages清单
-3. site.posts &emsp;&emsp; 按时间倒序的posts清单
-
-其他还有一些，可以在<http://jekyllcn.com/docs/variables/>查询。
-
-#####页面变量（page）
-&emsp;&emsp;这里主要是page下面的一些常用变量。
-
-1. page.content &emsp;&emsp; 页面内容
-2. page.title &emsp;&emsp; 页面标题
-3. page.excerpt &emsp;&emsp; 页面摘要
-4. page.date &emsp;&emsp; 页面时间
-5. page.url &emsp;&emsp; 页面的相对路径
-
-其他还有一些，可以在<http://jekyllcn.com/docs/variables/>查询。
-
-#####分页器（paginator）
-&emsp;&emsp;这里主要是paginator下面的一些常用变量。
-
-1. paginator.posts  &emsp;&emsp;这一页可用的posts
-2. paginator.previous_page &emsp;&emsp; 前一页的页号
-3. paginator.next_page &emsp;&emsp; 下一页的页号
-4. paginator.previous_page_path &emsp;&emsp; 上一页的地址
-5. paginator.next_page_path &emsp;&emsp; 上一页的地址
-
 
 ##BootStrap
 
