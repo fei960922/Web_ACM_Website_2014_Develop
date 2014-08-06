@@ -9,75 +9,76 @@ pic: btop_documentation.jpg
 
 ##目标
 
-&emsp;&emsp;上海交通大学ACM班2013级编程综合实践课程网页设计小组在课程中重做ACM班班级主页，新的班级主页代号为ACM14。该班级主页的目标是:
+上海交通大学ACM班2013级编程综合实践课程网页设计小组在课程中重做ACM班班级主页，新的班级主页代号为ACM14。该班级主页的目标是:
 
 * 改造现有的ACM班班级主页，整合当前较为杂乱的分类，处理样式与内容陈旧、布局不合理等现象。以此提升ACM班对外的宣传能力。
 * 建立一个方便且功能准确的平台。使得浏览网站的人更容易获取有效信息，使用课程中心进行课程管理时更加便捷，并突出ACM班新闻宣传的及时性和分类准确性。
 
-&emsp;&emsp;而该文档的目标则是明确网页设计的“继承”性。既丰富网页设计思路，为后续的改造者做好铺垫；又提供一些必要的维护应用软件，语言的信息以供学习。
+而该文档的目标则是明确网页设计的“继承”性。既丰富网页设计思路，为后续的改造者做好铺垫；又提供一些必要的维护应用软件，语言的信息以供学习。
 
 ##风格与理念
 	
-&emsp;&emsp;记录整个设计理念，不仅仅是想让读者去理解设计者的设计理念，更是想让修改者选择去跟随这种设计理念，只有认识到这种设计理念的优点，才能对它有所认同，才能更好的完善网页的制作与设计。
+记录整个设计理念，不仅仅是想让读者去理解设计者的设计理念，更是想让修改者选择去跟随这种设计理念，只有认识到这种设计理念的优点，才能对它有所认同，才能更好的完善网页的制作与设计。
 
 ###求同存异
 
-&emsp;&emsp;依据上一次旧版网页，制作新版网页。我们在这里确立了求同存异的核心设计理念。
+依据上一次旧版网页，制作新版网页。我们在这里确立了求同存异的核心设计理念。
 
-&emsp;&emsp;所谓求同，指的是公共主页之间要有相同点，这种相同点不仅仅指的是布局的一种相似，更是在整体思路，外观设计上的相似。但是一定要做到避免过多的重复造成的审美疲劳等现象的发生。
+所谓求同，指的是公共主页之间要有相同点，这种相同点不仅仅指的是布局的一种相似，更是在整体思路，外观设计上的相似。但是一定要做到避免过多的重复造成的审美疲劳等现象的发生。
 
-&emsp;&emsp;所谓存异，指的是各个不同的布局，各个不同的子栏目，应该有自己的鲜明的特点，只有保存并将其展示出来，才能更好展现网站的美感。这是一种创新，更是一种融汇。
+所谓存异，指的是各个不同的布局，各个不同的子栏目，应该有自己的鲜明的特点，只有保存并将其展示出来，才能更好展现网站的美感。这是一种创新，更是一种融汇。
 
-&emsp;&emsp;求同存异是设计的基本设计理念，也是众多门户网站的常用设计理念。
+求同存异是设计的基本设计理念，也是众多门户网站的常用设计理念。
 
 ###探索精神
 	
-&emsp;&emsp;我们需要贯彻原ACM班主页的内容理念。内容选材以原主页的内容为主，但必须进行有效地整合和提炼，必要时进行新增书写。在书写时，还原ACM班的本质精神。突出ACM班的科学性和创新性。
+我们需要贯彻原ACM班主页的内容理念。内容选材以原主页的内容为主，但必须进行有效地整合和提炼，必要时进行新增书写。在书写时，还原ACM班的本质精神。突出ACM班的科学性和创新性。
 
-&emsp;&emsp;而对于整体框架的设计，相关图片和插件的选择，兼顾整体性与区域性相关联的美感，这些重要性都是不言而喻的，而实质上，这些皆与探索精神有关。我们号召维护者们大胆探索，努力创新，创造出更有艺术性，更具有时代特征和ACM班特征的网站。
+而对于整体框架的设计，相关图片和插件的选择，兼顾整体性与区域性相关联的美感，这些重要性都是不言而喻的，而实质上，这些皆与探索精神有关。我们号召维护者们大胆探索，努力创新，创造出更有艺术性，更具有时代特征和ACM班特征的网站。
 
 #基础工具
 
-&emsp;&emsp;网站是由诸多的相互关联的网页搭建而成的。在这里主要是简单的介绍Markdown、Jekyll等在维护中必要的网页工具,而网页设计的基础Html、CSS等将不做介绍。
+网站是由诸多的相互关联的网页搭建而成的。在这里主要是简单的介绍Markdown、Jekyll等在维护中必要的网页工具,而网页设计的基础Html、CSS等将不做介绍。
 
-&emsp;&emsp;这里必须强调的一点是，这种介绍方式虽然简单，但是绝不会浅尝辄止。了解到超文本标记语言和这些工具之间的关系，这样既可以使得整体维护时遭遇的错误信息减少，也可以更清楚地了解整体构架，防止分类错误等不优雅的事件发生。
+这里必须强调的一点是，这种介绍方式虽然简单，但是绝不会浅尝辄止。了解到超文本标记语言和这些工具之间的关系，这样既可以使得整体维护时遭遇的错误信息减少，也可以更清楚地了解整体构架，防止分类错误等不优雅的事件发生。
 
-&emsp;&emsp;值得注意的是，在后文对整体的网站构建进行介绍的章节，会提及相关章节应该如何去修改，新增或完善相关网页。这些应用将大量使用这些基础工具，我们强烈建议认真学习以下内容。
+值得注意的是，在后文对整体的网站构建进行介绍的章节，会提及相关章节应该如何去修改，新增或完善相关网页。这些应用将大量使用这些基础工具，我们强烈建议认真学习以下内容。
 
 ##Html 与 Markdown
+
 ###HTML
-&emsp;&emsp;在添加网页维护网页前，首先是必须要了解网页。大多数网页是通过使用超文本标记语言(HTML)完成的，ACM14也不例外。
+在添加网页维护网页前，首先是必须要了解网页。大多数网页是通过使用超文本标记语言(HTML)完成的，ACM14也不例外。
 
-&emsp;&emsp;HTML语言的结构包括“Head”和“Body”两个部分。“Head”提供网页的信息，而“Body”提供网页的具体内容。如果只需要添加新闻等文类的话，只需要提供网页的具体内容(即“Body”内的信息即可)。
+HTML语言的结构包括“Head”和“Body”两个部分。“Head”提供网页的信息，而“Body”提供网页的具体内容。如果只需要添加新闻等文类的话，只需要提供网页的具体内容(即“Body”内的信息即可)。
 
-&emsp;&emsp;在这里并不详述HTML的具体的语法细节了。如果想了解具体的语言细节，请查询<a href = "http://www.w3school.com.cn/html/">HTML教程</a>。
+在这里并不详述HTML的具体的语法细节了。如果想了解具体的语言细节，请查询<a href = "http://www.w3school.com.cn/html/">HTML教程</a>。
 
-&emsp;&emsp;当然，在后文也会提及部分HTML的语法以方便维护者的灵活应用。
+肯定的，在后文也会提及部分HTML的语法以方便维护者的灵活应用。
 
 ###Markdown
-&emsp;&emsp;Markdown是一种语法，一种适用于网络的书写语言。它的语法是通过一些符号组成的，这些符号经过精挑细选，其作用一目了然。
+Markdown是一种语法，一种适用于网络的书写语言。它的语法是通过一些符号组成的，这些符号经过精挑细选，其作用一目了然。
 
-&emsp;&emsp;一份使用Markdown格式撰写的文件是可以以纯文本发布的。Markdown语言是一种可视化的语言，它“易读易写”。
+一份使用Markdown格式撰写的文件是可以以纯文本发布的。换句话说，不了解Markdown语言的人也能读懂多数代码。Markdown语言是一种可视化的语言，它“易读易写”。
 
-&emsp;&emsp;Markdown的语法只能对应实现小部分的HTML标记。所以，Markdown的生成器同时也能编译HTML标签，且不会出错。
+Markdown的语法只能对应实现小部分的HTML标记。所以，Markdown的生成器同时也能编译HTML标签，且不会出错。
 
-&emsp;&emsp;值得注意的是，在HTML区块标签间的Markdown格式语法将不会被处理。比如你在HTML区块内使用Markdown样式的斜体("* *")是会没有效果的。
+值得注意的是，在HTML区块标签间的Markdown格式语法将不会被处理。比如在HTML区块内使用Markdown样式的斜体("* *")是会没有效果的。
 
-&emsp;&emsp;下文将简要介绍在进行网页维护时所需要的语法。
+下文将简要介绍在进行网页维护时所需要的语法。
 
 ###区块元素
 
 ####段落与换行
 
-&emsp;&emsp;一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，若某一行只包含空格和制表符，则该行也会被视为空行）。普通段落不该用空格或制表符来缩进。
+一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，若某一行只包含空格和制表符，则该行也会被视为空行）。普通段落不该用空格或制表符来缩进。
 
-&emsp;&emsp;"由一个或多个连续的文本行组成"这句话其实暗示了 Markdown 允许段落内的强迫换行（插入换行符），这个特性和其他大部分的 text-to-HTML 格式不一样（包括 Movable Type 的"Convert Line Breaks"选项），其它的格式会把每个换行符都转成 <code>&lt;br /&gt;</code> 标签。
+"由一个或多个连续的文本行组成"这句话其实暗示了 Markdown 允许段落内的强迫换行（插入换行符），这个特性和其他大部分的 text-to-HTML 格式不一样（包括 Movable Type 的"Convert Line Breaks"选项），其它的格式会把每个换行符都转成 <code>&lt;br /&gt;</code> 标签。
 
 ####标题
 
-&emsp;&emsp;Markdown 支持两种标题的语法，类 <a href="http://docutils.sourceforge.net/mirror/setext.html">Setext</a> 和类 <a href="http://www.aaronsw.com/2002/atx/">atx</a> 形式。
+Markdown 支持两种标题的语法，类 <a href="http://docutils.sourceforge.net/mirror/setext.html">Setext</a> 和类 <a href="http://www.aaronsw.com/2002/atx/">atx</a> 形式。
 
-&emsp;&emsp;其中Setext形式是用底线的形式，例如：
+其中Setext形式是用底线的形式，例如：
 	
 	This is an H1
 	=============
@@ -85,9 +86,9 @@ pic: btop_documentation.jpg
 	This is an H2
 	-------------
 
-&emsp;&emsp;在这里利用<code>=</code>（最高阶标题H1）与<code>-</code>（第二阶标题H2）以进行的实现
+在这里利用<code>=</code>（最高阶标题H1）与<code>-</code>（第二阶标题H2）以进行的实现
 
-&emsp;&emsp;而类Atx形式则是在行首插入1到6个<code>#</code>，对应H1到H6的六个阶。例如：
+而类Atx形式则是在行首插入1到6个<code>#</code>，对应H1到H6的六个阶。例如：
 	
 	# 这是H1
 	
@@ -95,7 +96,7 @@ pic: btop_documentation.jpg
 	
 	####### 这是H6
 
-&emsp;&emsp;而为了使得文本更加美观，也可以在行尾叫上任意个<code>#</code>。这达到的是一种可选择性的“闭合”类Atx形式，例如：
+而为了使得文本更加美观，也可以在行尾叫上任意个<code>#</code>。这达到的是一种可选择性的“闭合”类Atx形式，例如：
 
 	# 这是H1 #
 	
@@ -103,11 +104,11 @@ pic: btop_documentation.jpg
 	
 	### 这是H3 ######
 
-&emsp;&emsp;注意，行尾可以加入任意个<code>#</code>，和开头的数量并不一定要相同。
+注意，行尾可以加入任意个<code>#</code>，和开头的数量并不一定要相同。
 
 ####区块引用Blockquotes
 
-&emsp;&emsp;Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用方式。如果你还熟悉在 email 信件中的引言部分，你就知道怎么在 Markdown 文件中建立一个区块引用，那会看起来像是你自己先断好行，然后在每行的最前面加上<code>></code>。例如：
+Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用方式。如果熟悉在 email 信件中的引言部分，就可以知道在 Markdown 文件中建立一个区块引用，这看起来类似像先断好行，然后在每行的最前面加上<code>></code>。例如：
 
 	>I used to rule the world,
 	>Seas would rise when I gave the word. 
@@ -123,7 +124,7 @@ pic: btop_documentation.jpg
 	>Now in the morning I sleep alone,
 	Sweep the streets I used to own.
 
-&emsp;&emsp;值得注意的是，区块引用是可以嵌套的，只要根据层次加上不同数量的<code>></code>即可。例如：
+值得注意的是，区块引用是可以嵌套的，只要根据层次加上不同数量的<code>></code>即可。例如：
 
 	>This is the first level of quoting
 	> 
@@ -133,7 +134,7 @@ pic: btop_documentation.jpg
 
 ####分隔线
 
-&emsp;&emsp;你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：
+可以通过在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他代码。这也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：
 
 	* * *
 	
@@ -149,7 +150,7 @@ pic: btop_documentation.jpg
 
 #####无序列表
 
-&emsp;&emsp;无序列表使用星号、加号或是减号作为列表标记：
+无序列表使用星号、加号或是减号作为列表标记：
 
 	* Red
 	* Green
@@ -286,16 +287,16 @@ pic: btop_documentation.jpg
 
 &emsp;&emsp;Jekyll没有独立的安装软件，如果要安装Jekyll，主要需要依靠devkit和ruby。
 
-###安装Jekyll
+###Windows环境下安装Jekyll
 
-1. <b>安装ruby</b><br/>
+1. <b>安装Ruby</b><br/>
 	ruby是一门语言，采用liquid语法。我们将在官网上下载Ruby。<br/>
    ruby官网：<http://rubyinstaller.org/downloads/> <br>
    打开官网后，选择下载ruby2.0.0-p481即可。<br/>
    下载完成后，直接运行相应文件装在任意目录下即可。<br/>
 
-2. <b>安装ruby devkit</b><br/>
-3. devkit叫rubyinstaller development kit，直译过来是ruby安装的扩展包，jekyll是需要使用这个扩展包的。<br/>
+2. <b>安装Ruby devkit</b><br/>
+   devkit叫rubyinstaller development kit，直译过来是ruby安装的扩展包，jekyll是需要使用这个扩展包的。<br/>
    双击右边的下载地址进行下载：<a href = "{{site.baseurl}}/downloads/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe">DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe</a>
    <br/>这是一个可运行文件格式的压缩包，把它解压到任意的位置均可。
 
@@ -309,7 +310,20 @@ pic: btop_documentation.jpg
 
 安装完成后，Jekyll在Windows下的基本功能已经可以使用了。如果在安装中出现了问题，请查询F.A.Q(链接到FAQ.md)。
 
-而在Linux下安装Jekyll则要简单得多，在官方<a href = "http://jekyllrb.com/">Jekyll文档</a>中即有详细的介绍。
+###Linux环境下安装Jekyll
+
+如果Linux下没有安装ruby，采用下面的命令安装ruby。
+	
+	Arch Linux：	
+	pacman -S ruby
+	gem update --system
+	Ubuntu：
+	sudo apt-cache search ruby
+	sudo apt-get install ruby1.9.3-full
+	Fedora：
+	yum install ruby
+
+安装之后，运行命令<code>gem install jekyll</code>即可完成Jekyll的安装。
 
 ###Jekyll的目录规范
 
@@ -498,6 +512,8 @@ pic: btop_documentation.jpg
 
 文本类特指的是一种类型。招生信息与班级理念充分的反应了文本类的信息构建。文本类可以单纯的理解为正文的一种固定的格式嵌套。
 
+文本类的设计在<code>_layouts\default_post.html</code>文件，该文件通过Jekyll语言实现了文本类的设计。在页首插入<code>_includes</code>文件夹下的html文件:<code>head.html</code>与<code>navigation.html</code>，在页尾插入<code>footer.html</code>。
+
 ###新闻中心
 	
 &emsp;&emsp;新闻中心首页是使用Jekyll生成的。内置的main.css内的“News Center”部分。设计了时间轴、newer&order等格式。
@@ -532,6 +548,37 @@ pic: btop_documentation.jpg
 >修改中
 
 ###课程中心
+
+课程中心的所有内容被放置在lessons文件夹内。
+
+####课程中心首页
+
+课程中心文本的命名是lesson_index.html，使用了文本类模板。而这里的文本是特殊的，是由若干<code>col-md-4</code>HTML块组成的。对于每一个HTML块，需要使用HTML的img命令插入一张图片，使用链接命令将这个课程的名字给出链接。例如有关PPCA这个课程采用的Html源码是：
+
+	<div class = "col-md-4">
+		<img src = "{{site.baseurl}}/images/lesson_PPCA.jpg">
+		<a href = "{{site.baseurl}}/lessons/lesson_PPCA.html"><h1>PPCA</h1></a>
+	</div>
+
+这里，插入的图片是<code>lesson_PPCA.jpg</code>，PPCA课程的详细地址是<code>/lessons/lesson_PPCA.html</code>。
+
+####单个课程
+
+单个课程在lesson下以HTML文件。命名规则为lesson_XXX.html，其中XXX为课程名称。例如课程PPCA的课程名称为lesson_PPCA.html。在这里并不推荐使用中文进行命名。
+
+单个课程采用Jekyll模板。模板文件为lesson.html，放置在模板存放文件夹<code>_layout</code>下。
+
+在lessons文件夹下有一个模板文件lesson_model.html。可以通过模仿模板的设计单个课程网页。
+
+以下解释头信息的具体内容：
+
+* layout: lesson。这里定义的是模板格式为lesson.html。
+* title: 课程的名称
+* fullname: title
+	* 体育节的新闻需要填写为pefestival
+	* 旅游的新闻需要填写为travel
+	* 夏令营的新闻需要填写为camp
+	* 其它的新闻均填写为news
 
 ###活动中心
 
