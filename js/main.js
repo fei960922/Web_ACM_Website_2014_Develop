@@ -7,22 +7,20 @@ $(window).resize(function(){
     $(".minh").css({"min-height":h});
     $(".fixh").css({height:h});
     h = winh*2/3;
-    if (winw<768) h = winw*3/4;
+    if (winw<768) h = winw*3/5;
     $(".halfh").css({height:h});
-    $(".block_intro_out").css({height:h});
-    $(".block_intro").css("display","none");
 })
 $(document).ready(function(){
     var winh=(window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight);
+    var winw=(window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth);
     $(".fullh").css({"min-height":winh});
     if (winh<700) winh = 700;
     var h = winh - 102;
     $(".minh").css({"min-height":h});
     $(".fixh").css({height:h});
     h = winh*2/3;
+    if (winw<768) h = winw*3/5;
     $(".halfh").css({height:h});
-    $(".block_intro_out").css({height:h});
-    $(".block_intro").css("display","none");
     fontmaking();
 
 /*  ------------------------------------------
