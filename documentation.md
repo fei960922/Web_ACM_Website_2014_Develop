@@ -2,7 +2,7 @@
 layout:	default_post
 title: Documentation
 title_full: 文档<br/>Documentation
-pic: btop_documantation.jpg
+pic: btop_documentation.jpg
 ---
 
 #引言
