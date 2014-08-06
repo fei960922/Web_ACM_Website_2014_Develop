@@ -503,9 +503,7 @@ Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局�
 以下将逐次介绍各个结构。
 ###首页
 
-首页采用视差滚动的实现效果，视差滚动的CSS可以在main.css内“Index”部分进行查看。有关时差滚动的详细解释，可以在BootStarp中查找。视差滚动的实现在
-
-通过视差滚动，将首页分为五个<a href = "http://www.w3school.com.cn/html/html_blocks.asp">HTML 块</a>。
+首页分为五个<a href = "http://www.w3school.com.cn/html/html_blocks.asp">HTML 块</a>。
 
 第一块命名为<code>index\_1</code>。背景是第一视角背景图片<code>index\_1.jpg</code>。通过插入背景为空的书法图片<code>hand\_writing.jpg</code>并设置它的margin和width的值以控制图片的位置。
 
@@ -513,7 +511,7 @@ Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局�
 
 第三块命名为<code>index\_3</code>。是对ACM班的简介。
 
-第四块命名为<code>index\_4</code>。背景图片是<code>index_2.jpg</code>。正文是"新闻中心"，同时它也被作为第四块的标题。
+第四块命名为<code>index\_4</code>。背景图片是<code>index_2.jpg</code>。正文是"新闻中心"，同时它也被作为第四块的标题。这一块视差滚动的实现效果，视差滚动的CSS可以在main.css内“Index”部分进行查看。有关时差滚动的详细解释，可以在BootStarp中查找。
 
 第五块命名为<code>index\_5</code>。是新闻中心在首页的展示，会集中展示最近的重要新闻。左侧会有一副配图，配图的被放置在<code>margin:2%</code>的位置，地址为<code>index\_5.jpg</code>。左侧是罗列的最新新闻，采用有序表进行规范，直接定义链接的方法进行链接。值得注意的是，有序表的第一个元素的字符大小被刻意的放大，已达到吸引力加大的效果，并突出了新闻的新颖性的特点。
 
@@ -553,8 +551,94 @@ Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局�
 
 
 ###班级介绍
-	
+
+班级介绍的所有内容被放置在<code>intros</code>文件夹内。
+
+####班级介绍主页
+
+班级介绍主页的命名是<code>intro_index.html</code>。本页被分为四个HTML块，分别表示班级介绍的四个侧重方向：“班”，“师”，“生”，“赛”。
+
+#####“班”
+
+第一块命名为<code>intro_1 fullh</code>，背景颜色选择为C蓝色，C蓝色rgb编号为<code>#CCCCCC</code>，是最纯正的蓝色。蓝色有创新的含义，体现了ACM班的创新精神。
+第一块分为上下两个之HTML块。
+
+第一块上半部分依次完成<code>H1</code>字号文字：“班”，班级介绍的html块和ACM班徽图片。其中ACM班班徽右对齐，<code>H1</code>字号文字左对齐，正文起填充效果。
+
+第一块下半部分是通过CSS实现的时间轴效果<code>timeline</code>。有关的CSS地址为：。
+
+#####“师”
+
+第二块命名为<code>intro_2 fullh</code>。背景颜色是浅蓝色，rgb编码为<code>rgba(46,93,156,0.2)</code>，起过渡作用。第二块分为上下两个之HTML块。
+
+第二块上半部分采用CSS设计<code>container_big</code>。书写韩愈著《师说》的选句，并插入<code>H1</code>字号文字：“师”，字号文字右对齐。
+
+第二块下半部分通过采用CSS设计<code>col-xs-4</code>。插入三位教师的照片与姓名。
+
+#####“生”
+
+第三块命名为<code>intro_3 fullh</code>。使用Bootstarp的滚轮设计:<code>intro_slide item active</code>。滚轮设计的每一页分别成HTML块。每一块对应一个班级。例如，2013级ACM班的HTML语言为：
+  	
+	<div class="intro_slide item active">
+    	<div class = "halfh intro_slide_pic"style="background-image:url(../images/stu_2013.jpg)"></div>
+    	<div class = "intro_slide_text">
+		<h2>ACM 2011</h2>
+    	<button type="button" class="btn btn_new">2013年级集体照</button>
+    	<button type="button" class="btn btn_new">2013年级学生介绍</button>
+    	</div>
+    </div>
+
+可以依据这个模板，进行ACM班班级的添加。集体照推荐使用“<code>stu_YYYY.jpg</code>”命名并存储在<code>images</code>文件夹内。
+
+#####“赛”
+
+第四块命名为<code>intro_4 fullh</code>。背景颜色依然是C蓝色，rgb编号为<code>#CCCCCC</code>。设计方式与第一块上半部分类似。
+
+依次完成<code>H1</code>字号文字：“赛”，班级介绍的html块和ACM_ICPC世界冠军奖杯图片。其中ACM班班徽左对齐，<code>H1</code>字号文字右对齐，正文起填充效果。
+
+####班级理念
+
+班级理念命名为<code>class.html</code>，采用一般文本类设计方案，可以在文本类查询。这里并不复述。
+
+####教师名单
+
+教师名单命名为<code>teachers.html</code>。左侧为教师名单，右侧为各个教师的介绍。
+
+#####在教师名单上加入一个教师
+
+假设需要添加一名名称为<code>[teacher_name]</code>的教师。
+
+需要在名录上（即`<div class="col-md-2 content">`内）添加：
+
+	<h5><a href="#[teacher_name]">[teacher_name]</a></h5>
+
+并且在正文部分（即`<div class="col-md-10 padding_0">`内）添加：
+
+	<div class="teacher_in">
+		<img src="{图片地址}">
+		<a id="[teacher_name]"><h1>[teacher_name]</h1></a>
+		{教师介绍}
+	</div>
+
+图片地址为`../images/{file_name}` 
+
+同时请将图片放入<code>images</code>文件夹中并改名为<code>{file_name}</code>
+
+在这里推荐将图片名改为：`teacher_$id.jpg` 以方便管理。
+
+需要<strong>注意</strong>的是，为了名单页面与名录的有序性，请根据教师姓名拼音的<a href = "http://baike.baidu.com/link?url=RwIuVALUfnrymdGT7xhXa3BgjcUJ6YFxKozPGU7GyxoQH4sDqAzmA27cLWGSshVLfKgx622lctHn7cUv2BqN1q">音序排列</a>找到当前合适的教师插入位置，进行加入。
+
+####学生名单
+
 >修改中
+
+####荣誉榜
+
+>修改中
+
+####ACM_ICPC竞赛介绍
+
+ACM_ICPC竞赛介绍主页命名为<code>acmicpc.html</code>，采用一般文本类设计方案，可以在文本类查询。这里并不复述。
 
 ###学术中心
 
