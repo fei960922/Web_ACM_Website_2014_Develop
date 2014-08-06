@@ -38,9 +38,9 @@ pic: btop_documentation.jpg
 
 #基础工具
 
-网站是由诸多的相互关联的网页搭建而成的。在这里主要是简单的介绍Markdown、Jekyll等在维护中必要的网页工具,而网页设计的基础Html、CSS等将不做介绍。
+网站是由诸多的相互关联的网页搭建而成的。本章将简单的介绍Markdown、Jekyll等在维护中必要的网页工具,而网页设计的基础Html、CSS等工具将给与链接，不做重点介绍。
 
-这里必须强调的一点是，这种介绍方式虽然简单，但是绝不会浅尝辄止。了解到超文本标记语言和这些工具之间的关系，这样既可以使得整体维护时遭遇的错误信息减少，也可以更清楚地了解整体构架，防止分类错误等不优雅的事件发生。
+值得强调的是，介绍方式虽简，但绝不浅尝辄止。了解超文本标记语言和这些工具之间的关系，既可以使得整体维护时遭遇的错误信息减少，也能更清楚地了解整体构架，防止分类错误等不优雅的事件发生。
 
 值得注意的是，在后文对整体的网站构建进行介绍的章节，会提及相关章节应该如何去修改，新增或完善相关网页。这些应用将大量使用这些基础工具，我们强烈建议认真学习以下内容。
 
@@ -184,7 +184,7 @@ Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用�
 
 &emsp;&emsp;链接分为行内式和参考式。
 
-&emsp;&emsp;行内式指被链接的文字使用[]包起来，在方括号后面马上接着括号并插入网址链接即可。例如：
+&emsp;&emsp;行内式指被链接的文字使用<code>[]</code>包起来，在方括号后面马上接着括号并插入网址链接即可。例如：
 	
 	This is [an example](http://example.com/ "Title") inline link.
 
@@ -327,32 +327,45 @@ Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用�
 
 ###Jekyll的目录规范
 
-&emsp;&emsp;如果要在目录下搭建本地静态网站，那么在该目录下必须要含有如下的文件和文件夹。<br/>
+如果要在目录下搭建本地静态网站，那么在该目录下必须要含有如下的文件和文件夹。
 
-1. _layouts文件夹，该文件夹存放着必要的模板。
-2. _includes文件夹，该文件夹常存放“小段”的html，比如navigation.html和footer.html
-3. _posts文件夹，该文件夹存放网站文章等文本。
-4. _config.yml文件，该文件为设定文件。对整个网站的几个属性值作一个规定，比如是否加上代码高亮，markdown的编译环境，页面存放内容限制等。
-5. index.html，该网页为搭建的本地网站的主页。
+以下是详细的存储树形图：
+
+	ACM14(建立Jekyll的文件夹)
+	├── index.html(首页，搭建的本地网站的主页)
+	├── _layouts(文件夹，存放必要的模板)
+	│   ├── camp.html
+	│   ├── news.html
+	│   ├── ...
+	│   └── travel.html
+	├── _includes(文件夹，存放小段的html以方便在模板或文章中使用)
+	│   ├── navigation.html
+	│   ├── ...
+	│   └── footer.html
+	├── _posts(文件夹，存放该网站收录的文章)
+    │	├── 2014-07-14-LJJ1.md
+    │	├── ...
+    │	└── 2014-07-14-LJJ2.html
+	└──_config.yml(配置设定文件。对整个网站的几个属性值作一个规定，比如是否加上代码高亮，markdown的编译环境，页面存放内容限制等。)
 
 ###本地运行Jekyll
 
 
-&emsp;&emsp;Jekyll的运行非常简单：在已搭建的本地静态网站的根目录下，输入cmd命令：<code>jekyll serve</code>或者<code>jekyll server --watch</code>即可运行。两者的区别是：前者是只运行不支持实时修改；后者是在如果修改了一个文件后，jekyll能自动地regenerate。读者可以根据个人习惯和喜好来选择。
+Jekyll的运行非常简单：在已搭建的本地静态网站的根目录下，输入cmd命令：<code>jekyll serve</code>或者<code>jekyll server --watch</code>即可运行。前者只会建立当前的网站页面，后者则可以实时更新。这两者各有利弊，在维护时慎重选择。
 
-&emsp;&emsp;在运行中，网页构建者可以在<code>localhost:4000</code>这个本地服务器上看网页的效果。
+在运行中，网页构建者可以在<code>localhost:4000</code>这个本地服务器上看网页的效果。
 
 ####Jekyll路径问题
 
-&emsp;&emsp;值得注意的是，在本地运行jekyll与在网络上运行时，有不同的路径。举一个简单的例子，当前网页上有一个照片：me.jpg。本地的设置路径是“/images/me.jpg”；而在网络上运行的时候（比如在Github上运行），地址改变为“username.github.io/images/me”。
+值得注意的是，在本地运行jekyll与在网络上运行时，有不同的路径。举一个简单的例子，当前网页上有一个照片：<code>me.jpg</code>。本地的设置路径是“<code>/images/me.jpg</code>”；而在网络上运行的时候（比如在Github上运行），地址改变为“<code>username.github.io/images/me</code>”。
 
-&emsp;&emsp;所以需要在config.yml中加入一个属性：baseurl。
+所以需要在<code>config.yml</code>中加入一个属性：<code>baseurl</code>。
 
-&emsp;&emsp;本地运行时，设置为：
+本地运行时，设置为：
 
-	baseurl:&emsp;"";
+	baseurl: "";
 
-&emsp;&emsp;上传到网站后，将命令改为:
+上传到网站后，将命令改为:
 
 	baseurl: "username.github.io/my_websites"
 或
@@ -446,15 +459,15 @@ Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用�
 
 ##BootStrap
 
-&emsp;&emsp;Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局、移动设备优先的WEB项目。官方网站：<http://www.bootcss.com/>和官方文档：<http://v3.bootcss.com/getting-started/>描述的非常详细，在这里就又不做细谈了。
+Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局、移动设备优先的WEB项目。官方网站：<http://www.bootcss.com/>和官方文档：<http://v3.bootcss.com/getting-started/>描述的非常详细，这里并不赘述。
 
 ##网站构建
 
-&emsp;&emsp;本章将主要介绍网页构建上的各个框架。包括整体框架构建，各中心，各主页框架构建等。本章的目的是让读者明确网页各处是怎样设计的，源代码各段分别是什么意义。
+本章将主要介绍网页构建上的各个框架。包括整体框架构建，各中心，各主页框架构建等。本章的目的是让读者明确网页各处设计缘由以及各段的源代码的意义。
 
 ###结构框架
 
-&emsp;&emsp;网站的首页是位于根目录下的<code>index.html</code>文件。随后，根据导航栏的每条，进行扩展。以下是扩展树形图：
+网站的首页是位于根目录下的<code>index.html</code>文件。随后，根据导航栏的每条，进行扩展。以下是扩展树形图：
 
 	ACM14(班级网站)
 	├── index.html(首页)
@@ -487,26 +500,26 @@ Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用�
 	├── news.html(新闻中心)
 	└──_posts(各新闻目录)
 
-&emsp;&emsp;以下将逐次介绍各个结构。
+以下将逐次介绍各个结构。
 ###首页
 
-&emsp;&emsp;首页采用视差滚动的实现效果，视差滚动的CSS可以在main.css内“Index”部分进行查看。有关时差滚动的详细解释，可以在BootStarp中查找。视差滚动的实现在
+首页采用视差滚动的实现效果，视差滚动的CSS可以在main.css内“Index”部分进行查看。有关时差滚动的详细解释，可以在BootStarp中查找。视差滚动的实现在
 
-&emsp;&emsp;通过视差滚动，将首页分为五个<a href = "http://www.w3school.com.cn/html/html_blocks.asp">HTML 块</a>。
+通过视差滚动，将首页分为五个<a href = "http://www.w3school.com.cn/html/html_blocks.asp">HTML 块</a>。
 
-&emsp;&emsp;第一块命名为<code>index\_1</code>。背景是第一视角背景图片<code>index\_1.jpg</code>。通过插入背景为空的书法图片<code>hand\_writing.jpg</code>并设置它的margin和width的值以控制图片的位置。
+第一块命名为<code>index\_1</code>。背景是第一视角背景图片<code>index\_1.jpg</code>。通过插入背景为空的书法图片<code>hand\_writing.jpg</code>并设置它的margin和width的值以控制图片的位置。
 
-&emsp;&emsp;第二块命名为<code>index\_2</code>。背景是纯色颜色<code>#DDDDDD</code>。可以在CSS里面的<code>background-color</code>选项做调整。正文是"欢迎来到ACM班"，同时它也被作为第三块的标题。
+第二块命名为<code>index\_2</code>。背景是纯色颜色<code>#DDDDDD</code>。可以在CSS里面的<code>background-color</code>选项做调整。正文是"欢迎来到ACM班"，同时它也被作为第三块的标题。
 
-&emsp;&emsp;第三块命名为<code>index\_3</code>。是对ACM班的简介。
+第三块命名为<code>index\_3</code>。是对ACM班的简介。
 
-&emsp;&emsp;第四块命名为<code>index\_4</code>。背景图片是<code>index_2.jpg</code>。正文是"新闻中心"，同时它也被作为第四块的标题。
+第四块命名为<code>index\_4</code>。背景图片是<code>index_2.jpg</code>。正文是"新闻中心"，同时它也被作为第四块的标题。
 
-&emsp;&emsp;第五块命名为<code>index\_5</code>。是新闻中心在首页的展示，会集中展示最近的重要新闻。左侧会有一副配图，配图的被放置在<code>margin:2%</code>的位置，地址为<code>index\_5.jpg</code>。左侧是罗列的最新新闻，采用有序表进行规范，直接定义链接的方法进行链接。值得注意的是，有序表的第一个元素的字符大小被刻意的放大，已达到吸引力加大的效果，并突出了新闻的新颖性的特点。
+第五块命名为<code>index\_5</code>。是新闻中心在首页的展示，会集中展示最近的重要新闻。左侧会有一副配图，配图的被放置在<code>margin:2%</code>的位置，地址为<code>index\_5.jpg</code>。左侧是罗列的最新新闻，采用有序表进行规范，直接定义链接的方法进行链接。值得注意的是，有序表的第一个元素的字符大小被刻意的放大，已达到吸引力加大的效果，并突出了新闻的新颖性的特点。
 
 ####最新新闻更新
 
-&emsp;&emsp;由于最新新闻采用的是直接定义链接的方法。若要更新最新新闻，需要手工修改有序表。注意在Jekyll内提到的链接设置采用的Liquid语言“<code>{{site.baseurl}}</code>”的使用。
+由于最新新闻采用的是直接定义链接的方法。若要更新最新新闻，需要手工修改有序表。注意在Jekyll内提到的链接设置采用的Liquid语言“<code>{{site.baseurl}}</code>”的使用。
 
 ###文本类
 
@@ -516,13 +529,13 @@ Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用�
 
 ###新闻中心
 	
-&emsp;&emsp;新闻中心首页是使用Jekyll生成的。内置的main.css内的“News Center”部分。设计了时间轴、newer&order等格式。
+新闻中心首页是使用Jekyll生成的。内置的<code>main.css</code>内的“News Center”部分。设计了时间轴、newer&order等格式。
 
-&emsp;&emsp;新闻中心首页中将显示所有新闻的链接。除此之外，体育节、旅游、夏令营的内容都属于新闻版块，而在它们各自的首页中只显示相关的链接。
+新闻中心首页中将显示所有新闻的链接。除此之外，体育节、旅游、夏令营的内容都属于新闻版块，而在它们各自的首页中只显示相关的链接。
 
 ####新增一篇新闻
 
-&emsp;&emsp;所有的新闻均放在_posts目录下。
+&emsp;&emsp;所有的新闻均放在<code>_posts</code>目录下。
 
 &emsp;&emsp;新闻文件的命名格式是"时间-文章标题.后缀名"。时间格式请使用“YYYY-MM-DD”，后缀名使用md和html均可。
 
@@ -549,11 +562,11 @@ Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用�
 
 ###课程中心
 
-课程中心的所有内容被放置在lessons文件夹内。
+课程中心的所有内容被放置在<code>lessons</code>文件夹内。
 
 ####课程中心首页
 
-课程中心文本的命名是lesson_index.html，使用了文本类模板。而这里的文本是特殊的，是由若干<code>col-md-4</code>HTML块组成的。对于每一个HTML块，需要使用HTML的img命令插入一张图片，使用链接命令将这个课程的名字给出链接。例如有关PPCA这个课程采用的Html源码是：
+课程中心文本的命名是<code>lesson_index.html</code>，使用了文本类模板。而这里的文本是特殊的，是由若干<code>col-md-4</code>HTML块组成的。对于每一个HTML块，需要使用HTML的img命令插入一张图片，使用链接命令将这个课程的名字给出链接。例如有关PPCA这个课程采用的Html源码是：
 
 	<div class = "col-md-4">
 		<img src = "{{site.baseurl}}/images/lesson_PPCA.jpg">
