@@ -1,5 +1,5 @@
 ---
-layout:	default_post
+layout:	documentation
 title: Documentation
 title_full: 文档<br/>Documentation
 pic: btop_documentation.jpg
