@@ -63,7 +63,7 @@ Markdown是一种语法，一种适用于网络的书写语言。它的语法是
 
 Markdown的语法只能对应实现小部分的HTML标记。所以，Markdown的生成器同时也能编译HTML标签，且不会出错。
 
-值得注意的是，在HTML区块标签间的Markdown格式语法将不会被处理。比如在HTML区块内使用Markdown样式的斜体("* *")是会没有效果的。
+值得注意的是，在HTML区块标签间的Markdown格式语法将不会被处理。例如在HTML区块内使用Markdown样式的斜体("* *")是会没有效果的。
 
 下文将简要介绍在进行网页维护时所需要的语法。
 
@@ -73,7 +73,7 @@ Markdown的语法只能对应实现小部分的HTML标记。所以，Markdown的
 
 一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，若某一行只包含空格和制表符，则该行也会被视为空行）。普通段落不该用空格或制表符来缩进。
 
-"由一个或多个连续的文本行组成"这句话其实暗示了 Markdown 允许段落内的强迫换行（插入换行符），这个特性和其他大部分的 text-to-HTML 格式不一样（包括 Movable Type 的"Convert Line Breaks"选项），其它的格式会把每个换行符都转成 <code>&lt;br /&gt;</code> 标签。
+"由一个或多个连续的文本行组成"这句话其实暗示了Markdown允许段落内的强迫换行（插入换行符），这个特性和其他大部分的 text-to-HTML 格式不一样（包括 Movable Type 的"Convert Line Breaks"选项），其它的格式会把每个换行符都转成 <code>&lt;br /&gt;</code> 标签。
 
 ####标题
 
@@ -109,7 +109,7 @@ Markdown 支持两种标题的语法，类 <a href="http://docutils.sourceforge.
 
 ####区块引用Blockquotes
 
-Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用方式。如果熟悉在 email 信件中的引言部分，就可以知道在 Markdown 文件中建立一个区块引用，这看起来类似像先断好行，然后在每行的最前面加上<code>></code>。例如：
+Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用方式。如果熟悉在 email 信件中的引言部分，就可以知道在 Markdown 文件中建立一个区块引用，类似于先断好行，然后在每行的最前面加上<code>></code>。例如：
 
 	>I used to rule the world,
 	>Seas would rise when I gave the word. 
@@ -157,13 +157,13 @@ Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用�
 	* Green
 	* Blue
 
-&emsp;&emsp;等同于：
+等同于：
 
 	+ Red
 	+ Green
 	+ Blue
 
-&emsp;&emsp;等同于：
+等同于：
 	
 	- Red
 	- Green
@@ -171,7 +171,7 @@ Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用�
 
 #####有序列表
 
-&emsp;&emsp;有序列表则使用数字+英文句点，例如：	
+有序列表则使用数字+英文句点，例如：	
 
 	1. Red
 	2. Green
@@ -183,15 +183,15 @@ Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用�
 
 ####链接
 
-&emsp;&emsp;链接分为行内式和参考式。
+链接分为行内式和参考式。
 
-&emsp;&emsp;行内式指被链接的文字使用<code>[]</code>包起来，在方括号后面马上接着括号并插入网址链接即可。例如：
+行内式指被链接的文字使用<code>[]</code>包起来，在方括号后面马上接着括号并插入网址链接即可。例如：
 	
 	This is [an example](http://example.com/ "Title") inline link.
 
 	[This link](http://example.net/) has no title attribute.
 
-&emsp;&emsp;而参考式是在链接文字的括号后面再接上另一个方括号，第二个方括号里面填入辨识链接的标记。并在文件的任意处，定义这些链接内容。例如：
+而参考式是在链接文字的括号后面再接上另一个方括号，第二个方括号里面填入辨识链接的标记。并在文件的任意处，定义这些链接内容。例如：
 
 	This is [an example][id] reference-style link.
 	
@@ -205,15 +205,15 @@ Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用�
 * 链接网址
 * 选择性的接着title内容，可以用单引号、双引号或者圆括号包着
 
-&emsp;&emsp;除此之外，还有一种方便的应用是自动连接。一般网址的链接文字和链接地址相同时，只需要把这个地址用<code><></code>符号包起来即可。例如：
+除此之外，还有一种方便的应用是自动连接。一般网址的链接文字和链接地址相同时，只需要把这个地址用<code><></code>符号包起来即可。例如：
 	
 	<http://acm.sjtu.edu.cn>
 
-&emsp;&emsp;值得一提的是，HTML标签所用的<code>&lt;a&gt;</code>链接标签也十分的方便使用。制作ACM14时大量应用的是<code>&lt;a&gt;</code>标签。
+值得一提的是，HTML标签所用的<code>&lt;a&gt;</code>链接标签也十分的方便使用。制作ACM14时大量应用的是<code>&lt;a&gt;</code>标签。
 
 ####强调
 
-&emsp;&emsp;Markdown使用星号<code>\*</code>和<code>\_</code>强调字词的符号，被<code>\*</code>或<code>\_</code>包围的字词会被转成斜体(<code>&lt;em&gt;</code>)，用<code>\**</code>或<code>\__</code>包起来的话，则会被转成粗体(<code>&lt;strong&gt;</code>)，例如：
+Markdown使用星号<code>\*</code>和<code>\_</code>强调字词的符号，被<code>\*</code>或<code>\_</code>包围的字词会被转成斜体(<code>&lt;em&gt;</code>)，用<code>\**</code>或<code>\__</code>包起来的话，则会被转成粗体(<code>&lt;strong&gt;</code>)，例如：
 
 	*single asterisks*
 
@@ -223,13 +223,13 @@ Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用�
 
 	__double underscores__
 
-&emsp;&emsp;请注意，如果<code>\*</code>和<code>\_</code>两边都有空格或制表符的话，它们会被当做普通的符号。
+请注意，如果<code>\*</code>和<code>\_</code>两边都有空格或制表符的话，它们会被当做普通的符号。
 
 ####图片
 
-&emsp;&emsp;图片插入的语法类似链接插入的语法。分为行内式和参考式两种。
+图片插入的语法类似链接插入的语法。分为行内式和参考式两种。
 
-&emsp;&emsp;与链接插入不同的只是它们前面多加了个惊叹号<code>\!</code>。例如：
+与链接插入不同的只是它们前面多加了个惊叹号<code>\!</code>。例如：
 
 	行内式：
 	![Alt test](/img.jpg)
@@ -238,21 +238,21 @@ Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用�
 	![Alt test][id]
 	[id]: url/to/image "XXX"
 
-&emsp;&emsp;然而实际上，图片的插入目前还没有到自适应长宽这样如此智能的地步。但是由于Markdown是支持HTML标签的。我们可以通过使用<code>&lt;img&gt;</code>来实现。
+然而实际上，图片的插入目前还没有到自适应长宽这样如此智能的地步。但是由于Markdown是支持HTML标签的。我们可以通过使用<code>&lt;img&gt;</code>来实现。
 
 <h3 id = "other">其它</h3>
 
 ####转义字符
 
-&emsp;&emsp;Markdown和HTML作为语言本身，是有一定的保留字符的。若试图将这些保留字符作为单纯的字符输出，系统还没有智能到如此的程度。常用的方式是使用转义字符。
+Markdown和HTML作为语言本身，是有一定的保留字符的。若试图将这些保留字符作为单纯的字符输出，系统还没有智能到如此的程度。常用的方式是使用转义字符。
 
-&emsp;&emsp;例如文本里有<code><</code>字符，而这个字符被HTML语法限制着，我们可输出它的转义字符编号(&lt ;)即可。
+例如文本里有<code><</code>字符，而这个字符被HTML语法限制着，我们可输出它的转义字符编号(&lt ;)即可。
 
-&emsp;&emsp;这里提供一个在线转义字符表连接：<http://tool.oschina.net/commons?type=2>
+这里提供一个在线转义字符表连接：<http://tool.oschina.net/commons?type=2>
 
 ####反斜杠
 
-&emsp;&emsp;而实际上，Mardown可以利用反斜杠来插入一些普通的符号。例如：如果你想要用星号加在文字旁边的方式来做出强调效果（但不用<code>&lt;em&gt;</code>标签），你可以在星号的前面加上反斜杠：
+而实际上，Mardown可以利用反斜杠来插入一些普通的符号。例如：如果你想要用星号加在文字旁边的方式来做出强调效果（但不用<code>&lt;em&gt;</code>标签），你可以在星号的前面加上反斜杠：
 	
 	\*Interesting\*
 
@@ -269,13 +269,13 @@ Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用�
 
 <h2 id = "css_and_js">CSS 与 JavaScript</h2>
 
-&emsp;&emsp;级联样式表(CSS)是一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言；而JavaScript是一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。
+级联样式表(CSS)是一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言；而JavaScript是一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。
 
-&emsp;&emsp;网页通过使用这两种语言，实现提升网页工作者的效率，增强网页交互性等功能。在这里不做详细的介绍，读者可以通过阅读网站(<http://www.w3school.com.cn/index.html>)掌握此技术。
+网页通过使用这两种语言，实现提升网页工作者的效率，增强网页交互性等功能。读者请通过阅读网站<http://www.w3school.com.cn/index.html>的内容以掌握此工具。
 
 <h2 id = "jekyll">Jekyll</h2>
 
-这里主要讲解的是Jekyll。Jekyll是一个简单的静态Blog生成工具，不需要数据库支持。但是可以配合第三方服务,例如discuz,达到良好的效果。ACM14网站中大量的使用了Jekyll。
+这里主要讲解的是Jekyll。Jekyll是一个简单的静态Blog生成工具，不需要数据库支持。但是可以配合第三方服务，例如discuz达到良好的效果。ACM14网站中大量的使用了Jekyll。
 
 <h3 id = "abstract">概述</h3>
 
@@ -291,14 +291,14 @@ Jekyll没有独立的安装软件，如果要安装Jekyll，主要需要依靠de
 
 ####Windows环境下安装Jekyll
 
-1. <b>安装Ruby</b><br/>
-	ruby是一门语言，采用liquid语法。我们将在官网上下载Ruby。<br/>
+1. <b>安装ruby</b><br/>
+	ruby是一门语言，采用liquid语法。我们将在官网上下载ruby。<br/>
    ruby官网：<http://rubyinstaller.org/downloads/> <br>
    打开官网后，选择下载ruby2.0.0-p481即可。<br/>
    下载完成后，直接运行相应文件装在任意目录下即可。<br/>
 
-2. <b>安装Ruby devkit</b><br/>
-   devkit叫rubyinstaller development kit，直译过来是ruby安装的扩展包，jekyll是需要使用这个扩展包的。<br/>
+2. <b>安装ruby devkit</b><br/>
+   devkit全称为rubyinstaller development kit，直译过来是ruby安装的扩展包，jekyll是需要使用这个扩展包的。<br/>
    双击右边的下载地址进行下载：<a href = "{{site.baseurl}}/downloads/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe">DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe</a>
    <br/>这是一个可运行文件格式的压缩包，把它解压到任意的位置均可。
 
@@ -310,7 +310,7 @@ Jekyll没有独立的安装软件，如果要安装Jekyll，主要需要依靠de
    最后，在Devkit目录下直接输入cmd命令：<code>gem install jekyll</code><br/>
    安装需要进行一定长的时间，请耐心等待。
 
-安装完成后，Jekyll在Windows下的基本功能已经可以使用了。如果在安装中出现了问题，请查询F.A.Q(链接到FAQ.md)。
+安装完成后，Jekyll在Windows下的基本功能已经可以使用了。如果在安装中出现了问题，请查询<a  href = "#FAQ">F.A.Q</a>。
 
 ####Linux环境下安装Jekyll
 
@@ -369,9 +369,9 @@ Jekyll用Ruby实现，这就是安装Jekyll必须要安装Ruby的原因。
 那里包含了大量需要了解的内容。在这里，并不进行完全的照搬。只是在下文中列举几个要点。
 
 ####命令
-jekyll的命令包括了上文介绍的两种命令：<code>jekyll serve</code>和<code>jekyll server --watch</code>。但这两个命令只是所有jekyll命令中的冰山一角，具体可以看文档里的基本用法。
+jekyll的命令包括了上文介绍的两种命令：<code>jekyll serve</code>和<code>jekyll server --watch</code>。但这两个命令只是所有jekyll命令中的冰山一角，更多的命令请在文档中查找。
 
-主要有应用的是有关<code>build</code>、<code>serve</code>的命令。
+值得注意的是，主要有应用的是有关<code>build</code>、<code>serve</code>的命令。
 
 ####配置
 对于_config.yml的配置。有以下几个要点：
@@ -386,9 +386,14 @@ jekyll的命令包括了上文介绍的两种命令：<code>jekyll serve</code>�
 ####头信息
 头信息，全称是yaml头信息。这些信息包含在两行虚线之间。头信息是在使用Jekyll样式时的必要使用信息。
 
-jekyll在扫描html、md等文件时，会根据文章顶端的的头信息进行编译。例如：<br/>
+jekyll在扫描html、md等文件时，会根据文章顶端的的头信息进行编译。例如：
 
-<img src = "images/headinfo.png" />
+	---
+	layout:	documentation
+	title: Documentation
+	title_full: 文档<br/>Documentation
+	pic: btop_documentation.jpg
+	---
 
 虚线之间包含的变量可以有很多，甚至可以是维护者进行自定义的。下面将介绍几个常用变量。（值得注意的是，如果使用utf-8格式，不要出现BOM头字符）
 
@@ -396,9 +401,9 @@ jekyll在扫描html、md等文件时，会根据文章顶端的的头信息进�
 > 2. title: xxx。定义page或post的标题。
 > 3. permalink: xxx。用来指定这篇page或post的url。方便以后使用超链接时进行链接。
 > 4. category: xxx。有时候并不需要指定一个完整的路径，那么写category就足够了。category本质上是给文章指定一个类别。jekyll会在_site文件夹下生成一个xxx的文件夹，这时转换好的文章就会放在其中。
-> 5. <b>自定义变量。</b>jekyll提供的这个功能是十分有用的。举例来说，比如我现在写一个课程中心，课程包含的信息有名称，老师，上课时间等等，但这些肯定不会是保留属性。那么我们可以自己起。比如cirriculum_name: xxx，teacher: xxx, class hour: xxx，等等
+> 5. <b>自定义变量</b>。jekyll提供的这个功能是十分有用的。举例来说，比如我现在写一个课程中心，课程包含的信息有名称，老师，上课时间等等，但这些肯定不会是保留属性。那么我们可以自己起。比如cirriculum_name: xxx，teacher: xxx, class hour: xxx，等等
 
-在样式html中直接调用就可以直接使用这些变量了（这一点有点像c++中的define）。调用方式是{{page.property}}，如果是_post里面的post，那么就要用{{post.property}}。
+在样式html中直接调用就可以直接使用这些变量了（这一点有点像C++中的<code>#define</code>）。调用方式是<code>{{page.property}}</code>，如果是<code>_post</code>目录内的post文件，那么就要用<code>{{post.property}}</code>。
 
 值得注意的是，头信息可以是空的，jekyll仍然会处理。
 
@@ -414,37 +419,83 @@ jekyll在扫描html、md等文件时，会根据文章顶端的的头信息进�
 <b>`paginator：`</b>这是一个分页变量。若新闻首页只想放10篇，剩下的会有最下面的1、2、3、4……页码，那就要用到这个变量。在`_config.yml`中设置`paginate: 10;`就可以使用这个变量了。（不一定是10，视个人爱好或具体要求决定）
 
 #####全站变量（site）
+
 这里主要是site下面的一些常用变量。
 
-1. site.time &emsp;&emsp; 当前时间
-2. site.pages &emsp;&emsp; 网站包含的pages清单
-3. site.posts &emsp;&emsp; 按时间倒序的posts清单
+<table>
+<tr>
+  <td>site.time</td>
+  <td>当前时间</td>
+</tr>
+<tr>
+  <td>site.pages</td>
+  <td>网站包含的pages清单</td>
+</tr>
+<tr>
+  <td>site.posts</td>
+  <td>按时间倒序的posts清单</td>
+</tr>
+</table>
 
 其他还有一些，可以在<http://jekyllcn.com/docs/variables/>查询。
 
 #####页面变量（page）
 这里主要是page下面的一些常用变量。
 
-1. page.content &emsp;&emsp; 页面内容
-2. page.title &emsp;&emsp; 页面标题
-3. page.excerpt &emsp;&emsp; 页面摘要
-4. page.date &emsp;&emsp; 页面时间
-5. page.url &emsp;&emsp; 页面的相对路径
+<table>
+<tr>
+  <td>page.content</td>
+  <td>页面内容</td>
+</tr>
+<tr>
+  <td>page.title</td>
+  <td>页面标题</td>
+</tr>
+<tr>
+  <td>page.excerpt</td>
+  <td>页面摘要</td>
+</tr>
+<tr>
+  <td>page.date</td>
+  <td>页面时间</td>
+</tr>
+<tr>
+  <td>page.url</td>
+  <td>页面的相对路径</td>
+</tr>
+</table>
 
 其他还有一些，可以在<http://jekyllcn.com/docs/variables/>查询。
 
 #####分页器（paginator）
 这里主要是paginator下面的一些常用变量。
 
-1. paginator.posts  &emsp;&emsp;这一页可用的posts
-2. paginator.previous_page &emsp;&emsp; 前一页的页号
-3. paginator.next_page &emsp;&emsp; 下一页的页号
-4. paginator.previous_page_path &emsp;&emsp; 上一页的地址
-5. paginator.next_page_path &emsp;&emsp; 上一页的地址
+<table>
+<tr>
+  <td>paginator.posts</td>
+  <td>当前页面可用的posts</td>
+</tr>
+<tr>
+  <td>paginator.previous_page</td>
+  <td>前一页的页号</td>
+</tr>
+<tr>
+  <td>paginator.next_page</td>
+  <td>下一页的页号</td>
+</tr>
+<tr>
+  <td>paginator.previous_page_path</td>
+  <td>上一页的地址/td>
+</tr>
+<tr>
+  <td>paginator.next_page_path</td>
+  <td>下一页的地址</td>
+</tr>
+</table>
 
 ####Jekyll路径整合
 
-值得注意的是，在本地运行jekyll与在网络上运行时，有不同的路径。举一个简单的例子，当前网页上有一个照片：<code>me.jpg</code>。本地的设置路径是“<code>/images/me.jpg</code>”；而在网络上运行的时候（比如在Github上运行），地址改变为“<code>username.github.io/images/me</code>”。
+值得注意的是，在本地运行jekyll与在网络上运行时，有不同的路径。例如，当前网页上有一个照片：<code>me.jpg</code>。本地的设置路径是“<code>/images/me.jpg</code>”；而在网络上运行的时候（比如在Github上运行），地址改变为“<code>username.github.io/images/me</code>”。
 
 所以需要在<code>config.yml</code>中加入一个属性：<code>baseurl</code>。
 
@@ -702,7 +753,7 @@ ACM_ICPC竞赛介绍主页命名为<code>acmicpc.html</code>，采用一般文�
 
 这种替换方式的具体模块可以参照需要替换的旧的新闻模块，超文本标记语言的易书写易阅读的特性被合理展现。
 
-#F.A.Q
+<h1 id = "FAQ">F.A.Q</h1>
 
 &emsp;&emsp;本环节详细解答网页维护时可能会遇到的问题。这些问题大多是在网页重构时遭遇的困难，大家集思广益想到的解决方案；也有一些是具有前瞻性的，带有设问性的问题，这些问题将会充分考虑一个维护人员所遭遇的种种难题。
 
