@@ -5,9 +5,9 @@ title_full: 文档<br/>Documentation
 pic: btop_documentation.jpg
 ---
 
-#引言
+<h1 id = "introduction">引言</h1>
 
-##目标
+<h2 id = "target">目标</h2>
 
 上海交通大学ACM班2013级编程综合实践课程网页设计小组在课程中重做ACM班班级主页，新的班级主页代号为ACM14。该班级主页的目标是:
 
@@ -16,7 +16,7 @@ pic: btop_documentation.jpg
 
 而该文档的目标则是明确网页设计的“继承”性。既丰富网页设计思路，为后续的改造者做好铺垫；又提供一些必要的维护应用软件，语言的信息以供学习。
 
-##风格与理念
+<h2 id = "frame">风格与理念</h2>
 	
 记录整个设计理念，不仅仅是想让读者去理解设计者的设计理念，更是想让修改者选择去跟随这种设计理念，只有认识到这种设计理念的优点，才能对它有所认同，才能更好的完善网页的制作与设计。
 
@@ -36,17 +36,17 @@ pic: btop_documentation.jpg
 
 而对于整体框架的设计，相关图片和插件的选择，兼顾整体性与区域性相关联的美感，这些重要性都是不言而喻的，而实质上，这些皆与探索精神有关。我们号召维护者们大胆探索，努力创新，创造出更有艺术性，更具有时代特征和ACM班特征的网站。
 
-#基础工具
+<h1 id = "basic">基础工具</h1>
 
-网站是由诸多的相互关联的网页搭建而成的。本章将简单的介绍Markdown、Jekyll等在维护中必要的网页工具,而网页设计的基础Html、CSS等工具将给与链接，不做重点介绍。
+网站是由诸多的相互关联的网页搭建而成的。本章将简单的介绍<a href = "#markdown">Markdown</a>、<a href = "#jekyll">Jekyll</a>等在维护中必要的网页工具,而网页设计的基础<a href = "#html">Html</a>、<a href = "#CSS">CSS</a>等工具将给与链接，不做重点介绍。
 
 值得强调的是，介绍方式虽简，但绝不浅尝辄止。了解超文本标记语言和这些工具之间的关系，既可以使得整体维护时遭遇的错误信息减少，也能更清楚地了解整体构架，防止分类错误等不优雅的事件发生。
 
 值得注意的是，在后文对整体的网站构建进行介绍的章节，会提及相关章节应该如何去修改，新增或完善相关网页。这些应用将大量使用这些基础工具，我们强烈建议认真学习以下内容。
 
-##Html 与 Markdown
+<h2 id = "html_and_markdown">Html 与 Markdown</h2>
 
-###HTML
+<h3 id = "html">HTML</h3>
 在添加网页维护网页前，首先是必须要了解网页。大多数网页是通过使用超文本标记语言(HTML)完成的，ACM14也不例外。
 
 HTML语言的结构包括“Head”和“Body”两个部分。“Head”提供网页的信息，而“Body”提供网页的具体内容。如果只需要添加新闻等文类的话，只需要提供网页的具体内容(即“Body”内的信息即可)。
@@ -55,7 +55,8 @@ HTML语言的结构包括“Head”和“Body”两个部分。“Head”提供�
 
 肯定的，在后文也会提及部分HTML的语法以方便维护者的灵活应用。
 
-###Markdown
+<h3 id = "markdown">Markdown</h3>
+
 Markdown是一种语法，一种适用于网络的书写语言。它的语法是通过一些符号组成的，这些符号经过精挑细选，其作用一目了然。
 
 一份使用Markdown格式撰写的文件是可以以纯文本发布的。换句话说，不了解Markdown语言的人也能读懂多数代码。Markdown语言是一种可视化的语言，它“易读易写”。
@@ -66,7 +67,7 @@ Markdown的语法只能对应实现小部分的HTML标记。所以，Markdown的
 
 下文将简要介绍在进行网页维护时所需要的语法。
 
-###区块元素
+<h3 id = "kuai">区块元素</h3>
 
 ####段落与换行
 
@@ -178,7 +179,7 @@ Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用�
 
 &emsp;&emsp;值得注意的是，列表标记使用的数字并不会影响输出的HTML结果，并且列表标记也可以类似区块引用一样进行嵌套，这里就不一一列举了。
 
-###区段元素
+<h3 id = "duan">区段元素</h3>
 
 ####链接
 
@@ -239,7 +240,7 @@ Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用�
 
 &emsp;&emsp;然而实际上，图片的插入目前还没有到自适应长宽这样如此智能的地步。但是由于Markdown是支持HTML标签的。我们可以通过使用<code>&lt;img&gt;</code>来实现。
 
-###其它
+<h3 id = "other">其它</h3>
 
 ####转义字符
 
@@ -266,28 +267,29 @@ Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用�
 
 
 
-##CSS 与 JavaScript
+<h2 id = "css_and_js">CSS 与 JavaScript</h2>
 
 &emsp;&emsp;级联样式表(CSS)是一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言；而JavaScript是一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。
 
 &emsp;&emsp;网页通过使用这两种语言，实现提升网页工作者的效率，增强网页交互性等功能。在这里不做详细的介绍，读者可以通过阅读网站(<http://www.w3school.com.cn/index.html>)掌握此技术。
 
-##Jekyll
+<h2 id = "jekyll">Jekyll</h2>
 
-&emsp;&emsp;这里主要讲解的是Jekyll。Jekyll是一个简单的静态Blog生成工具，不需要数据库支持。但是可以配合第三方服务,例如discuz,达到良好的效果。ACM14网站中大量的使用了Jekyll。
+这里主要讲解的是Jekyll。Jekyll是一个简单的静态Blog生成工具，不需要数据库支持。但是可以配合第三方服务,例如discuz,达到良好的效果。ACM14网站中大量的使用了Jekyll。
 
-###概述
-&emsp;&emsp;许多人误以为Jekyll是一种语言，与html、JS类似，但实际上不是的。它实际上是一个简单的博客形态的静态站点生产工具。最关键的是，它是开源的。
+<h3 id = "abstract">概述</h3>
 
-&emsp;&emsp;举一个简单的例子，Jekyll是一台机器，将你用Markdown、Textile、Html写的文章或代码整合在一起，形成一个完整的网站。
+许多人误以为Jekyll是一种语言，与html、JS类似，但实际上不是的。它实际上是一个简单的博客形态的静态站点生产工具。最关键的是，它是开源的。
 
-&emsp;&emsp;Jekyll的basic idea十分显然，利用一些特定的语法，使得许多网页可以共用网页格式（css，js等）。举一个实际的应用：一个新闻中心的新闻大多是共用同一个格式的；所以将新闻的格式固定下来，可以有效起到减小工作量的作用。
+举一个简单的例子，Jekyll是一台机器，将你用Markdown、Textile、Html写的文章或代码整合在一起，形成一个完整的网站。
 
-####本地Jekyll的安装
+Jekyll的主要思路是利用一些特定的语法，使得许多网页可以共用网页格式（css，js等）。举一个实际的应用：一个新闻中心的新闻大多是共用同一个格式的；所以将新闻的格式固定下来，可以有效起到减小工作量的作用。
 
-&emsp;&emsp;Jekyll没有独立的安装软件，如果要安装Jekyll，主要需要依靠devkit和ruby。
+<h3 id = "install">本地Jekyll的安装</h3>
 
-###Windows环境下安装Jekyll
+Jekyll没有独立的安装软件，如果要安装Jekyll，主要需要依靠devkit和ruby。
+
+####Windows环境下安装Jekyll
 
 1. <b>安装Ruby</b><br/>
 	ruby是一门语言，采用liquid语法。我们将在官网上下载Ruby。<br/>
@@ -310,7 +312,7 @@ Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用�
 
 安装完成后，Jekyll在Windows下的基本功能已经可以使用了。如果在安装中出现了问题，请查询F.A.Q(链接到FAQ.md)。
 
-###Linux环境下安装Jekyll
+####Linux环境下安装Jekyll
 
 如果Linux下没有安装ruby，采用下面的命令安装ruby。
 	
@@ -325,13 +327,19 @@ Markdown 标记区块引用是使用类似 email 中用<code>></code>的引用�
 
 安装之后，运行命令<code>gem install jekyll</code>即可完成Jekyll的安装。
 
-###Jekyll运行原理
+####本地Jekyll的运行
+
+Jekyll的运行非常简单：在已搭建的本地静态网站的根目录下，输入cmd命令：<code>jekyll serve</code>或者<code>jekyll server --watch</code>即可运行。前者只会建立当前的网站页面，后者则可以实时更新。这两者各有利弊，在维护时慎重选择。
+
+在运行中，网页构建者可以在<code>localhost:4000</code>这个本地服务器上看网页的效果。
+
+<h3 id = "run">Jekyll运行原理</h3>
 
 Jekyll的核心其实是一个文本转换引擎。通过Jekyll语言将各不同的标记语言，排版布局等整合起来。只需要纯文本编辑，最终生成静态成品页面。
 
 Jekyll用Ruby实现，这就是安装Jekyll必须要安装Ruby的原因。
 
-###Jekyll的目录规范
+<h3 id = "directory_specification">Jekyll的目录规范</h3>
 
 如果要在目录下搭建本地静态网站，那么在该目录下必须要含有如下的文件和文件夹。
 
@@ -354,13 +362,7 @@ Jekyll用Ruby实现，这就是安装Jekyll必须要安装Ruby的原因。
     │	└── 2014-07-14-LJJ2.html
 	└──_config.yml(配置设定文件。对整个网站的几个属性值作一个规定，比如是否加上代码高亮，markdown的编译环境，页面存放内容限制等。)
 
-###本地运行Jekyll
-
-Jekyll的运行非常简单：在已搭建的本地静态网站的根目录下，输入cmd命令：<code>jekyll serve</code>或者<code>jekyll server --watch</code>即可运行。前者只会建立当前的网站页面，后者则可以实时更新。这两者各有利弊，在维护时慎重选择。
-
-在运行中，网页构建者可以在<code>localhost:4000</code>这个本地服务器上看网页的效果。
-
-###Jekyll的编写规范（Jekyll文档）
+<h3 id = "written_specification">Jekyll的编写规范（Jekyll文档）</h3>
 
 关于Jekyll的一些编写规范，最好的方案是查看官方<a href = "http://jekyllcn.com/">Jekyll文档</a>。
 
@@ -440,7 +442,7 @@ jekyll在扫描html、md等文件时，会根据文章顶端的的头信息进�
 4. paginator.previous_page_path &emsp;&emsp; 上一页的地址
 5. paginator.next_page_path &emsp;&emsp; 上一页的地址
 
-####Jekyll路径
+####Jekyll路径整合
 
 值得注意的是，在本地运行jekyll与在网络上运行时，有不同的路径。举一个简单的例子，当前网页上有一个照片：<code>me.jpg</code>。本地的设置路径是“<code>/images/me.jpg</code>”；而在网络上运行的时候（比如在Github上运行），地址改变为“<code>username.github.io/images/me</code>”。
 
@@ -461,15 +463,15 @@ jekyll在扫描html、md等文件时，会根据文章顶端的的头信息进�
 
 类似的，在有关超链接、css、js的引用、图片的引用时都要注意相应的路径问题。
 
-##BootStrap
+<h2 id = "bootstrap">BootStrap</h2>
 
 Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局、移动设备优先的WEB项目。官方网站：<http://www.bootcss.com/>和官方文档：<http://v3.bootcss.com/getting-started/>描述的非常详细，这里并不赘述。
 
-##网站构建
+#网站构建
 
 本章将主要介绍网页构建上的各个框架。包括整体框架构建，各中心，各主页框架构建等。本章的目的是让读者明确网页各处设计缘由以及各段的源代码的意义。
 
-###结构框架
+##结构框架
 
 网站的首页是位于根目录下的<code>index.html</code>文件。随后，根据导航栏的每条，进行扩展。以下是扩展树形图：
 
@@ -505,7 +507,7 @@ Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局�
 	└──_posts(各新闻目录)
 
 以下将逐次介绍各个结构。
-###首页
+##首页
 
 首页分为五个<a href = "http://www.w3school.com.cn/html/html_blocks.asp">HTML 块</a>。
 
@@ -519,7 +521,7 @@ Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局�
 
 第五块命名为<code>index\_5</code>。是新闻中心在首页的展示，会集中展示最近的重要新闻。左侧会有一副配图，配图的被放置在<code>margin:2%</code>的位置，地址为<code>index\_5.jpg</code>。左侧是罗列的最新新闻，采用有序表进行规范，直接定义链接的方法进行链接。值得注意的是，有序表的第一个元素的字符大小被刻意的放大，已达到吸引力加大的效果，并突出了新闻的新颖性的特点。
 
-####最新新闻更新
+###最新新闻更新
 
 由于最新新闻采用的是直接定义链接的方法。若要更新最新新闻，需要手工修改有序表。注意在Jekyll内提到的链接设置采用的Liquid语言“<code>{{site.baseurl}}</code>”的使用。
 
@@ -529,13 +531,13 @@ Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局�
 
 文本类的设计在<code>_layouts\default_post.html</code>文件，该文件通过Jekyll语言实现了文本类的设计。在页首插入<code>_includes</code>文件夹下的html文件:<code>head.html</code>与<code>navigation.html</code>，在页尾插入<code>footer.html</code>。
 
-###新闻中心
+##新闻中心
 	
 新闻中心首页是使用Jekyll生成的。内置的<code>main.css</code>内的“News Center”部分。设计了时间轴、newer&order等格式。
 
 新闻中心首页中将显示所有新闻的链接。除此之外，体育节、旅游、夏令营的内容都属于新闻版块，而在它们各自的首页中只显示相关的链接。
 
-####新增一篇新闻
+###新增一篇新闻
 
 &emsp;&emsp;所有的新闻均放在<code>_posts</code>目录下。
 
@@ -554,11 +556,11 @@ Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局�
 	* 其它的新闻均填写为news
 
 
-###班级介绍
+##班级介绍
 
 班级介绍的所有内容被放置在<code>intros</code>文件夹内。
 
-####班级介绍主页
+###班级介绍主页
 
 班级介绍主页的命名是<code>intro_index.html</code>。本页被分为四个HTML块，分别表示班级介绍的四个侧重方向：“班”，“师”，“生”，“赛”。
 
@@ -600,15 +602,15 @@ Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局�
 
 依次完成<code>H1</code>字号文字：“赛”，班级介绍的html块和ACM_ICPC世界冠军奖杯图片。其中ACM班班徽左对齐，<code>H1</code>字号文字右对齐，正文起填充效果。
 
-####班级理念
+###班级理念
 
 班级理念命名为<code>class.html</code>，采用一般文本类设计方案，可以在文本类查询。这里并不复述。
 
-####教师名单
+###教师名单
 
 教师名单命名为<code>teachers.html</code>。左侧为教师名单，右侧为各个教师的介绍。
 
-#####在教师名单上加入一个教师
+####在教师名单上加入一个教师
 
 假设需要添加一名名称为<code>[teacher_name]</code>的教师。
 
@@ -632,15 +634,15 @@ Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局�
 
 需要<strong>注意</strong>的是，为了名单页面与名录的有序性，请根据教师姓名拼音的<a href = "http://baike.baidu.com/link?url=RwIuVALUfnrymdGT7xhXa3BgjcUJ6YFxKozPGU7GyxoQH4sDqAzmA27cLWGSshVLfKgx622lctHn7cUv2BqN1q">音序排列</a>找到当前合适的教师插入位置，进行加入。
 
-####学生名单
+###学生名单
 
 >修改中
 
-####荣誉榜
+###荣誉榜
 
 >修改中
 
-####ACM_ICPC竞赛介绍
+###ACM_ICPC竞赛介绍
 
 ACM_ICPC竞赛介绍主页命名为<code>acmicpc.html</code>，采用一般文本类设计方案，可以在文本类查询。这里并不复述。
 
@@ -648,11 +650,11 @@ ACM_ICPC竞赛介绍主页命名为<code>acmicpc.html</code>，采用一般文�
 
 >修改中
 
-###课程中心
+##课程中心
 
 课程中心的所有内容被放置在<code>lessons</code>文件夹内。
 
-####课程中心首页
+###课程中心首页
 
 课程中心文本的命名是<code>lesson_index.html</code>，使用了文本类模板。而这里的文本是特殊的，是由若干<code>col-md-4</code>HTML块组成的。对于每一个HTML块，需要使用HTML的img命令插入一张图片，使用链接命令将这个课程的名字给出链接。例如有关PPCA这个课程采用的Html源码是：
 
@@ -663,7 +665,7 @@ ACM_ICPC竞赛介绍主页命名为<code>acmicpc.html</code>，采用一般文�
 
 这里，插入的图片是<code>lesson_PPCA.jpg</code>，PPCA课程的详细地址是<code>/lessons/lesson_PPCA.html</code>。
 
-####单个课程
+###单个课程
 
 单个课程在lesson下以HTML文件。命名规则为lesson_XXX.html，其中XXX为课程名称。例如课程PPCA的课程名称为lesson_PPCA.html。在这里并不推荐使用中文进行命名。
 
@@ -679,7 +681,7 @@ ACM_ICPC竞赛介绍主页命名为<code>acmicpc.html</code>，采用一般文�
 * teacher: 授课教师
 * grade: 授课时间
 
-###活动中心
+##活动中心
 
 活动中心使用了BootStarp的滚轮设计，体现活动的灵动性。几个由大图片构成的页面相互轮换，与文字相得益彰。活动中心相比于其它的几个中心，具有更加的开放性，可以尝试一些华丽新颖的设计理念。
 
@@ -690,7 +692,7 @@ ACM_ICPC竞赛介绍主页命名为<code>acmicpc.html</code>，采用一般文�
 在这里，共设计了三个页面，分别对应体育节、旅游和夏令营这三件ACM班的主要活动信息。每个项目的具体活动信息存储在新闻中心内，可以在新闻中心的介绍中查询到对应信息。
 每个页面的设计是类似的。这三个页面分别被分为了三个HTML块：.activity\_1,activity\_2与activity\_3。而对应每一个页面都有一个HTML块article\_activity存储并显示图片所对应的文字内容。每段文字后会有一个“点击查看更多”方框。这个方框是固定模板，可查看js文件夹下的main.js文件了解相信的实现方法。
 
-####如何修改活动中心的页面
+###如何修改活动中心的页面
 
 活动中心页面的修改须直接修改activity.html。
 
@@ -700,15 +702,15 @@ ACM_ICPC竞赛介绍主页命名为<code>acmicpc.html</code>，采用一般文�
 
 这种替换方式的具体模块可以参照需要替换的旧的新闻模块，超文本标记语言的易书写易阅读的特性被合理展现。
 
-##F.A.Q
+#F.A.Q
 
 &emsp;&emsp;本环节详细解答网页维护时可能会遇到的问题。这些问题大多是在网页重构时遭遇的困难，大家集思广益想到的解决方案；也有一些是具有前瞻性的，带有设问性的问题，这些问题将会充分考虑一个维护人员所遭遇的种种难题。
 
 &emsp;&emsp;在进行网页维护时难免会遭遇整个文档（包括F.A.Q）都无法解决的问题。如若遭遇这类情况，请及时联系ACM14设计小组成员。我们会在帮助解决问题，同时进行F.A.Q的更新。
 
-###Jekyll问题
+##Jekyll问题
 
-####问题1：Windows下安装Jekyll失败，有些文件没有被安装
+###问题1：Windows下安装Jekyll失败，有些文件没有被安装
 
 答：这可能是由如下的问题造成的，他们各有不同的解决方案。
 
@@ -716,21 +718,21 @@ ACM_ICPC竞赛介绍主页命名为<code>acmicpc.html</code>，采用一般文�
 
 2. windows编码问题。这种错误经常显示“UTF-8”和"GBK"等单词。可在网站：<http://yanping.me/cn/blog/2012/10/09/chinese-charset-problems-with-jekyll/>上查询解决方案。
 
-####问题2：修改网页以后，网页没有被Jekyll编译
+###问题2：修改网页以后，网页没有被Jekyll编译
 
 答：在修改网页的任何一个细节的疏忽都有可能导致这个问题的发生。
 
 1. 没有编译。请查看Jekyll教程内的有关Build的命令进行学习，对于编译成功的代码可以在_site文件夹内查询到。 
 2. 编码问题。由于Windows和Linux下不同的编码，Jekyll的头信息由于对空格等字符有十分严格的审查限定，在Jekyll的头信息附件意外增加无用的字符是出现这种问题的最大可能。请认真检查Jekyll，可以使用Emacs作为编辑器辅助工具进行检查。
 
-###History问题
+##History问题
 
-####问题1：意外删掉了一些网页代码怎么办
+###问题1：意外删掉了一些网页代码怎么办
 
 答：为了防止这种情况的发生，请在对网站做修改时，及时保存历史信息。
 
-###网页意外Bug
+##网页意外Bug
 
-####问题1：当前图片无法显示
+###问题1：当前图片无法显示
 
 答：检查对应的图片链接是否正确，是否使用Jekyll要求的Liquid语言：“<code>{{site.baseurl}}</code>”。
