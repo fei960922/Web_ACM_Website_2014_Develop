@@ -518,11 +518,11 @@ jekyll在扫描html、md等文件时，会根据文章顶端的的头信息进�
 
 Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局、移动设备优先的WEB项目。官方网站：<http://www.bootcss.com/>和官方文档：<http://v3.bootcss.com/getting-started/>描述的非常详细，这里并不赘述。
 
-#网站构建
+<h1 id = "build">网站构建</h1>
 
 本章将主要介绍网页构建上的各个框架。包括整体框架构建，各中心，各主页框架构建等。本章的目的是让读者明确网页各处设计缘由以及各段的源代码的意义。
 
-##结构框架
+<h2 id = "framework">结构框架</h2>
 
 网站的首页是位于根目录下的<code>index.html</code>文件。随后，根据导航栏的每条，进行扩展。以下是扩展树形图：
 
@@ -558,7 +558,7 @@ Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局�
 	└──_posts(各新闻目录)
 
 以下将逐次介绍各个结构。
-##首页
+<h2 id = "index">首页</h2>
 
 首页分为五个<a href = "http://www.w3school.com.cn/html/html_blocks.asp">HTML 块</a>。
 
@@ -582,7 +582,7 @@ Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局�
 
 文本类的设计在<code>_layouts\default_post.html</code>文件，该文件通过Jekyll语言实现了文本类的设计。在页首插入<code>_includes</code>文件夹下的html文件:<code>head.html</code>与<code>navigation.html</code>，在页尾插入<code>footer.html</code>。
 
-##新闻中心
+<h2 id = "news">新闻中心</h2>
 	
 新闻中心首页是使用Jekyll生成的。内置的<code>main.css</code>内的“News Center”部分。设计了时间轴、newer&order等格式。
 
@@ -607,11 +607,11 @@ Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局�
 	* 其它的新闻均填写为news
 
 
-##班级介绍
+<h2 id = "intros">班级介绍</h2>
 
 班级介绍的所有内容被放置在<code>intros</code>文件夹内。
 
-###班级介绍主页
+<h3 id = "intro_index">班级介绍主页</h3>
 
 班级介绍主页的命名是<code>intro_index.html</code>。本页被分为四个HTML块，分别表示班级介绍的四个侧重方向：“班”，“师”，“生”，“赛”。
 
@@ -653,11 +653,11 @@ Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局�
 
 依次完成<code>H1</code>字号文字：“赛”，班级介绍的html块和ACM_ICPC世界冠军奖杯图片。其中ACM班班徽左对齐，<code>H1</code>字号文字右对齐，正文起填充效果。
 
-###班级理念
+<h3 id = "class">班级理念</h3>
 
 班级理念命名为<code>class.html</code>，采用一般文本类设计方案，可以在文本类查询。这里并不复述。
 
-###教师名单
+<h3 id = "teachers">教师名单</h3>
 
 教师名单命名为<code>teachers.html</code>。左侧为教师名单，右侧为各个教师的介绍。
 
@@ -685,27 +685,27 @@ Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局�
 
 需要<strong>注意</strong>的是，为了名单页面与名录的有序性，请根据教师姓名拼音的<a href = "http://baike.baidu.com/link?url=RwIuVALUfnrymdGT7xhXa3BgjcUJ6YFxKozPGU7GyxoQH4sDqAzmA27cLWGSshVLfKgx622lctHn7cUv2BqN1q">音序排列</a>找到当前合适的教师插入位置，进行加入。
 
-###学生名单
+<h3 id = "students">学生名单</h3>
 
 >修改中
 
-###荣誉榜
+<h3 id = "honor">荣誉榜</h3>
 
 >修改中
 
-###ACM_ICPC竞赛介绍
+<h3 id = "acmicpc">ACM_ICPC竞赛介绍</h3>
 
 ACM_ICPC竞赛介绍主页命名为<code>acmicpc.html</code>，采用一般文本类设计方案，可以在文本类查询。这里并不复述。
 
-###学术中心
+<h2 id = "academic">学术中心</h2>
 
 >修改中
 
-##课程中心
+<h2 id = "lessons">课程中心</h2>
 
 课程中心的所有内容被放置在<code>lessons</code>文件夹内。
 
-###课程中心首页
+<h3 id = "lesson_index">课程中心首页</h3>
 
 课程中心文本的命名是<code>lesson_index.html</code>，使用了文本类模板。而这里的文本是特殊的，是由若干<code>col-md-4</code>HTML块组成的。对于每一个HTML块，需要使用HTML的img命令插入一张图片，使用链接命令将这个课程的名字给出链接。例如有关PPCA这个课程采用的Html源码是：
 
@@ -716,7 +716,7 @@ ACM_ICPC竞赛介绍主页命名为<code>acmicpc.html</code>，采用一般文�
 
 这里，插入的图片是<code>lesson_PPCA.jpg</code>，PPCA课程的详细地址是<code>/lessons/lesson_PPCA.html</code>。
 
-###单个课程
+<h3 id = "lesson_xxx">单个课程</h3>
 
 单个课程在lesson下以HTML文件。命名规则为lesson_XXX.html，其中XXX为课程名称。例如课程PPCA的课程名称为lesson_PPCA.html。在这里并不推荐使用中文进行命名。
 
@@ -732,7 +732,7 @@ ACM_ICPC竞赛介绍主页命名为<code>acmicpc.html</code>，采用一般文�
 * teacher: 授课教师
 * grade: 授课时间
 
-##活动中心
+<h2 id = "activity">活动中心</h2>
 
 活动中心使用了BootStarp的滚轮设计，体现活动的灵动性。几个由大图片构成的页面相互轮换，与文字相得益彰。活动中心相比于其它的几个中心，具有更加的开放性，可以尝试一些华丽新颖的设计理念。
 
