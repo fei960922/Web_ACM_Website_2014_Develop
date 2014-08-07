@@ -495,7 +495,7 @@ jekyll在扫描html、md等文件时，会根据文章顶端的的头信息进�
 
 ####Jekyll路径整合
 
-值得注意的是，在本地运行jekyll与在网络上运行时，有不同的路径。例如，当前网页上有一个照片：<code>me.jpg</code>。本地的设置路径是“<code>/images/me.jpg</code>”；而在网络上运行的时候（比如在Github上运行），地址改变为“<code>username.github.io/images/me</code>”。
+值得注意的是，在本地运行jekyll与在网络上运行时，有不同的路径。例如，当前网页上有一个照片：<code>me.jpg</code>。本地的设置路径是“<code>/images/me.jpg</code>”；而在网络上运行的时候，地址应改变为“<code>username.github.io/images/me</code>”。
 
 所以需要在<code>config.yml</code>中加入一个属性：<code>baseurl</code>。
 
@@ -562,13 +562,13 @@ Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局�
 
 首页分为五个<a href = "http://www.w3school.com.cn/html/html_blocks.asp">HTML 块</a>。
 
-第一块命名为<code>index\_1</code>。背景是第一视角背景图片<code>index\_1.jpg</code>。通过插入背景为空的书法图片<code>hand\_writing.jpg</code>并设置它的margin和width的值以控制图片的位置。
+第一块命名为<code>index\_1</code>。背景是第一视角背景图片<code>index\_1.jpg</code>。通过插入背景为空的书法图片<code>hand\_writing.jpg</code>并设置它的<code>margin</code>和<code>width</code>的值以控制图片的位置。
 
 第二块命名为<code>index\_2</code>。背景是纯色颜色<code>#DDDDDD</code>。可以在CSS里面的<code>background-color</code>选项做调整。正文是"欢迎来到ACM班"，同时它也被作为第三块的标题。
 
 第三块命名为<code>index\_3</code>。是对ACM班的简介。
 
-第四块命名为<code>index\_4</code>。背景图片是<code>index_2.jpg</code>。正文是"新闻中心"，同时它也被作为第四块的标题。这一块视差滚动的实现效果，视差滚动的CSS可以在main.css内“Index”部分进行查看。有关时差滚动的详细解释，可以在BootStarp中查找。
+第四块命名为<code>index\_4</code>。背景图片是<code>index_2.jpg</code>。正文是"新闻中心"，同时它也被作为第四块的标题。这一块视差滚动的实现效果，视差滚动的CSS可以在<code>main.css</code>内“Index”部分进行查看。有关时差滚动的详细解释，可以在BootStarp中查找。
 
 第五块命名为<code>index\_5</code>。是新闻中心在首页的展示，会集中展示最近的重要新闻。左侧会有一副配图，配图的被放置在<code>margin:2%</code>的位置，地址为<code>index\_5.jpg</code>。左侧是罗列的最新新闻，采用有序表进行规范，直接定义链接的方法进行链接。值得注意的是，有序表的第一个元素的字符大小被刻意的放大，已达到吸引力加大的效果，并突出了新闻的新颖性的特点。
 
@@ -576,9 +576,9 @@ Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局�
 
 由于最新新闻采用的是直接定义链接的方法。若要更新最新新闻，需要手工修改有序表。注意在Jekyll内提到的链接设置采用的Liquid语言“<code>{{site.baseurl}}</code>”的使用。
 
-###文本类
+<h2 id = "deafult_post">default_post类型</h2>
 
-文本类特指的是一种类型。招生信息与班级理念充分的反应了文本类的信息构建。文本类可以单纯的理解为正文的一种固定的格式嵌套。
+deafult_post类型是被设计出的模板类型，大多网页是均应用此设计模板进行完成。例如<a href = "#class">班级理念</a>与<a href = "#acmicpc">ACM_ICPC</a>竞赛介绍等
 
 文本类的设计在<code>_layouts\default_post.html</code>文件，该文件通过Jekyll语言实现了文本类的设计。在页首插入<code>_includes</code>文件夹下的html文件:<code>head.html</code>与<code>navigation.html</code>，在页尾插入<code>footer.html</code>。
 
@@ -590,11 +590,11 @@ Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局�
 
 ###新增一篇新闻
 
-&emsp;&emsp;所有的新闻均放在<code>_posts</code>目录下。
+所有的新闻均放在<code>_posts</code>目录下。
 
-&emsp;&emsp;新闻文件的命名格式是"时间-文章标题.后缀名"。时间格式请使用“YYYY-MM-DD”，后缀名使用md和html均可。
+新闻文件的命名格式是"时间-文章标题.后缀名"。时间格式请使用“YYYY-MM-DD”，后缀名使用<code>.md</code>和<code>html</code>均可。
 
-&emsp;&emsp;维护人员可以将任意一份新闻当做模板，进行适当的修改形成新的新闻即可。
+维护人员可以将任意一份新闻当做模板，进行适当的修改形成新的新闻即可。
 
 以下解释头信息的具体内容：
 
@@ -620,7 +620,7 @@ Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局�
 第一块命名为<code>intro_1 fullh</code>，背景颜色选择为C蓝色，C蓝色rgb编号为<code>#CCCCCC</code>，是最纯正的蓝色。蓝色有创新的含义，体现了ACM班的创新精神。
 第一块分为上下两个之HTML块。
 
-第一块上半部分依次完成<code>H1</code>字号文字：“班”，班级介绍的html块和ACM班徽图片。其中ACM班班徽右对齐，<code>H1</code>字号文字左对齐，正文起填充效果。
+第一块上半部分依次完成<code>H1</code>字号文字：“班”，班级介绍的HTML块和ACM班徽图片。其中ACM班班徽右对齐，<code>H1</code>字号文字左对齐，正文起填充效果。
 
 第一块下半部分是通过CSS实现的时间轴效果<code>timeline</code>。有关的CSS地址为：。
 
@@ -651,7 +651,7 @@ Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局�
 
 第四块命名为<code>intro_4 fullh</code>。背景颜色依然是C蓝色，rgb编号为<code>#CCCCCC</code>。设计方式与第一块上半部分类似。
 
-依次完成<code>H1</code>字号文字：“赛”，班级介绍的html块和ACM_ICPC世界冠军奖杯图片。其中ACM班班徽左对齐，<code>H1</code>字号文字右对齐，正文起填充效果。
+依次完成<code>H1</code>字号文字：“赛”，班级介绍的HTML块和ACM_ICPC世界冠军奖杯图片。其中ACM班班徽左对齐，<code>H1</code>字号文字右对齐，正文起填充效果。
 
 <h3 id = "class">班级理念</h3>
 
@@ -718,15 +718,15 @@ ACM_ICPC竞赛介绍主页命名为<code>acmicpc.html</code>，采用一般文�
 
 <h3 id = "lesson_xxx">单个课程</h3>
 
-单个课程在lesson下以HTML文件。命名规则为lesson_XXX.html，其中XXX为课程名称。例如课程PPCA的课程名称为lesson_PPCA.html。在这里并不推荐使用中文进行命名。
+单个课程在lesson文件夹下以HTML文件。命名规则为<code>lesson_XXX.html</code>，其中XXX为课程名称。例如课程PPCA的课程名称为<code>lesson_PPCA.html</code>。在这里并不推荐使用中文进行命名。
 
-单个课程采用Jekyll模板。模板文件为lesson.html，放置在模板存放文件夹<code>_layout</code>下。
+单个课程采用Jekyll模板。模板文件为<code>lesson.html</code>，放置在模板存放文件夹<code>_layout</code>下。
 
-在lessons文件夹下有一个模板文件lesson_model.html。可以通过模仿模板的设计单个课程网页。
+在lessons文件夹下有一个模板文件<code>lesson_model.html</code>。可以通过模仿模板的设计单个课程网页。
 
 以下解释头信息的具体内容：
 
-* layout: lesson。这里定义的是模板格式为lesson.html。
+* layout: lesson。所指定模板格式为_post文件夹下的<code>lesson.html</code>。
 * title: 课程名称缩写，显示在网页标签栏中。
 * fullname: 课程名称。
 * teacher: 授课教师
@@ -741,15 +741,15 @@ ACM_ICPC竞赛介绍主页命名为<code>acmicpc.html</code>，采用一般文�
 有关滚轮设计的模板在<code>bootstrap.min.css</code>和<code>bootstrap.min.js</code>里面，维护者若对实现有兴趣，可以前去阅读。
 
 在这里，共设计了三个页面，分别对应体育节、旅游和夏令营这三件ACM班的主要活动信息。每个项目的具体活动信息存储在新闻中心内，可以在新闻中心的介绍中查询到对应信息。
-每个页面的设计是类似的。这三个页面分别被分为了三个HTML块：.activity\_1,activity\_2与activity\_3。而对应每一个页面都有一个HTML块article\_activity存储并显示图片所对应的文字内容。每段文字后会有一个“点击查看更多”方框。这个方框是固定模板，可查看js文件夹下的main.js文件了解相信的实现方法。
+每个页面的设计是类似的。这三个页面分别被分为了三个HTML块：<code>activity_1</code>,<code>activity_2</code>与<code>activity_3</code>。而对应每一个页面都有一个HTML块<code>article_activity</code>存储并显示图片所对应的文字内容。每段文字后会有一个“点击查看更多”方框。这个方框是固定模板，可查看js文件夹下的<code>main.js</code>文件了解相信的实现方法。
 
 ###如何修改活动中心的页面
 
-活动中心页面的修改须直接修改activity.html。
+活动中心页面的修改须直接修改<code>activity.html</code>。
 
 若欲新增一个页面，不仅需要在css内新增activity_4的配置，而且还需要在新闻中心内做出一定的改变。这样做是不推荐的。
 
-而将新的活动信息替换旧的活动信息，可直接通过替换对应图片activity\_X.jpg与在对应的article\_activity块内修改对应的文字信息（使用Html语言）即可。
+而将新的活动信息替换旧的活动信息，可直接通过替换对应图片<code>activity_X.jpg</code>与在对应的<code>article_activity</code>块内修改对应的文字信息（使用Html语言）即可。
 
 这种替换方式的具体模块可以参照需要替换的旧的新闻模块，超文本标记语言的易书写易阅读的特性被合理展现。
 
