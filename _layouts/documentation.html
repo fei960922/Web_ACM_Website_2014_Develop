@@ -5,9 +5,7 @@
     <div class = "big_top" {% if page.pic %}style = "background-image:url({{site.baseurl}}/images/{{ page.pic }});"{% endif %}>
 		{% if page.title_full %}{{ page.title_full}}{% else %}{{page.title}}{% endif %}<br/>
 	</div>
-    <div class = "container{% if page.size_big %}_big{% endif %} acm_article">
-        {{ content }}
-    	<div class = "col-md-3">
+    <div class = "col-md-3">
 	  		<div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" role="complementary">
             <ul class="nav bs-docs-sidenav">
                 <li class = "active">
@@ -44,7 +42,9 @@
 				</li>
             </ul>
       		</div>
-    	</div>
+    </div>
+    <div class = "container{% if page.size_big %}_big{% endif %} acm_article">
+        {{ content }}
     </div>
 
     {% include footer.html %}
