@@ -1248,3 +1248,8 @@ padding: 0;
 .nav_addition li ul {
 	padding-left: 20px;
 }
+
+.subnav {
+	font-size: 15px;
+	font-weight: 400;
+}
