@@ -12,7 +12,7 @@
 │      │	├── 区段元素(duan)
 │      │	└── 其它(other)
 │      ├── CSS与JavaScript(css_and_js)
-│      ├── Jekyll(Jekyll)
+│      ├── Jekyll(jekyll)
 │      │	├── 概述(abstract)
 │      │	├── 安装(install)
 │      │	├── 运行原理(run)
