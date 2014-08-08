@@ -576,14 +576,14 @@ deafult_post类型是被设计出的模板类型，大多网页是均应用此�
 
 第三块命名为<code>intro_3 fullh</code>。使用Bootstarp的滚轮设计:<code>intro_slide item active</code>。滚轮设计的每一页分别成HTML块。每一块对应一个班级。例如，2013级ACM班的HTML语言为：
 
-	&lt; div class="intro_slide item active" &gt;
-    	&lt; div class = "halfh intro_slide_pic"style="background-image:url(../images/stu_2013.jpg)" &gt; &lt; /div &gt;
-    	&lt; div class = "intro_slide_text" &gt;
-		&lt; h2 &gt; ACM 2011 &lt; /h2 &gt;
-    	&lt; button type="button" class="btn btn_new" &gt; 2013年级集体照 &lt; /button &gt;
-    	&lt; button type="button" class="btn btn_new" &gt; 2013年级学生介绍 &lt; /button &gt;
-    	&lt; /div &gt;
-    &lt; /div &gt;
+	<div class="intro_slide item active">
+    	<div class = "halfh intro_slide_pic"style="background-image:url(../images/stu_2013.jpg)" > </div>
+    	<div class = "intro_slide_text">
+		<h2> ACM 2011 </h2>
+    	<button type="button" class="btn btn_new"> 2013年级集体照 </button>
+    	<button type="button" class="btn btn_new"> 2013年级学生介绍 </button>
+    	</div>
+    </div>
 
 可以依据这个模板，进行ACM班班级的添加。集体照推荐使用“<code>stu_YYYY.jpg</code>”命名并存储在<code>images</code>文件夹内。
 
