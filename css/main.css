@@ -1239,3 +1239,12 @@ padding: 0;
 	.acm_size{width:100%;}
 	.acm_history {width:100%;}
 }
+
+.nav_addition li a{
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.nav_addition li ul {
+	padding-left: 20px;
+}
