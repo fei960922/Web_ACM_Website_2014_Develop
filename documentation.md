@@ -421,7 +421,7 @@ jekyll在扫描html、md等文件时，会根据文章顶端的的头信息进�
 #####全站变量（site）
 
 这里主要是site下面的一些常用变量。
-
+<!--
 <table>
 <tr>
   <td>site.time</td>
@@ -436,12 +436,12 @@ jekyll在扫描html、md等文件时，会根据文章顶端的的头信息进�
   <td>按时间倒序的posts清单</td>
 </tr>
 </table>
-
+-->
 其他还有一些，可以在<http://jekyllcn.com/docs/variables/>查询。
 
 #####页面变量（page）
 这里主要是page下面的一些常用变量。
-
+<!--
 <table>
 <tr>
   <td>page.content</td>
@@ -464,12 +464,12 @@ jekyll在扫描html、md等文件时，会根据文章顶端的的头信息进�
   <td>页面的相对路径</td>
 </tr>
 </table>
-
+-->
 其他还有一些，可以在<http://jekyllcn.com/docs/variables/>查询。
 
 #####分页器（paginator）
 这里主要是paginator下面的一些常用变量。
-
+<!--
 <table>
 <tr>
   <td>paginator.posts</td>
@@ -492,6 +492,7 @@ jekyll在扫描html、md等文件时，会根据文章顶端的的头信息进�
   <td>下一页的地址</td>
 </tr>
 </table>
+-->
 
 ####Jekyll路径整合
 
