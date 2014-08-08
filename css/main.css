@@ -1249,3 +1249,7 @@ padding: 0;
 	padding-left: 20px;
 	font-weight: normal;
 }
+
+.nav_addition li ul li a {
+	font-weight: normal!important;
+}
