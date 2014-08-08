@@ -421,78 +421,17 @@ jekyll在扫描html、md等文件时，会根据文章顶端的的头信息进�
 #####全站变量（site）
 
 这里主要是site下面的一些常用变量。
-<!--
-<table>
-<tr>
-  <td>site.time</td>
-  <td>当前时间</td>
-</tr>
-<tr>
-  <td>site.pages</td>
-  <td>网站包含的pages清单</td>
-</tr>
-<tr>
-  <td>site.posts</td>
-  <td>按时间倒序的posts清单</td>
-</tr>
-</table>
--->
+
 其他还有一些，可以在<http://jekyllcn.com/docs/variables/>查询。
 
 #####页面变量（page）
 这里主要是page下面的一些常用变量。
-<!--
-<table>
-<tr>
-  <td>page.content</td>
-  <td>页面内容</td>
-</tr>
-<tr>
-  <td>page.title</td>
-  <td>页面标题</td>
-</tr>
-<tr>
-  <td>page.excerpt</td>
-  <td>页面摘要</td>
-</tr>
-<tr>
-  <td>page.date</td>
-  <td>页面时间</td>
-</tr>
-<tr>
-  <td>page.url</td>
-  <td>页面的相对路径</td>
-</tr>
-</table>
--->
+
 其他还有一些，可以在<http://jekyllcn.com/docs/variables/>查询。
 
 #####分页器（paginator）
 这里主要是paginator下面的一些常用变量。
-<!--
-<table>
-<tr>
-  <td>paginator.posts</td>
-  <td>当前页面可用的posts</td>
-</tr>
-<tr>
-  <td>paginator.previous_page</td>
-  <td>前一页的页号</td>
-</tr>
-<tr>
-  <td>paginator.next_page</td>
-  <td>下一页的页号</td>
-</tr>
-<tr>
-  <td>paginator.previous_page_path</td>
-  <td>上一页的地址/td>
-</tr>
-<tr>
-  <td>paginator.next_page_path</td>
-  <td>下一页的地址</td>
-</tr>
-</table>
--->
+
 
 ####Jekyll路径整合
 
