@@ -27,3 +27,12 @@ title: Introduction
     <button type="button" class="btn btn_new btn-block" onclick="window.open('{{ "/intros/acmicpc.html" | prepend: site.baseurl }}')">点击查看更多</button>
 </div></div>
 </div>
+<script type="text/javascript">
+    $(".block_intro_out").hover(            
+    function() {
+        $(this).children().fadeIn("fast");                         
+    },
+    function() {
+        $(this).children().fadeOut("fast");                         
+    });
+</script>

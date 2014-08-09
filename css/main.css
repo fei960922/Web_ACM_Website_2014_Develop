@@ -4,6 +4,7 @@
 	------------------------------------------  */
 
 body,html {
+	position:relative;
 	height     : 100%;
 	margin     : 0;
 	padding    : 0;
@@ -483,19 +484,13 @@ padding: 0;
 	        CSS for "Activity Center"
 	------------------------------------------  */
 
-.activity_1,.activity_2,.activity_3 { 
+.activity_main {height:100%;}
+.activity_main>div { 
 	background-size: cover;
 	background-repeat: no-repeat;
 	height:100%;
 }
-.activity_1{background-image: url(../images/activity_1.jpg);}
-.activity_2{background-image: url(../images/activity_2.jpg);}
-.activity_3{background-image: url(../images/activity_3.jpg);}
-
-.article_activity .btn{
-	font-size       :20px;
-}
-.article_activity {  
+.activity_main>div>div {  
 	padding    : 10% 0 0 15%; 
 	width      : 45%;
 	max-width  : 600px;
@@ -503,7 +498,7 @@ padding: 0;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.5); 
 	line-height: 1.5em; color: #fff; 
 }
-.article_activity h2 { font-size:40px;}
+.activity_main h2 { font-size:40px;}
 
 
 /*	------------------------------------------

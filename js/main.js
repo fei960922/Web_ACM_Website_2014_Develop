@@ -24,23 +24,12 @@ $(document).ready(function(){
     fontmaking();
 
 /*  ------------------------------------------
-             JavaScript of Introduction 
-    ------------------------------------------  */
-
-    $(".block_intro_out").hover(            
-        function() {
-            $(this).children().fadeIn("fast");                         
-        },
-        function() {
-            $(this).children().fadeOut("fast");                         
-        });
-
-/*  ------------------------------------------
              JavaScript of Nav-bar 
     ------------------------------------------  */
 
     $(".dropdown").hover(            
         function() {
+        	$('.dropdown-menu', this).stop(true,true);
             $('.dropdown-menu', this).fadeIn("fast");
             $(this).toggleClass('open');
             $('b', this).toggleClass("caret caret-up");                
