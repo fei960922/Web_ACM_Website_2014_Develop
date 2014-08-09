@@ -498,6 +498,7 @@ Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局�
 	└──_posts(各新闻目录)
 
 以下将逐次介绍各个结构。
+
 <h2 id = "index">首页</h2>
 
 首页分为五个<a href = "http://www.w3school.com.cn/html/html_blocks.asp">HTML 块</a>。
@@ -516,7 +517,7 @@ Bootstrap是最受欢迎的HTML、CSS和JS框架，用于开发响应式布局�
 
 由于最新新闻采用的是直接定义链接的方法。若要更新最新新闻，需要手工修改有序表。注意在Jekyll内提到的链接设置采用的Liquid语言“<code>{{site.baseurl}}</code>”的使用。
 
-<h2 id = "deafult_post">default_post类型</h2>
+<h2 id = "default_post">default_post类型</h2>
 
 deafult_post类型是被设计出的模板类型，大多网页是均应用此设计模板进行完成。例如<a href = "#class">班级理念</a>与<a href = "#acmicpc">ACM_ICPC</a>竞赛介绍等
 
