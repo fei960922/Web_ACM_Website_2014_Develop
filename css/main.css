@@ -35,7 +35,9 @@ a:hover {text-decoration: none;}
 	list-style: none;
 	display: block;
 }
-
+.acm_article img {
+	width:95%;
+}
 h1,h2,h3,h4,h5,h6 {
 	line-height: 2em;
 	margin-bottom:5px;
