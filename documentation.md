@@ -626,10 +626,6 @@ deafult_post类型是被设计出的模板类型，大多网页是均应用此�
 
 需要<strong>注意</strong>的是，为了名单页面与名录的有序性，请根据教师姓名拼音的<a href = "http://baike.baidu.com/link?url=RwIuVALUfnrymdGT7xhXa3BgjcUJ6YFxKozPGU7GyxoQH4sDqAzmA27cLWGSshVLfKgx622lctHn7cUv2BqN1q">音序排列</a>找到当前合适的教师插入位置，进行加入。
 
-<h3 id = "students">学生名单</h3>
-
->修改中
-
 <h3 id = "honor">荣誉榜</h3>
 
 >修改中
