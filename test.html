@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="./css/docs.min.css" type="text/css" />
   <link rel="stylesheet" href="./css/main.css" type="text/css" />
 </head>
-    <body class = "Microsoft_YaHei" style = "margin-top: 50px">
-    <div id = "headingDefault" style = "position: fixed;margin-top: 0px">
+    <body class = "Microsoft_YaHei">
+    <div id = "headingDefault" style = "position: relative;margin-top: 0px">
       <div class="inners" >
   <nav class="navbar" role="navigation">
     <div class="navbar-header">
@@ -369,8 +369,12 @@
 
   </body>
   <script src="./js/jquery.min.js"></script>
-  <script src="./js/docs.min.js"></script>
   <script src="./js/jquery.md5.js"></script> 
   <script src="./js/bootstrap.min.js"></script>
   <script src="./js/main.js"></script>
+  <script>
+    $(document).ready(function(){
+ $("body").scrollspy();
+});
+  </script>
 </html>
