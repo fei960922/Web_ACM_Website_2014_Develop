@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="container_big">
+    <ul class="timeline">
+    {% for post in site.categories.tgj %}
+		{% include post.html %}
+	{% endfor %}  
+	</ul>
+</div>	
+
+{% if paginator.total_pages > 1 %}
+	<div id="pagination">
+		{% if paginator.previous_page %}
+			<a class="prev" href="{{site.baseurl}}/news/{%if paginator.previous_page > 1 %}page{{ paginator.previous_page }}{% endif %}/">&laquo; Newer</a>
+		{% endif %}
+
+		{% if paginator.next_page %}
+			<a class="next" href="{{site.baseurl}}/news/page{{ paginator.next_page }}/" >Older &raquo;</a>
+		{% endif %}
+	</div>
+{% endif %}
+
