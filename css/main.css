@@ -27,6 +27,7 @@ a:hover {text-decoration: none;}
 
 .acm_article h1,.acm_article h2 {
 	border-bottom:1px solid #DDDDDD;
+	margin-bottom:5px;
 }
 .acm_article li {
 	line-height:1.6em;
@@ -36,7 +37,8 @@ a:hover {text-decoration: none;}
 	display: block;
 }
 .acm_article img {
-	width:95%;
+	width:100%;
+	padding:5px;
 }
 h1,h2,h3,h4,h5,h6 {
 	line-height: 2em;
