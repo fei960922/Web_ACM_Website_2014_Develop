@@ -25,6 +25,11 @@ body,html {
 
 a:hover {text-decoration: none;}
 
+.acm_article {
+	float: left;
+	margin-left: 25%;
+}
+
 .acm_article h1,.acm_article h2 {
 	border-bottom:1px solid #DDDDDD;
 	margin-bottom:5px;
@@ -514,6 +519,17 @@ padding: 0;
 	text-align      : center;
 	padding:5px;
 }
+
+.academic_left div:last-child {
+	height: 30%;
+	background-color: #fff;
+}
+
+.academic_left div:last-child:hover {
+	height: 30%;
+	background-color: #fff;
+}
+
 .academic_left>div:hover{background-color: #CCCCCC;}
 @media (min-width: 801px){
 .academic_left {
@@ -521,11 +537,13 @@ padding: 0;
 	position:fixed;
 	width: 17%;
 	max-width:200px;
+	height: 70%;
 }
 .academic_left h1,.academic_left h2{line-height: 1em;}
+
 .academic_left>div{
 	width  :100%;
-	height :20%;
+	height :15%;
 }
 .academic_now{background-color: #DDDDDD !important;}
 .academic_main {
@@ -1251,4 +1269,18 @@ padding: 0;
 
 .nav_addition li ul li a {
 	font-weight: normal!important;
+}
+
+.at_bottom {
+	position: absolute;
+}
+
+.docs-left {
+	padding-left: 20px;
+}
+
+.toctext {
+	font-size: 20px;
+	font-weight: 900;
+	padding-left: 0px;
 }

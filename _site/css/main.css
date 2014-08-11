@@ -4,6 +4,7 @@
 	------------------------------------------  */
 
 body,html {
+	position:relative;
 	height     : 100%;
 	margin     : 0;
 	padding    : 0;
@@ -37,7 +38,7 @@ a:hover {text-decoration: none;}
 
 h1,h2,h3,h4,h5,h6 {
 	line-height: 2em;
-	margin:0;
+	margin-bottom:5px;
 }
 p {
 	line-height: 1.6em;
@@ -144,7 +145,7 @@ p {
 
 .navbar{margin:0;color:#FFFFFF;}
 .navbar-toggle{margin-bottom:0;}
-.nav>li>a{color:#FFFFFF;}
+.nav>li>a{color:#FFFFFF;padding:15px 14px;}
 .dropdown>a:hover,.nav li>a:hover{
 	background-color:rgba(0,0,0,0.3)!important;
 }
@@ -244,45 +245,12 @@ p {
 	        CSS for "Introduction"
 	------------------------------------------  */
 
-.block_intro h1{
-	font-size:	100px;
-	font-family:华文行楷;
-	color:		#FFFFFF;
-	text-shadow:0 0 30px #000000;
-}
-.block_intro {
-	background-color: rgba(255,255,255,0.6);
-	height: 100%;
-}
-.block_intro .btn {
-	width:50%;
-	margin:auto;
-}
-.block_intro p{
-	padding:5% 20% 0 20%;
-}
-.bi1 {background: url(../images/intro_1.jpg);}
-.bi2 {background: url(../images/intro_2.jpg);}
-.bi3 {background: url(../images/intro_3.jpg);}
-.bi4 {background: url(../images/intro_4.jpg);}
-.bi1,.bi2,.bi3,.bi4{
-	background-size:	cover;
-	padding:	0;
-	-webkit-filter: alpha(opacity = 30);
-	-o-filter: alpha(opacity = 30);
-	filter: alpha(opacity = 30);
-}
-.bi1 h1{position:absolute;bottom:0;right:10px;}
-.bi2 h1{position:absolute;bottom:0;left:10px;}
-.bi3 h1{position:absolute;top:0;right:10px;}
-.bi4 h1{position:absolute;top:0;left:10px;}
-
-
-.intro_1>h1{
+.intro_1 h1{
 	font-size:200px;
-	margin: 0 50px 0 20px;
-	line-height: 1.6em;
+	padding:20px;
+	line-height: 1.4em;
 	float:left;
+	margin:30px;
 	border-bottom: 15px solid #CCCCCC;
 }
 .intro_2 h1{
@@ -296,7 +264,10 @@ p {
 	font-size:200px;
 	float:left;
 	line-height:1em;
-	padding: 0 40px;
+	padding: 20px;
+	position:absolute;
+	bottom:3%;
+	left :3%;
 	border-left: 15px solid #CCCCCC;
 }
 .intro_4 h1{
@@ -306,19 +277,26 @@ p {
 	padding: 0 20px 0 50px;
 	border-top: 15px solid #CCCCCC;
 }
-.intro_2 {background-color: rgba(46,93,156,0.3);}
-.intro_4 {background-color: rgba(46,93,156,0.9);color:white;}
-.intro_1>img {
-	width:30%;
-	float:right;
-	margin:20px 20px 0 50px;
-}
-.intro_1 p{font-size:14px;}
-.intro_1>div>img {padding:20px;}
 
-.intro_2 div {padding:20px;}
+.intro_1 {
+	background-color: rgba(46,93,156,1);
+	color:white;
+	padding:5% 0;
+}
+.intro_1>div>img {
+	width:360px;
+	max-width:40%;
+	float:right;
+	margin:6%;
+}
+.intro_1 h2 {padding-top:10%;}
+.intro_1 p{font-size:14px;}
+.intro_1>div>div {padding:10px;}
+
+.intro_2 {background-color: rgba(46,93,156,0.2);}
+.intro_2>div>div {padding:5% 20px;}
 .intro_2 h2{font-size:50px;}
-.intro_2>div>div>h3{
+.intro_2 h3{
 	text-align:center;
 	line-height:1em;
 }
@@ -332,6 +310,10 @@ p {
 	padding:0 1%;
 	text-align: right;
 }
+.intro_3 {
+	background-color: rgba(46,93,156,0.5);
+	position:relative;
+}
 .intro_3 img {width:100%;}
 .intro_3 p,.intro_4 p {
 	font-size:14px;
@@ -339,10 +321,16 @@ p {
 }
 .intro_slide {
 	height:100%;
+	width:100%;
+}
+.intro_slide_pic {
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-position: center;
-	width:100%;
+}
+.intro_slide_text {
+	text-align: right;
+	padding:5%;
 }
 .intro_3 h2{
 	color:#000000;
@@ -351,8 +339,12 @@ p {
 	padding:20px;
 	text-shadow: 0 0 20px #000000;
 }
+@media(max-width: 640px) {.intro_3 h1 {display:none;}}
+.intro_4 {background-color: rgba(46,93,156,0.9);color:white;}
+.intro_4 {padding-top:10%;}
 .intro_4 h2 {margin-top:0;}
-.intro_4>img {
+.intro_4 p {padding:10px;}
+.intro_4 img {
 	float:left;
 	padding:20px;
 }
@@ -362,10 +354,95 @@ p {
 .intro_4 td {
 	padding:10px 30px;
 }
-.intro_4 button {
+.intro_4 button,.intro_2 button{
 	padding:0 20px;
 	margin:10px;
 }
+
+/*CSS For Timeline in Intro_index*/
+#dates a {
+	color: black;
+	text-decoration: none;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+	transition: 0.5s;
+	margin: 0;
+	padding: 0;
+}
+#dates a:hover,
+#dates a.selected {
+	font-size:20px;
+	margin: 0;
+	padding: 0;
+}
+
+#timeline {
+	max-width: 800px;
+	width:100%;
+	height: 100px;
+	overflow: hidden;
+	margin: 50px auto;
+	padding: 0;
+	background: url('../images/dot.gif') left 45px repeat-x;
+}
+#dates {
+	width: 800px;
+	height: 60px;
+	overflow: hidden;
+	margin: 0;
+padding: 0;
+}
+#dates li {
+	list-style: none;
+	float: left;
+	width: 100px;
+	height: 50px;
+	font-size: 14px;
+	text-align: center;
+	background: url('../images/biggerdot.png') center bottom no-repeat;
+	margin: 0;
+	padding: 0;
+}
+#dates a {
+	line-height: 38px;
+	padding-bottom: 10px;
+	margin: 0;
+}
+#dates .selected {
+    font-size: 20px;
+    margin: 0;
+	padding: 0;
+}
+
+#issues {
+	width: 800px;
+	height: 350px;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}	
+#issues li {
+	width: 800px;
+	height: 350px;
+	list-style: none;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+#issues li p {
+	text-align:center;
+	font-size: 14px;
+	margin-right: 70px;
+	font-weight: normal;
+	line-height: 22px;
+	text-shadow: #000 1px 1px 2px;
+	margin: 0;
+	padding: 0;
+}
+@media (max-width: 800px){#timeline{display:none !important;}}
+
 
 
 /*	------------------------------------------
@@ -407,19 +484,13 @@ p {
 	        CSS for "Activity Center"
 	------------------------------------------  */
 
-.activity_1,.activity_2,.activity_3 { 
+.activity_main {height:100%;}
+.activity_main>div { 
 	background-size: cover;
 	background-repeat: no-repeat;
 	height:100%;
 }
-.activity_1{background-image: url(../images/activity_1.jpg);}
-.activity_2{background-image: url(../images/activity_2.jpg);}
-.activity_3{background-image: url(../images/activity_3.jpg);}
-
-.article_activity .btn{
-	font-size       :20px;
-}
-.article_activity {  
+.activity_main>div>div {  
 	padding    : 10% 0 0 15%; 
 	width      : 45%;
 	max-width  : 600px;
@@ -427,7 +498,7 @@ p {
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.5); 
 	line-height: 1.5em; color: #fff; 
 }
-.article_activity h2 { font-size:40px;}
+.activity_main h2 { font-size:40px;}
 
 
 /*	------------------------------------------
@@ -444,7 +515,8 @@ p {
 .academic_left {
 	float:left;
 	position:fixed;
-	width: 15%;
+	width: 17%;
+	max-width:200px;
 }
 .academic_left h1,.academic_left h2{line-height: 1em;}
 .academic_left>div{
@@ -1079,147 +1151,100 @@ p {
 }
 
 .acm_size {
-	width: 60%;
+	width: 67%;
 	margin-right: 0px;
 	float: left;
 	margin-top: 0px;
 }
-
-.item img {
+.acm_size_slide{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height:500px;
 	width: 100%;
-	height: 500px;
 	position: relative;
 }
 
 .acm_caption_bac {
-	background-image: url(../images/shadow.png);
+	position:	absolute;
+	bottom:		0;
+	width: 		100%;
+	height:25%;
+	font-size:	14px;
+	background: url(../images/shadow.png);
 	background-size: 100% 100%;
-	bottom: 0px;
-	position: absolute;
+	padding: 	24px 40px;
+	color: 		white;
+	text-align: center;
 }
 
 .acm_bottom {
-	bottom: 5px;
+	bottom: 2px;
 }
 
 .acm_history {
-	width: 35%;
+	width: 33%;
 	float: right;
-	padding-top: 1%;
+	background-color: rgba(46,93,156,0.8);
 }
-
-.acm_history ul{
-}
-
 .acm_history li {
-	padding-top: 10px;
+	font-size: 20px;
+	height: 10%;
+	margin-top:0 !important;
+}
+
+.acm_history_list {
+	height: 500px;
 }
 
 .acm_history_list li a {
-	border: 2px solid #ddd;
-	color: #08c;
+	border: 0px solid #ddd;
+	color:white;
+	text-align: center;
 }
 
 .teams_intro {
 	width: 100%;
 	float: left;
 	margin-top: 0;
-	padding-top: 2%;
-	background-color: rgba(46,93,156,0.3);
+	padding-top: 3%;
+	background-color: #EEEEEE;
 }
 
+.team_frame {
+	box-shadow: 5px 5px 10px #555555;
+	padding: 20px;
+	background-color: rgba(200, 200, 200, 0.5);
+}
+
+.team_frame div {
+	padding-top: 5px;
+	font-size: 20px;
+}
+
+.one_team_intro {margin:20px 0;}
 .one_team_intro img {
 	box-shadow: 0px 0px 20px #000;
-}
-
-.teams_intro .one_team_intro {
-	width: 30%;
-	padding-left: 10%;
-	float: left;
-	text-align: center;
 }
 
 .one_team_intro img {
 	width: 100%;
 }
-
-/*CSS For Timeline in Intro_index*/
-#dates a {
-	color: black;
-	text-decoration: none;
-	-webkit-transition: 0.5s;
-	-moz-transition: 0.5s;
-	-o-transition: 0.5s;
-	-ms-transition: 0.5s;
-	transition: 0.5s;
-	margin: 0;
-	padding: 0;
+@media(max-width: 768px) {
+	.acm_size{width:100%;}
+	.acm_history {width:100%;}
 }
-	#dates a:hover,
-	#dates a.selected {
-		font-size:20px;
-		margin: 0;
-	padding: 0;
-	}
 
-	#timeline {
-		width: 800px;
-		height: 100px;
-		overflow: hidden;
-		margin: 50px auto;
-		background: url('../images/dot.gif') left 45px repeat-x;
-	}
-		#dates {
-			width: 800px;
-			height: 60px;
-			overflow: hidden;
-			margin: 0;
-	    padding: 0;
-		}
-			#dates li {
-				list-style: none;
-				float: left;
-				width: 100px;
-				height: 50px;
-				font-size: 14px;
-				text-align: center;
-				background: url('../images/biggerdot.png') center bottom no-repeat;
-				margin: 0;
-	padding: 0;
-			}
-				#dates a {
-					line-height: 38px;
-					padding-bottom: 10px;
-					margin: 0;
-				}
-				#dates .selected {
-			        font-size: 20px;
-			        margin: 0;
-	padding: 0;
-				}
-		
-		#issues {
-			width: 800px;
-			height: 350px;
-			overflow: hidden;
-			margin: 0;
-	padding: 0;
-		}	
-			#issues li {
-				width: 800px;
-				height: 350px;
-				list-style: none;
-				float: left;
-				margin: 0;
-	padding: 0;
-			}
-				#issues li p {
-				text-align:center;
-					font-size: 14px;
-					margin-right: 70px;
-					font-weight: normal;
-					line-height: 22px;
-					text-shadow: #000 1px 1px 2px;
-					margin: 0;
-	padding: 0;
-				}
+.nav_addition li a{
+	font-size: 15px!important;
+	font-weight: 900!important;
+}
+
+.nav_addition li ul {
+	padding-left: 20px;
+	font-weight: normal;
+}
+
+.nav_addition li ul li a {
+	font-weight: normal!important;
+}

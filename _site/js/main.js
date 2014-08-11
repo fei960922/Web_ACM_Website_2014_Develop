@@ -1,39 +1,27 @@
 $(window).resize(function(){
     var winh=(window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight);
-    $(".fullh").css({height:winh});
+    var winw=(window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth);
+    $(".fullh").css({"min-height":winh});
     if (winh<700) winh = 700;
     var h = winh - 102;
     $(".minh").css({"min-height":h});
     $(".fixh").css({height:h});
-    h = (winh-102)*2/3;
+    h = winh*2/3;
+    if (winw<768) h = winw*3/5;
     $(".halfh").css({height:h});
-    $(".block_intro_out").css({height:h});
-    $(".block_intro").css("display","none");
 })
 $(document).ready(function(){
     var winh=(window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight);
-    $(".fullh").css({height:winh});
+    var winw=(window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth);
+    $(".fullh").css({"min-height":winh});
     if (winh<700) winh = 700;
     var h = winh - 102;
     $(".minh").css({"min-height":h});
     $(".fixh").css({height:h});
-    h = (winh-102)*2/3;
+    h = winh*2/3;
+    if (winw<768) h = winw*3/5;
     $(".halfh").css({height:h});
-    $(".block_intro_out").css({height:h});
-    $(".block_intro").css("display","none");
     fontmaking();
-
-/*  ------------------------------------------
-             JavaScript of Introduction 
-    ------------------------------------------  */
-
-    $(".block_intro_out").hover(            
-        function() {
-            $(this).children().fadeIn("fast");                         
-        },
-        function() {
-            $(this).children().fadeOut("fast");                         
-        });
 
 /*  ------------------------------------------
              JavaScript of Nav-bar 
@@ -41,6 +29,7 @@ $(document).ready(function(){
 
     $(".dropdown").hover(            
         function() {
+        	$('.dropdown-menu', this).stop(true,true);
             $('.dropdown-menu', this).fadeIn("fast");
             $(this).toggleClass('open');
             $('b', this).toggleClass("caret caret-up");                
@@ -80,3 +69,418 @@ function fontmaking() {
             else loadExtentFile("http://www.youziku.com/webfont/css?id=" + md5 + "&guid=" + "d6858636a9194575b81f6b3a5b3d1606" + "&type=5");
         });
 }
+
+/* ----------------------------------
+jQuery Timelinr 0.9.53
+tested with jQuery v1.6+
+
+Copyright 2011, CSSLab.cl
+Free under the MIT license.
+http://www.opensource.org/licenses/mit-license.php
+
+instructions: http://www.csslab.cl/2011/08/18/jquery-timelinr/
+---------------------------------- */
+
+$(function(){
+			$().timelinr({
+				arrowKeys: 'true',
+				mousewheel:		'true'
+			})
+		});
+jQuery.fn.timelinr = function(options){
+	// default plugin settings
+	settings = jQuery.extend({
+		orientation: 				'horizontal',		// value: horizontal | vertical, default to horizontal
+		containerDiv: 				'#timeline',		// value: any HTML tag or #id, default to #timeline
+		datesDiv: 					'#dates',			// value: any HTML tag or #id, default to #dates
+		datesSelectedClass: 		'selected',			// value: any class, default to selected
+		datesSpeed: 				'normal',			// value: integer between 100 and 1000 (recommended) or 'slow', 'normal' or 'fast'; default to normal
+		issuesDiv: 					'#issues',			// value: any HTML tag or #id, default to #issues
+		issuesSelectedClass: 		'selected',			// value: any class, default to selected
+		issuesSpeed: 				'fast',				// value: integer between 100 and 1000 (recommended) or 'slow', 'normal' or 'fast'; default to fast
+		issuesTransparency: 		0.2,				// value: integer between 0 and 1 (recommended), default to 0.2
+		issuesTransparencySpeed: 	500,				// value: integer between 100 and 1000 (recommended), default to 500 (normal)
+		prevButton: 				'#prev',			// value: any HTML tag or #id, default to #prev
+		nextButton: 				'#next',			// value: any HTML tag or #id, default to #next
+		arrowKeys: 					'false',			// value: true | false, default to false
+		startAt: 					1,					// value: integer, default to 1 (first)
+		autoPlay: 					'false',			// value: true | false, default to false
+		autoPlayDirection: 			'forward',			// value: forward | backward, default to forward
+		autoPlayPause: 				2000,				// value: integer (1000 = 1 seg), default to 2000 (2segs)
+		mousewheel:                'false'				// value: true | false, default to false
+	}, options);
+
+	$(function(){
+		// setting variables... many of them
+		var howManyDates = $(settings.datesDiv+' li').length;
+		var howManyIssues = $(settings.issuesDiv+' li').length;
+		var currentDate = $(settings.datesDiv).find('a.'+settings.datesSelectedClass);
+		var currentIssue = $(settings.issuesDiv).find('li.'+settings.issuesSelectedClass);
+		var widthContainer = $(settings.containerDiv).width();
+		var heightContainer = $(settings.containerDiv).height();
+		var widthIssues = $(settings.issuesDiv).width();
+		var heightIssues = $(settings.issuesDiv).height();
+		var widthIssue = $(settings.issuesDiv+' li').width();
+		var heightIssue = $(settings.issuesDiv+' li').height();
+		var widthDates = $(settings.datesDiv).width();
+		var heightDates = $(settings.datesDiv).height();
+		var widthDate = $(settings.datesDiv+' li').width();
+		var heightDate = $(settings.datesDiv+' li').height();
+		// set positions!
+		if(settings.orientation == 'horizontal') {	
+			$(settings.issuesDiv).width(widthIssue*howManyIssues);
+			$(settings.datesDiv).width(widthDate*howManyDates).css('marginLeft',widthContainer/2-widthDate/2);
+			var defaultPositionDates = parseInt($(settings.datesDiv).css('marginLeft').substring(0,$(settings.datesDiv).css('marginLeft').indexOf('px')));
+		} else if(settings.orientation == 'vertical') {
+			$(settings.issuesDiv).height(heightIssue*howManyIssues);
+			$(settings.datesDiv).height(heightDate*howManyDates).css('marginTop',heightContainer/2-heightDate/2);
+			var defaultPositionDates = parseInt($(settings.datesDiv).css('marginTop').substring(0,$(settings.datesDiv).css('marginTop').indexOf('px')));
+		}
+		
+		$(settings.datesDiv+' a').click(function(event){
+			event.preventDefault();
+			// first vars
+			var whichIssue = $(this).text();
+			var currentIndex = $(this).parent().prevAll().length;
+			// moving the elements
+			if(settings.orientation == 'horizontal') {
+				$(settings.issuesDiv).animate({'marginLeft':-widthIssue*currentIndex},{queue:false, duration:settings.issuesSpeed});
+			} else if(settings.orientation == 'vertical') {
+				$(settings.issuesDiv).animate({'marginTop':-heightIssue*currentIndex},{queue:false, duration:settings.issuesSpeed});
+			}
+			$(settings.issuesDiv+' li').animate({'opacity':settings.issuesTransparency},{queue:false, duration:settings.issuesSpeed}).removeClass(settings.issuesSelectedClass).eq(currentIndex).addClass(settings.issuesSelectedClass).fadeTo(settings.issuesTransparencySpeed,1);
+			// prev/next buttons now disappears on first/last issue | bugfix from 0.9.51: lower than 1 issue hide the arrows | bugfixed: arrows not showing when jumping from first to last date
+			if(howManyDates == 1) {
+				$(settings.prevButton+','+settings.nextButton).fadeOut('fast');
+			} else if(howManyDates == 2) {
+				if($(settings.issuesDiv+' li:first-child').hasClass(settings.issuesSelectedClass)) {
+					$(settings.prevButton).fadeOut('fast');
+				 	$(settings.nextButton).fadeIn('fast');
+				} 
+				else if($(settings.issuesDiv+' li:last-child').hasClass(settings.issuesSelectedClass)) {
+					$(settings.nextButton).fadeOut('fast');
+					$(settings.prevButton).fadeIn('fast');
+				}
+			} else {
+				if( $(settings.issuesDiv+' li:first-child').hasClass(settings.issuesSelectedClass) ) {
+					$(settings.nextButton).fadeIn('fast');
+					$(settings.prevButton).fadeOut('fast');
+				} 
+				else if( $(settings.issuesDiv+' li:last-child').hasClass(settings.issuesSelectedClass) ) {
+					$(settings.prevButton).fadeIn('fast');
+					$(settings.nextButton).fadeOut('fast');
+				}
+				else {
+					$(settings.nextButton+','+settings.prevButton).fadeIn('slow');
+				}	
+			}
+			// now moving the dates
+			$(settings.datesDiv+' a').removeClass(settings.datesSelectedClass);
+			$(this).addClass(settings.datesSelectedClass);
+			if(settings.orientation == 'horizontal') {
+				$(settings.datesDiv).animate({'marginLeft':defaultPositionDates-(widthDate*currentIndex)},{queue:false, duration:'settings.datesSpeed'});
+			} else if(settings.orientation == 'vertical') {
+				$(settings.datesDiv).animate({'marginTop':defaultPositionDates-(heightDate*currentIndex)},{queue:false, duration:'settings.datesSpeed'});
+			}
+		});
+
+		$(settings.nextButton).bind('click', function(event){
+			event.preventDefault();
+			if(settings.orientation == 'horizontal') {
+				var currentPositionIssues = parseInt($(settings.issuesDiv).css('marginLeft').substring(0,$(settings.issuesDiv).css('marginLeft').indexOf('px')));
+				var currentIssueIndex = currentPositionIssues/widthIssue;
+				var currentPositionDates = parseInt($(settings.datesDiv).css('marginLeft').substring(0,$(settings.datesDiv).css('marginLeft').indexOf('px')));
+				var currentIssueDate = currentPositionDates-widthDate;
+				if(currentPositionIssues <= -(widthIssue*howManyIssues-(widthIssue))) {
+					$(settings.issuesDiv).stop();
+					$(settings.datesDiv+' li:last-child a').click();
+				} else {
+					if (!$(settings.issuesDiv).is(':animated')) {
+						$(settings.issuesDiv).animate({'marginLeft':currentPositionIssues-widthIssue},{queue:false, duration:settings.issuesSpeed});
+						$(settings.issuesDiv+' li').animate({'opacity':settings.issuesTransparency},{queue:false, duration:settings.issuesSpeed});
+						$(settings.issuesDiv+' li.'+settings.issuesSelectedClass).removeClass(settings.issuesSelectedClass).next().fadeTo(settings.issuesTransparencySpeed, 1).addClass(settings.issuesSelectedClass);
+						$(settings.datesDiv).animate({'marginLeft':currentIssueDate},{queue:false, duration:'settings.datesSpeed'});
+						$(settings.datesDiv+' a.'+settings.datesSelectedClass).removeClass(settings.datesSelectedClass).parent().next().children().addClass(settings.datesSelectedClass);
+					}
+				}
+			} else if(settings.orientation == 'vertical') {
+				var currentPositionIssues = parseInt($(settings.issuesDiv).css('marginTop').substring(0,$(settings.issuesDiv).css('marginTop').indexOf('px')));
+				var currentIssueIndex = currentPositionIssues/heightIssue;
+				var currentPositionDates = parseInt($(settings.datesDiv).css('marginTop').substring(0,$(settings.datesDiv).css('marginTop').indexOf('px')));
+				var currentIssueDate = currentPositionDates-heightDate;
+				if(currentPositionIssues <= -(heightIssue*howManyIssues-(heightIssue))) {
+					$(settings.issuesDiv).stop();
+					$(settings.datesDiv+' li:last-child a').click();
+				} else {
+					if (!$(settings.issuesDiv).is(':animated')) {
+						$(settings.issuesDiv).animate({'marginTop':currentPositionIssues-heightIssue},{queue:false, duration:settings.issuesSpeed});
+						$(settings.issuesDiv+' li').animate({'opacity':settings.issuesTransparency},{queue:false, duration:settings.issuesSpeed});
+						$(settings.issuesDiv+' li.'+settings.issuesSelectedClass).removeClass(settings.issuesSelectedClass).next().fadeTo(settings.issuesTransparencySpeed, 1).addClass(settings.issuesSelectedClass);
+						$(settings.datesDiv).animate({'marginTop':currentIssueDate},{queue:false, duration:'settings.datesSpeed'});
+						$(settings.datesDiv+' a.'+settings.datesSelectedClass).removeClass(settings.datesSelectedClass).parent().next().children().addClass(settings.datesSelectedClass);
+					}
+				}
+			}
+			// prev/next buttons now disappears on first/last issue | bugfix from 0.9.51: lower than 1 issue hide the arrows
+			if(howManyDates == 1) {
+				$(settings.prevButton+','+settings.nextButton).fadeOut('fast');
+			} else if(howManyDates == 2) {
+				if($(settings.issuesDiv+' li:first-child').hasClass(settings.issuesSelectedClass)) {
+					$(settings.prevButton).fadeOut('fast');
+				 	$(settings.nextButton).fadeIn('fast');
+				} 
+				else if($(settings.issuesDiv+' li:last-child').hasClass(settings.issuesSelectedClass)) {
+					$(settings.nextButton).fadeOut('fast');
+					$(settings.prevButton).fadeIn('fast');
+				}
+			} else {
+				if( $(settings.issuesDiv+' li:first-child').hasClass(settings.issuesSelectedClass) ) {
+					$(settings.prevButton).fadeOut('fast');
+				} 
+				else if( $(settings.issuesDiv+' li:last-child').hasClass(settings.issuesSelectedClass) ) {
+					$(settings.nextButton).fadeOut('fast');
+				}
+				else {
+					$(settings.nextButton+','+settings.prevButton).fadeIn('slow');
+				}	
+			}
+		});
+
+		$(settings.prevButton).click(function(event){
+			event.preventDefault();
+			if(settings.orientation == 'horizontal') {
+				var currentPositionIssues = parseInt($(settings.issuesDiv).css('marginLeft').substring(0,$(settings.issuesDiv).css('marginLeft').indexOf('px')));
+				var currentIssueIndex = currentPositionIssues/widthIssue;
+				var currentPositionDates = parseInt($(settings.datesDiv).css('marginLeft').substring(0,$(settings.datesDiv).css('marginLeft').indexOf('px')));
+				var currentIssueDate = currentPositionDates+widthDate;
+				if(currentPositionIssues >= 0) {
+					$(settings.issuesDiv).stop();
+					$(settings.datesDiv+' li:first-child a').click();
+				} else {
+					if (!$(settings.issuesDiv).is(':animated')) {
+						$(settings.issuesDiv).animate({'marginLeft':currentPositionIssues+widthIssue},{queue:false, duration:settings.issuesSpeed});
+						$(settings.issuesDiv+' li').animate({'opacity':settings.issuesTransparency},{queue:false, duration:settings.issuesSpeed});
+						$(settings.issuesDiv+' li.'+settings.issuesSelectedClass).removeClass(settings.issuesSelectedClass).prev().fadeTo(settings.issuesTransparencySpeed, 1).addClass(settings.issuesSelectedClass);
+						$(settings.datesDiv).animate({'marginLeft':currentIssueDate},{queue:false, duration:'settings.datesSpeed'});
+						$(settings.datesDiv+' a.'+settings.datesSelectedClass).removeClass(settings.datesSelectedClass).parent().prev().children().addClass(settings.datesSelectedClass);
+					}
+				}
+			} else if(settings.orientation == 'vertical') {
+				var currentPositionIssues = parseInt($(settings.issuesDiv).css('marginTop').substring(0,$(settings.issuesDiv).css('marginTop').indexOf('px')));
+				var currentIssueIndex = currentPositionIssues/heightIssue;
+				var currentPositionDates = parseInt($(settings.datesDiv).css('marginTop').substring(0,$(settings.datesDiv).css('marginTop').indexOf('px')));
+				var currentIssueDate = currentPositionDates+heightDate;
+				if(currentPositionIssues >= 0) {
+					$(settings.issuesDiv).stop();
+					$(settings.datesDiv+' li:first-child a').click();
+				} else {
+					if (!$(settings.issuesDiv).is(':animated')) {
+						$(settings.issuesDiv).animate({'marginTop':currentPositionIssues+heightIssue},{queue:false, duration:settings.issuesSpeed});
+						$(settings.issuesDiv+' li').animate({'opacity':settings.issuesTransparency},{queue:false, duration:settings.issuesSpeed});
+						$(settings.issuesDiv+' li.'+settings.issuesSelectedClass).removeClass(settings.issuesSelectedClass).prev().fadeTo(settings.issuesTransparencySpeed, 1).addClass(settings.issuesSelectedClass);
+						$(settings.datesDiv).animate({'marginTop':currentIssueDate},{queue:false, duration:'settings.datesSpeed'},{queue:false, duration:settings.issuesSpeed});
+						$(settings.datesDiv+' a.'+settings.datesSelectedClass).removeClass(settings.datesSelectedClass).parent().prev().children().addClass(settings.datesSelectedClass);
+					}
+				}
+			}
+			// prev/next buttons now disappears on first/last issue | bugfix from 0.9.51: lower than 1 issue hide the arrows
+			if(howManyDates == 1) {
+				$(settings.prevButton+','+settings.nextButton).fadeOut('fast');
+			} else if(howManyDates == 2) {
+				if($(settings.issuesDiv+' li:first-child').hasClass(settings.issuesSelectedClass)) {
+					$(settings.prevButton).fadeOut('fast');
+				 	$(settings.nextButton).fadeIn('fast');
+				} 
+				else if($(settings.issuesDiv+' li:last-child').hasClass(settings.issuesSelectedClass)) {
+					$(settings.nextButton).fadeOut('fast');
+					$(settings.prevButton).fadeIn('fast');
+				}
+			} else {
+				if( $(settings.issuesDiv+' li:first-child').hasClass(settings.issuesSelectedClass) ) {
+					$(settings.prevButton).fadeOut('fast');
+				} 
+				else if( $(settings.issuesDiv+' li:last-child').hasClass(settings.issuesSelectedClass) ) {
+					$(settings.nextButton).fadeOut('fast');
+				}
+				else {
+					$(settings.nextButton+','+settings.prevButton).fadeIn('slow');
+				}	
+			}
+		});
+		// keyboard navigation, added since 0.9.1
+		if(settings.arrowKeys=='true') {
+			if(settings.orientation=='horizontal') {
+				$(document).keydown(function(event){
+					if (event.keyCode == 39) { 
+				       $(settings.nextButton).click();
+				    }
+					if (event.keyCode == 37) { 
+				       $(settings.prevButton).click();
+				    }
+				});
+			} else if(settings.orientation=='vertical') {
+				$(document).keydown(function(event){
+					if (event.keyCode == 40) { 
+				       $(settings.nextButton).click();
+				    }
+					if (event.keyCode == 38) { 
+				       $(settings.prevButton).click();
+				    }
+				});
+			}
+		}
+		// default position startAt, added since 0.9.3
+		$(settings.datesDiv+' li').eq(settings.startAt-1).find('a').trigger('click');
+		// autoPlay, added since 0.9.4
+		if(settings.autoPlay == 'true') { 
+			setInterval("autoPlay()", settings.autoPlayPause);
+		}
+		
+		if(settings.mousewheel=="true") {
+			
+			$(settings.containerDiv).mousewheel(function(event, delta, deltaX, deltaY){
+				if(delta==1){
+					$(settings.prevButton).click();
+				}else{
+					$(settings.nextButton).click();
+				}
+			});
+		}
+	});
+};
+
+// autoPlay, added since 0.9.4
+function autoPlay(){
+	var currentDate = $(settings.datesDiv).find('a.'+settings.datesSelectedClass);
+	if(settings.autoPlayDirection == 'forward') {
+		if(currentDate.parent().is('li:last-child')) {
+			$(settings.datesDiv+' li:first-child').find('a').trigger('click');
+		} else {
+			currentDate.parent().next().find('a').trigger('click');
+		}
+	} else if(settings.autoPlayDirection == 'backward') {
+		if(currentDate.parent().is('li:first-child')) {
+			$(settings.datesDiv+' li:last-child').find('a').trigger('click');
+		} else {
+			currentDate.parent().prev().find('a').trigger('click');
+		}
+	}
+}
+
+/*! Copyright (c) 2013 Brandon Aaron (http://brandonaaron.net)
+ * Licensed under the MIT License (LICENSE.txt).
+ *
+ * Thanks to: http://adomas.org/javascript-mouse-wheel/ for some pointers.
+ * Thanks to: Mathias Bank(http://www.mathias-bank.de) for a scope bug fix.
+ * Thanks to: Seamus Leahy for adding deltaX and deltaY
+ *
+ * Version: 3.1.3
+ *
+ * Requires: 1.2.2+
+ */
+
+(function (factory) {
+    if ( typeof define === 'function' && define.amd ) {
+        // AMD. Register as an anonymous module.
+        define(['jquery'], factory);
+    } else if (typeof exports === 'object') {
+        // Node/CommonJS style for Browserify
+        module.exports = factory;
+    } else {
+        // Browser globals
+        factory(jQuery);
+    }
+}(function ($) {
+
+    var toFix = ['wheel', 'mousewheel', 'DOMMouseScroll', 'MozMousePixelScroll'];
+    var toBind = 'onwheel' in document || document.documentMode >= 9 ? ['wheel'] : ['mousewheel', 'DomMouseScroll', 'MozMousePixelScroll'];
+    var lowestDelta, lowestDeltaXY;
+
+    if ( $.event.fixHooks ) {
+        for ( var i = toFix.length; i; ) {
+            $.event.fixHooks[ toFix[--i] ] = $.event.mouseHooks;
+        }
+    }
+
+    $.event.special.mousewheel = {
+        setup: function() {
+            if ( this.addEventListener ) {
+                for ( var i = toBind.length; i; ) {
+                    this.addEventListener( toBind[--i], handler, false );
+                }
+            } else {
+                this.onmousewheel = handler;
+            }
+        },
+
+        teardown: function() {
+            if ( this.removeEventListener ) {
+                for ( var i = toBind.length; i; ) {
+                    this.removeEventListener( toBind[--i], handler, false );
+                }
+            } else {
+                this.onmousewheel = null;
+            }
+        }
+    };
+
+    $.fn.extend({
+        mousewheel: function(fn) {
+            return fn ? this.bind("mousewheel", fn) : this.trigger("mousewheel");
+        },
+
+        unmousewheel: function(fn) {
+            return this.unbind("mousewheel", fn);
+        }
+    });
+
+
+    function handler(event) {
+        var orgEvent = event || window.event,
+            args = [].slice.call(arguments, 1),
+            delta = 0,
+            deltaX = 0,
+            deltaY = 0,
+            absDelta = 0,
+            absDeltaXY = 0,
+            fn;
+        event = $.event.fix(orgEvent);
+        event.type = "mousewheel";
+
+        // Old school scrollwheel delta
+        if ( orgEvent.wheelDelta ) { delta = orgEvent.wheelDelta; }
+        if ( orgEvent.detail )     { delta = orgEvent.detail * -1; }
+
+        // New school wheel delta (wheel event)
+        if ( orgEvent.deltaY ) {
+            deltaY = orgEvent.deltaY * -1;
+            delta  = deltaY;
+        }
+        if ( orgEvent.deltaX ) {
+            deltaX = orgEvent.deltaX;
+            delta  = deltaX * -1;
+        }
+
+        // Webkit
+        if ( orgEvent.wheelDeltaY !== undefined ) { deltaY = orgEvent.wheelDeltaY; }
+        if ( orgEvent.wheelDeltaX !== undefined ) { deltaX = orgEvent.wheelDeltaX * -1; }
+
+        // Look for lowest delta to normalize the delta values
+        absDelta = Math.abs(delta);
+        if ( !lowestDelta || absDelta < lowestDelta ) { lowestDelta = absDelta; }
+        absDeltaXY = Math.max(Math.abs(deltaY), Math.abs(deltaX));
+        if ( !lowestDeltaXY || absDeltaXY < lowestDeltaXY ) { lowestDeltaXY = absDeltaXY; }
+
+        // Get a whole value for the deltas
+        fn = delta > 0 ? 'floor' : 'ceil';
+        delta  = Math[fn](delta / lowestDelta);
+        deltaX = Math[fn](deltaX / lowestDeltaXY);
+        deltaY = Math[fn](deltaY / lowestDeltaXY);
+
+        // Add event and delta to the front of the arguments
+        args.unshift(event, delta, deltaX, deltaY);
+
+        return ($.event.dispatch || $.event.handle).apply(this, args);
+    }
+
+}));
