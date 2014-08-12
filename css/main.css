@@ -25,14 +25,10 @@ body,html {
 
 a:hover {text-decoration: none;}
 
-.acm_article {
-	float: left;
-	margin-left: 25%;
-}
-
 .acm_article h1,.acm_article h2 {
 	border-bottom:1px solid #DDDDDD;
 	margin-bottom:5px;
+	line-height: 2em;
 }
 .acm_article li {
 	line-height:1.6em;
@@ -45,11 +41,7 @@ a:hover {text-decoration: none;}
 	width:100%;
 	padding:5px;
 }
-h1,h2,h3,h4,h5,h6 {
-	line-height: 2em;
-	margin-bottom:5px;
-}
-p {
+.acm_article p {
 	line-height: 1.6em;
 	text-indent: 2em;
 }
@@ -514,40 +506,45 @@ padding: 0;
 	        CSS for "Academic Center"
 	------------------------------------------  */
 
-.academic_left>div {
-	background-color: #EEEEEE;
+.academic_lt>div {
 	text-align      : center;
-	padding:5px;
+	padding:1px;
 }
 
-.academic_left div:last-child {
-	height: 30%;
-	background-color: #fff;
+.academic_bottom {
+	width:100%;
+	text-align: center;
 }
-
-.academic_left div:last-child:hover {
-	height: 30%;
-	background-color: #fff;
+.academic_bottom>div {padding:0;}
+.academic_now,
+.academic_lt>div:hover,
+.academic_bottom .nav>.active>a,
+.academic_bottom .nav>.active:hover>a,
+.academic_bottom .nav>.active:focus>a,
+.academic_bottom .nav>li>a:hover,
+.academic_bottom .nav>li>a:focus{
+	width:100%;
+	color:#2E5D9C;
+	border-left:0;
+	background-color: #CCCCCC;
+	border-right:3px solid #2E5D9C;
 }
-
-.academic_left>div:hover{background-color: #CCCCCC;}
+@media (max-height:800px){.academic_bottom {display:none;}}
 @media (min-width: 801px){
 .academic_left {
 	float:left;
 	position:fixed;
 	width: 17%;
 	max-width:200px;
-	height: 70%;
+	height: 100%;
 }
 .academic_left h1,.academic_left h2{line-height: 1em;}
-
-.academic_left>div{
-	width  :100%;
-	height :15%;
+.academic_lt{
+	padding:20px 0;
 }
-.academic_now{background-color: #DDDDDD !important;}
 .academic_main {
-	margin: 20px 20px 20px 18%;
+	margin: 20px 2% 20px 18%;
+	width:80%;
 }
 }
 @media (max-width: 800px){
@@ -555,15 +552,17 @@ padding: 0;
 	width:	100%;
 	height:	120px !important; 
 }
-.academic_left>div{
+.academic_lt>div{
 	float:left;
+	background-color: #EEEEEE;
 	width:20%;
 }
-.academic_left>div>h1{font-size: 40px;line-height: 0.5em;}
-.academic_left>div>h2{font-size: 20px;line-height: 0.5em;}
+.academic_lt>div>h1{font-size: 40px;line-height: 0.5em;}
+.academic_lt>div>h2{font-size: 20px;line-height: 0.5em;}
 .academic_main {
 	width:	100%;
 }
+.academic_bottom{display:none;}
 }
 
 /*	------------------------------------------
@@ -1271,7 +1270,7 @@ padding: 0;
 	font-weight: normal!important;
 }
 
-.at_bottom {
+.academic_bottom {
 	position: absolute;
 }
 
