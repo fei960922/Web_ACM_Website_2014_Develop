@@ -727,6 +727,3 @@ ACM_ICPC竞赛介绍主页命名为<code>acmicpc.html</code>，采用一般文�
 
 
 
-<script src="{{ "/js/docs.min.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "/js/page_context.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "/js/ie-emulation-modes-warning.js" | prepend: site.baseurl }}"></script>
