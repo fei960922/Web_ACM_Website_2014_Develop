@@ -686,7 +686,8 @@ padding: 0;
   list-style: none;
   margin: auto;
   position: relative;
-  left:13%;
+  left:3%;
+  width:90%;
 }
 .timeline:before {
   top: 0;
@@ -725,7 +726,6 @@ padding: 0;
 	float              : right;
 }
 .timeline-panel {
-  width: 80%;
   margin:20px;
   height:350px;
   position: relative;
