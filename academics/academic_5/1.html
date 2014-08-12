@@ -1,110 +1,36 @@
-﻿<!DOCTYPE html>
-<html>
-	<head>
-	    <meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <title>上海交通大学ACM班</title>
-	    <meta name="viewport" content="width=device-width">
-	    <meta name="description" content="{{ site.description }}">
-		<link rel="stylesheet" href="../../css/bootstrap.min.css">
-	    <link rel="stylesheet" href="../../css/main.css">
-	    <style type="text/css">
-	       p
-	        {
-	         text-indent:2em;
-	        }
-	    </style>
-	</head>
-	<body class = "Microsoft_YaHei">
-	  <div id = "heading">
-	    <div class="inners" >
-	      <nav class="navbar" role="navigation">
-	        <div class="navbar-header">
-	          <img src = "./images/head-logo.png" style = "float:left;width:200px;height:50px;">
-	          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-	            导航栏<span class="sr-only">Toggle navigation</span>
-	          </button>
-	        </div>
-	        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	          <ul class="nav navbar-nav navbar-right">
-	            <li><a href="./index.html">首页</a></li>
-	            <li class="dropdown">
-	              <a href="./intro.html">班级介绍</a>
-	              <ul class="dropdown-menu" role="menu">
-	                <li><a href="#">班级历史</a></li>
-	                <li><a href="#">教师名录</a></li>
-					<li><a href="#">学子风采</a></li>
-	                <li><a href="#">荣誉榜</a></li>
-	                <li><a href="#">ACM-ICPC</a></li>
-	              </ul>
-	            </li>
-	            <li class="dropdown">
-	              <a href="./enroll.html">招生信息</a>
-	              <ul class="dropdown-menu" role="menu">
-	                <li><a href="#">招生简章</a></li>
-	                <li><a href="#">招生条件</a></li>
-	                <li><a href="#">招生政策</a></li>
-	              </ul>
-	            </li>
-	            <li class="dropdown">
-	              <a href="./lesson.html">课程中心</a>
-	              <ul class="dropdown-menu" role="menu">
-					<li><a href="http://acm.sjtu.edu.cn/OnlineJudge">Online Judge系统</a></li>
-	                <li class="divider"></li>
-	                <li><a href="#">PPCA</a></li>
-	                <li><a href="#">数据结构</a></li>
-	                <li><a href="#">程序设计</a></li>
-	              </ul>
-	            </li>
-	            <li class="dropdown">
-	              <a href="./academic.html">学术中心</a>
-	              <ul class="dropdown-menu" role="menu">
-	                <li><a href="#">科研成果</a></li>
-	                <li><a href="#">学术交流</a></li>
-	                <li><a href="#">学长讲坛</a></li>
-					<li><a href="#">学术节</a></li>
-	                <li><a href="#">实习版块</a></li>
-	              </ul>
-	            </li>
-	            <li class="dropdown">
-	              <a href="./activity.html">活动中心</a>
-	              <ul class="dropdown-menu" role="menu">
-	                <li><a href="#">体育节</a></li>
-	                <li><a href="#">旅游</a></li>
-	                <li><a href="#">夏令营</a></li>
-	              </ul>
-	            </li>
-	          </ul>
-	        </div>
-	    </nav>
-	  </div>
-	</div>
+﻿---
+layout: default
+title: Academic
+---
 
-<div class = "container_big">
-  <div class = "academic_left fixh">
-    <div>
-      <a href="./academic_1.html"><h1>1</h1>
-      <h2>科研成果</h2></a>
-    </div>
-    <div>
-      <a href="./academic_2.html"><h1>2</h1>
-      <h2>学术交流</h2></a>
-    </div>
-    <div>
-      <a href="./academic_3.html"><h1>3</h1>
-      <h2>学长讲坛</h2></a>
-    </div>
-    <div>
-      <a href="./academic_4.html"><h1>4</h1>
-      <h2>学术节</h2></a>
-    </div>
-    <div class = "academic_now">
-      <a href="./academic_5.html"><h1>5</h1>
-      <h2>实习版块</h2></a>
+<div class = "container_big bs-docs-container">
+  <div class = "academic_left">
+    <div class = "academic_lt">
+      <div>
+        <a href="./academic_1.html">
+        <h2>科研成果</h2></a>
+      </div>
+      <div>
+        <a href="./academic_2.html">
+        <h2>学术交流</h2></a>
+      </div>
+      <div>
+        <a href="./academic_3.html">
+        <h2>学长讲坛</h2></a>
+      </div>
+      <div>
+        <a href="./academic_4.html">
+        <h2>学术节　</h2></a>
+      </div>
+      <div class = "academic_now">
+        <a href="./academic_5.html">
+        <h2>实习版块</h2></a>
+      </div>
     </div>
   </div>
-  <div class = "academic_main acm_article col-md-10">
-		<h1>张伟楠：ACM班带给我的四个暑期（节选）</h1>
+
+  <div class = "acm_article academic_main minh" role = "main">
+<h1>张伟楠：ACM班带给我的四个暑期（节选）</h1>
 		<h2>
 			大三暑假：第一次去实习
 		</h2>
@@ -132,14 +58,5 @@
 		<p>
 			这次访问仅仅两个月，我看到了和国内完全不同的一种研究环境。虽然我无法在交大实验室营造出这样一种氛围，但是至少我可以知道，做好科研不能有浮躁的心。
 		</p>
-	</div>
-	<div class = "footer">
-	  	<div style ="float:left">Powered By <a href="http://www.bootcss.com">BootStrap</a> written by PPCA2014</div>
-	  	<div style ="float:right">Copyright &copy; 2014 <a href="/">ACM Class</a>. All rights reserved.</div>
-	</div>
-	</body>
-	<script type="text/javascript" src="http://www.youziku.com/UserDownFile/jquery.min.js"></script>
-	<script type="text/javascript" src="http://www.youziku.com/UserDownFile/jquery.md5.js"></script> 
-		<script src="../../js/bootstrap.min.js"></script>
-		<script src="../../js/main.js"></script>
-</html>
+  </div>
+</div>
