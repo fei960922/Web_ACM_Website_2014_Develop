@@ -86,4 +86,28 @@
   </div>
  </div>
 
-    {% include footer.html %}
+    <div class = "footer">
+        <div id = "left">Powered By <a href="http://www.bootcss.com">BootStrap</a> written by <a href="{{ "/designer/designer.html" | prepend: site.baseurl }}">PPCA2014</a>
+        <button class="btn btn-primary btn" data-toggle="modal" data-target="#myModal" style = "padding:0;border:0;font-size:6px;">
+            &nbsp;本页面的期望与实际问题&nbsp;
+        </button>
+        </div>
+        <div id = "right">Copyright &copy; 2014 <a href="http://acm.sjtu.edu.cn">ACM Class</a>. All rights reserved.</div>
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog"><div class="modal-content"><div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <p>{% if page.bugs %}{{ page.bugs }}{% else %}无{% endif %} </p>
+        <p><a href="{{ "/designer/index.html" | prepend: site.baseurl }}">项目主页</a></p>
+    </div></div></div></div></div>
+
+    </body>
+    <script src="{{ "/js/jquery.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/jquery.md5.js" | prepend: site.baseurl }}"></script> 
+    <script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/docs.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/page_context.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/ie-emulation-modes-warning.js" | prepend: site.baseurl }}"></script>
+</html>
