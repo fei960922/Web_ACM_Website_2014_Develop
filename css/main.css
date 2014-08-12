@@ -207,7 +207,7 @@ a:hover {text-decoration: none;}
 	width      : 96%;
 	text-indent: 2em;
 	line-height: 2em;
-	margin     : 2%;
+	padding     : 2%;
 }
 .index_5 ul>li:first-child {
 	font-size :20px;
