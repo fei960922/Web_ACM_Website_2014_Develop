@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<!-- saved from url http://www.bootstraptor.com ##########################################################################
+Don't remove this attribution!
+This template build on Bootstrap 3 Developer  Kit v.3.0. by @Bootstraptor
+Built with Bootstrap 3.0. RC 1 version/ part of Bootstraptor KIT
+Read usage license on for this template on http://www.bootstraptor.com 
+##########################################################################
+-->
+<html>
+	<head>
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="generator" content="Jekyll" />
+		<meta name="author" content="{{ site.author.name }}" />
+		<meta name="description" content="{{ site.description }}" />
+		<link rel="alternate" type="application/atom.xml" title="Recent Entries" href="{{ site.feed }}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}" type="text/css" />
+		<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}" type="text/css" />
+<style type="text/css">
+      body {
+        padding-top: 50px;
+        padding-bottom: 40px;
+      }
+	#cat-navi select{
+			display:none;
+		}
+	
+	@media (max-width: 768px){
+	
+		#cat-navi select{
+			display:block;
+			width:100%;
+		}
+		#cat-navi li{
+			display:none;
+		}
+	}
+  .panel
+   {
+    border-style:none;
+   }
+  .panel-heading
+   {
+    background-color:#eee !important; 
+    color:black !important;
+    border-style:none !important;
+   }
+   .list-group-item
+    {
+     border-style:none !important;
+    }
+    #cat-vi.list-group-item
+     {
+      border-style:0 0 thin 0 !important;
+     }
+   .panel-footer
+    {
+     border-style:none !important;
+    }
+  
+	@media (max-width: 768px) {
+		.container{
+			padding-right:20px;
+			padding-left:20px;
+		}
+	}
+    </style>
+<!--[if lt IE 7]>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome-ie7.min.css" rel="stylesheet">
+	<![endif]-->
+	
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+    </head>
+  <body>
+
+    <div id="headingDefault">
+			{% include navigation.html %}
+		</div>
+<header> 
+	<div class="jumbotron">     
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-lg-12">
+					<h1 style="text-align:center;">{{ page.title }}</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+ 		<div class="container">
+<div class="container">
+
+<!-- Example row of columns -->
+<div class="row">
+	<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-right"><!-- z-index:1020; - fix for .pull-right on xs widths-->
+	<div  class="list-group panel panel-primary">
+					<div class="panel-heading list-group-item text-center hidden-xs">
+						<h4>相关新闻</h4>
+					</div>
+					<div id="cat-navi">
+					{% for post in site.categories.[page.category] limit:10 %}
+						<a href="{{ post.url | prepend: site.baseurl}}" class="list-group-item hidden-xs">{{ post.title }}</a>
+					{% endfor %}
+					</div>
+					<div class="panel-footer">
+						<div class="row">
+								<a class="btn btn-link btn-sm btn-block hidden-xs" href="{{ "/activity/tgj/index.html" | prepend: site.baseurl }}"  style="color:grey;text-align:right;">更多>></a> 
+						</div>
+					</div>
+	</div>
+	</div>
+<!-- CONTENT SIDE-->
+<div class="col-sm-8 col-lg-8 signForNews">
+	{{ content }}
+</div>
+</div>
+<!--/ CONTENT -->
+
+{% include footer.html %}
+        
