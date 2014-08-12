@@ -529,7 +529,11 @@ padding: 0;
 	background-color: #CCCCCC;
 	border-right:3px solid #2E5D9C;
 }
-@media (max-height:800px){.academic_bottom {display:none;}}
+@media (max-height:600px){.academic_bottom {display:none;}}
+@media (max-height:800px){
+	.academic_left h2{font-size: 20px;}
+	
+}
 @media (min-width: 801px){
 .academic_left {
 	float:left;
@@ -538,7 +542,7 @@ padding: 0;
 	max-width:200px;
 	height: 100%;
 }
-.academic_left h1,.academic_left h2{line-height: 1em;}
+.academic_left h2{line-height: 1em;}
 .academic_lt{
 	padding:20px 0;
 }
