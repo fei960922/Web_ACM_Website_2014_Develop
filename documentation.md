@@ -724,3 +724,9 @@ ACM_ICPC竞赛介绍主页命名为<code>acmicpc.html</code>，采用一般文�
 ###问题1：当前图片无法显示
 
 答：检查对应的图片链接是否正确，是否使用Jekyll要求的Liquid语言：“<code>{{site.baseurl}}</code>”。
+
+
+
+<script src="{{ "/js/docs.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/page_context.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/ie-emulation-modes-warning.js" | prepend: site.baseurl }}"></script>
