@@ -531,8 +531,8 @@ padding: 0;
 }
 @media (max-height:600px){.academic_bottom {display:none;}}
 @media (max-height:800px){
-	.academic_left h2{font-size: 20px;}
-	
+	.academic_left h2{font-size: 25px;margin:10px 0;}
+	.academic_lt {padding-bottom:0;}
 }
 @media (min-width: 801px){
 .academic_left {
