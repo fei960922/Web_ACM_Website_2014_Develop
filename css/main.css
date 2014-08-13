@@ -625,6 +625,7 @@ padding: 0;
 @media(max-width:991px){.content{display:none;}}
 .student_in{
 	background-size: cover;
+	background-position: center;
 	height         : 500px;
 	width          : 100%;
 	display        : block;
@@ -646,6 +647,7 @@ padding: 0;
 .teacher_in:nth-child(even) {
 	background-color: #EEEEEE;
 }
+@media(max-width:480px){.student_in p{width:100%;padding:5px;}}
 @media(min-width:480px){.teacher_in img{float:right;}}
 .teacher_in img{
 	margin    :10%;
