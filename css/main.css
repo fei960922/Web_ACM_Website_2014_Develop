@@ -790,13 +790,11 @@ padding: 0;
 }
 
 #pagination .prev {
-	padding-left: 200px;
-	float: left;
+	padding: 0 20% 0 0;
 }
 
 #pagination .next {
-	padding-right: 200px;
-	float: right;
+	padding: 0 0 0 70%;
 }
 /* @end */
 
