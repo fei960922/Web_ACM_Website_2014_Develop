@@ -689,6 +689,7 @@ padding: 0;
   left:3%;
   width:90%;
 }
+@media(max-width:350px) {.timeline {left:-18%;width:118%;}}
 .timeline:before {
   top: 0;
   bottom: 0;
@@ -790,11 +791,11 @@ padding: 0;
 }
 
 #pagination .prev {
-	padding: 0 80% 0 0;
+	padding: 0 70% 0 0;
 }
 
 #pagination .next {
-	padding: 0 0 0 80%;
+	padding: 0 0 0 70%;
 }
 /* @end */
 
