@@ -517,7 +517,13 @@ padding: 0;
 }
 .academic_bottom>div {padding:0;}
 .academic_now,
-.academic_lt>div:hover,
+.academic_lt>div:hover{
+	color:#2E5D9C;
+	border-left:0;
+	background-color: #CCCCCC;
+	border-left:3px solid #2E5D9C;
+	border-right:3px solid #2E5D9C;
+}
 .academic_bottom .nav>.active>a,
 .academic_bottom .nav>.active:hover>a,
 .academic_bottom .nav>.active:focus>a,
