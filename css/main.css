@@ -74,10 +74,10 @@ a:hover {text-decoration: none;}
 	min-height: 51px;
 }
 #headingFull{
-	background: rgba(0,0,0,0);
+	background: rgba(46,93,156,0.2);
 	position  :	fixed;
 	z-index   :	1000;
-	top       : 10px;
+	top       : 0px;
 	width     :	100%;
 	min-height: 51px;
 	text-shadow:0 0 10px #000000;
@@ -325,7 +325,10 @@ a:hover {text-decoration: none;}
 	width:100%;
 }
 .intro_slide_pic {
-	background-size: 100%;
+	width:85%;
+	margin:20px auto;
+	border:10px solid #003333;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
