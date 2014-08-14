@@ -199,12 +199,12 @@ a:hover {text-decoration: none;}
 }
 @media (min-width:1100px) {.index_3 img {width:200px;}}
 .index_5 img{
-	width : 96%;
+	width : 90%;
 	margin: 2%;
 }
 .index_5 > div {
 	float      : right;
-	width      : 96%;
+	width      : 90%;
 	text-indent: 2em;
 	line-height: 2em;
 	padding     : 2%;
@@ -739,6 +739,7 @@ padding: 0;
   height:350px;
   position: relative;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
 }
 
 .timeline > li > a .timeline-badge {
