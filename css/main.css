@@ -22,6 +22,9 @@ body,html {
 	border          :1px solid;
 	font-size       :20px;
 }
+.btn_center {
+	margin:10px auto;
+}
 
 a:hover {text-decoration: none;}
 
@@ -205,11 +208,11 @@ a:hover {text-decoration: none;}
 .index_5 > div {
 	float      : right;
 	width      : 96%;
-	text-indent: 2em;
+	text-indent: 0.1em;
 	line-height: 2em;
 	padding     : 2%;
 }
-.index_5 ul>li:first-child {
+.index_5 ul>li:first-child>a {
 	font-size :20px;
 }
 .index_5 .btn {
