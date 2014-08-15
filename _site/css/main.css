@@ -22,16 +22,11 @@ body,html {
 	border          :1px solid;
 	font-size       :20px;
 }
-.btn_center {
-	margin:10px auto;
-}
 
 a:hover {text-decoration: none;}
 
 .acm_article h1,.acm_article h2 {
 	border-bottom:1px solid #DDDDDD;
-	margin-bottom:5px;
-	line-height: 2em;
 }
 .acm_article li {
 	line-height:1.6em;
@@ -40,11 +35,12 @@ a:hover {text-decoration: none;}
 	list-style: none;
 	display: block;
 }
-.acm_article img {
-	width:100%;
-	margin:5px;
+
+h1,h2,h3,h4,h5,h6 {
+	line-height: 2em;
+	margin-bottom:5px;
 }
-.acm_article p {
+p {
 	line-height: 1.6em;
 	text-indent: 2em;
 }
@@ -77,11 +73,10 @@ a:hover {text-decoration: none;}
 	min-height: 51px;
 }
 #headingFull{
-	background: rgba(0,0,0,0.1);
+	background: rgba(0,0,0,0);
 	position  :	fixed;
-	font-weight:900;
 	z-index   :	1000;
-	top       : 0px;
+	top       : 10px;
 	width     :	100%;
 	min-height: 51px;
 	text-shadow:0 0 10px #000000;
@@ -209,11 +204,11 @@ a:hover {text-decoration: none;}
 .index_5 > div {
 	float      : right;
 	width      : 96%;
-	text-indent: 0.1em;
+	text-indent: 2em;
 	line-height: 2em;
-	padding     : 2%;
+	margin     : 2%;
 }
-.index_5 ul>li:first-child>a {
+.index_5 ul>li:first-child {
 	font-size :20px;
 }
 .index_5 .btn {
@@ -274,15 +269,7 @@ a:hover {text-decoration: none;}
 	bottom:3%;
 	left :3%;
 	border-left: 15px solid #CCCCCC;
-	margin-left: 7%;
 }
-
-.intro_3 h3 {
-	padding-top: 20%;
-	margin-left: 35%;
-	font-size: 40px;
-}
-
 .intro_4 h1{
 	font-size:200px;
 	float:right;
@@ -337,20 +324,13 @@ a:hover {text-decoration: none;}
 	width:100%;
 }
 .intro_slide_pic {
-	width:60%;
-	height: 500px;
-	margin:20px auto;
-	border:10px solid #003333;
-	background-size: cover;
+	background-size: 100%;
 	background-repeat: no-repeat;
-	float: left;
-	margin-left: 10%;
-	margin-top: 5%;
+	background-position: center;
 }
 .intro_slide_text {
 	text-align: right;
 	padding:5%;
-	padding-top: 10%;
 }
 .intro_3 h2{
 	color:#000000;
@@ -476,39 +456,29 @@ padding: 0;
 	box-shadow: 0 0 30px #000000;
 }
 
-.lesson_main div>div {
+.lesson_main div h1{
 	text-align:	center;
+}
+
+.lesson_main {
+	background-color: #EEFDFF;
 }
 
 .online_judge{
 	position:absolute;
-	top:0;
-	right:0;
-	width:300px;
-	height:272px;
-	overflow:hidden;
-}
-.online_judge>div {
-	position:relative;
-	width:500px;
-	top:120px;
-	right:30px;
-	text-align: center;
+	right:-150px;
+	top:90px;
 	background-color: rgba(255,255,255,0.4);
+	color:#FFFFFF;
 	font-size:30px;
-	padding:10px 0;
+	padding:10px 150px;
 	transform: rotate(45deg);
 	-ms-transform: rotate(45deg);		
 	-webkit-transform: rotate(45deg);	
 	-o-transform: rotate(45deg);		
 	-moz-transform: rotate(45deg);	
 }
-.online_judge a{color:#FFFFFF;}
-.online_judge a:hover{color:#CCCCCC;}
-@media(max-width:520px){
-	.online_judge a{font-size:14px;vertical-align: middle;}
-	.online_judge>div {top:70px;right:0;padding:0;}
-}
+@media(max-width:480px){.online_judge{font-size:14px;}}
 
 /*	------------------------------------------
 	        CSS for "Activity Center"
@@ -535,56 +505,27 @@ padding: 0;
 	        CSS for "Academic Center"
 	------------------------------------------  */
 
-.academic_lt>div {
+.academic_left>div {
+	background-color: #EEEEEE;
 	text-align      : center;
-	padding:1px;
+	padding:5px;
 }
-
-.academic_bottom {
-	width:100%;
-	text-align: center;
-}
-.academic_bottom>div {padding:0;}
-.academic_now,
-.academic_lt>div:hover{
-	color:#2E5D9C;
-	border-left:0;
-	background-color: #CCCCCC;
-	border-left:3px solid #2E5D9C;
-	border-right:3px solid #2E5D9C;
-}
-.academic_bottom .nav>.active>a,
-.academic_bottom .nav>.active:hover>a,
-.academic_bottom .nav>.active:focus>a,
-.academic_bottom .nav>li>a:hover,
-.academic_bottom .nav>li>a:focus{
-	width:100%;
-	color:#2E5D9C;
-	border-left:0;
-	background-color: #CCCCCC;
-	border-right:3px solid #2E5D9C;
-}
-@media (max-height:600px){.academic_bottom {display:none;}}
-@media (max-height:800px){
-	.academic_left h2{font-size: 25px;margin:10px 0;}
-	.academic_bottom a {padding: 2px !important;}
-	.academic_lt {padding-bottom:0 !important;}
-}
+.academic_left>div:hover{background-color: #CCCCCC;}
 @media (min-width: 801px){
 .academic_left {
 	float:left;
 	position:fixed;
 	width: 17%;
 	max-width:200px;
-	height: 100%;
 }
-.academic_left h2{line-height: 1em;}
-.academic_lt{
-	padding:20px 0;
+.academic_left h1,.academic_left h2{line-height: 1em;}
+.academic_left>div{
+	width  :100%;
+	height :20%;
 }
+.academic_now{background-color: #DDDDDD !important;}
 .academic_main {
-	padding: 20px 2% 20px 18%;
-	width:100%;
+	margin: 20px 20px 20px 18%;
 }
 }
 @media (max-width: 800px){
@@ -592,17 +533,15 @@ padding: 0;
 	width:	100%;
 	height:	120px !important; 
 }
-.academic_lt>div{
+.academic_left>div{
 	float:left;
-	background-color: #EEEEEE;
 	width:20%;
 }
-.academic_lt>div>h1{font-size: 40px;line-height: 0.5em;}
-.academic_lt>div>h2{font-size: 20px;line-height: 0.5em;}
+.academic_left>div>h1{font-size: 40px;line-height: 0.5em;}
+.academic_left>div>h2{font-size: 20px;line-height: 0.5em;}
 .academic_main {
 	width:	100%;
 }
-.academic_bottom{display:none;}
 }
 
 /*	------------------------------------------
@@ -654,7 +593,6 @@ padding: 0;
 @media(max-width:991px){.content{display:none;}}
 .student_in{
 	background-size: cover;
-	background-position: center;
 	height         : 500px;
 	width          : 100%;
 	display        : block;
@@ -676,7 +614,6 @@ padding: 0;
 .teacher_in:nth-child(even) {
 	background-color: #EEEEEE;
 }
-@media(max-width:480px){.student_in p{width:100%;padding:5px;}}
 @media(min-width:480px){.teacher_in img{float:right;}}
 .teacher_in img{
 	margin    :10%;
@@ -723,10 +660,8 @@ padding: 0;
   list-style: none;
   margin: auto;
   position: relative;
-  left:3%;
-  width:90%;
+  left:13%;
 }
-@media(max-width:350px) {.timeline {left:-18%;width:118%;}}
 .timeline:before {
   top: 0;
   bottom: 0;
@@ -764,11 +699,11 @@ padding: 0;
 	float              : right;
 }
 .timeline-panel {
+  width: 80%;
   margin:20px;
   height:350px;
   position: relative;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
-  overflow: hidden;
 }
 
 .timeline > li > a .timeline-badge {
@@ -829,11 +764,13 @@ padding: 0;
 }
 
 #pagination .prev {
-	padding: 0 70% 0 0;
+	padding-left: 200px;
+	float: left;
 }
 
 #pagination .next {
-	padding: 0 0 0 70%;
+	padding-right: 200px;
+	float: right;
 }
 /* @end */
 
@@ -1214,7 +1151,7 @@ padding: 0;
 }
 
 .acm_size {
-	width: 100%;
+	width: 67%;
 	margin-right: 0px;
 	float: left;
 	margin-top: 0px;
@@ -1310,18 +1247,4 @@ padding: 0;
 
 .nav_addition li ul li a {
 	font-weight: normal!important;
-}
-
-.academic_bottom {
-	position: absolute;
-}
-
-.docs-left {
-	padding-left: 20px;
-}
-
-.toctext {
-	font-size: 20px;
-	font-weight: 900;
-	padding-left: 0px;
 }

@@ -274,15 +274,7 @@ a:hover {text-decoration: none;}
 	bottom:3%;
 	left :3%;
 	border-left: 15px solid #CCCCCC;
-	margin-left: 7%;
 }
-
-.intro_3 h3 {
-	padding-top: 20%;
-	margin-left: 35%;
-	font-size: 40px;
-}
-
 .intro_4 h1{
 	font-size:200px;
 	float:right;
@@ -337,20 +329,16 @@ a:hover {text-decoration: none;}
 	width:100%;
 }
 .intro_slide_pic {
-	width:60%;
-	height: 500px;
+	width:85%;
 	margin:20px auto;
 	border:10px solid #003333;
 	background-size: cover;
 	background-repeat: no-repeat;
-	float: left;
-	margin-left: 10%;
-	margin-top: 5%;
+	background-position: center;
 }
 .intro_slide_text {
 	text-align: right;
 	padding:5%;
-	padding-top: 10%;
 }
 .intro_3 h2{
 	color:#000000;
