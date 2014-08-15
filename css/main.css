@@ -61,6 +61,7 @@ a:hover {text-decoration: none;}
 	width    : 100%;
 	max-width: 1200px;
 	margin   : auto;
+	padding  : 0 15px;
 }
 .container{
 	width    : 100%;
