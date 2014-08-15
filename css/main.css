@@ -16,6 +16,8 @@ body,html {
 	background-color: rgba(0,0,0,0);
 	border          :1px solid;
 	font-size       :20px;
+	padding         :10px;
+	margin          :10px;
 }
 .btn_new:hover{
 	background-color: rgba(255,255,255,0.5);
@@ -251,37 +253,28 @@ a:hover {text-decoration: none;}
 	        CSS for "Introduction"
 	------------------------------------------  */
 
-.intro_1 h1{
-	font-size:200px;
+.intro_1 h1,.intro_2 h1,.intro_3 h1,.intro_4 h1{
+	line-height: 1em;
 	padding:20px;
-	line-height: 1.4em;
-	float:left;
-	margin:30px;
+	font-size:200px;
+	margin:20px;
+}
+.intro_1 h1{
 	border-bottom: 15px solid #CCCCCC;
+	float:left;
 }
 .intro_2 h1{
-	font-size:200px;
-	float:right;
-	line-height:1em;
-	padding: 0 40px;
 	border-right: 15px solid #CCCCCC;
+	float:right;
 }
 .intro_3 h1{
-	font-size:200px;
-	float:left;
-	line-height:1em;
-	padding: 20px;
-	position:absolute;
-	bottom:3%;
-	left :3%;
 	border-left: 15px solid #CCCCCC;
+	float:left;
+	position:absolute;
 }
 .intro_4 h1{
-	font-size:200px;
-	float:right;
-	line-height:1.6em;
-	padding: 0 20px 0 50px;
 	border-top: 15px solid #CCCCCC;
+	float:right;
 }
 
 .intro_1 {
@@ -301,7 +294,6 @@ a:hover {text-decoration: none;}
 
 .intro_2 {background-color: rgba(46,93,156,0.2);}
 .intro_2>div>div {padding:5% 20px;}
-.intro_2 h2{font-size:50px;}
 .intro_2 h3{
 	text-align:center;
 	line-height:1em;
@@ -316,6 +308,7 @@ a:hover {text-decoration: none;}
 	padding:0 1%;
 	text-align: right;
 }
+@media(max-width: 600px){.intro_2 h4{font-size:20px;}}
 .intro_3 {
 	background-color: rgba(46,93,156,0.5);
 	position:relative;
@@ -329,6 +322,10 @@ a:hover {text-decoration: none;}
 	height:100%;
 	width:100%;
 }
+.intro_slide_text{
+	padding:40px 0 0 40%;
+	min-height:250px;
+}
 .intro_slide_pic {
 	width:85%;
 	margin:20px auto;
@@ -337,18 +334,16 @@ a:hover {text-decoration: none;}
 	background-repeat: no-repeat;
 	background-position: center;
 }
-.intro_slide_text {
-	text-align: right;
-	padding:5%;
-}
 .intro_3 h2{
 	color:#000000;
 	font-size: 50px;
 	margin:0;
 	padding:20px;
-	text-shadow: 0 0 20px #000000;
 }
-@media(max-width: 640px) {.intro_3 h1 {display:none;}}
+@media(max-width: 660px) {
+	.intro_3 h1 {display:none;}
+	.intro_slide_text{padding-left:10%;}
+}
 .intro_4 {background-color: rgba(46,93,156,0.9);color:white;}
 .intro_4 {padding-top:10%;}
 .intro_4 h2 {margin-top:0;}
@@ -361,11 +356,14 @@ a:hover {text-decoration: none;}
 	margin:20px auto;
 }
 .intro_4 td {
-	padding:10px 30px;
+	padding:10px 10px;
 }
 .intro_4 button,.intro_2 button{
 	padding:5px 20px;
 	margin:0 20px 20px 20px;
+}
+@media(max-width: 480px){
+	.intro_1 h1,.intro_2 h1,.intro_3 h1,.intro_4 h1{display:none;}
 }
 
 /*CSS For Timeline in Intro_index*/
