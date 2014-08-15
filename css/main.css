@@ -151,19 +151,25 @@ a:hover {text-decoration: none;}
 .navbar{margin:0;color:#FFFFFF;}
 .navbar-toggle{margin-bottom:0;}
 .nav>li>a{color:#FFFFFF;padding:15px 14px;}
-.dropdown>a:hover,.nav li>a:hover{
+.dropdown>a:hover,.nav>li>a:hover,.nav .open>a{
 	background-color:rgba(0,0,0,0.3)!important;
 }
-.dropdown-menu>li{text-shadow:0 0 0 ;}
+.dropdown-menu>li>a {padding:5px 14px;}
+.dropdown-menu{
+	left:0 !important;
+	right:auto !important;
+	text-shadow:0 0 0;
+	background-color: rgba(255,255,255,0.8);
+}
 @media (max-width: 768px){.dropdown-menu{display:none !important;}}
 .footer{
 	text-align : center;
 	height     : 50px;
-	line-height: 1.2em;
+	line-height: 2em;
+	font-size: 10px;
 }
-.footer>div{padding:17px;}
-
 @media (min-width: 960px) {
+	.footer>div{padding:13px;}
 	.footer #left {float:left;}
 	.footer #right{float:right;}
 }
@@ -206,12 +212,8 @@ a:hover {text-decoration: none;}
 	width : 96%;
 	margin: 2%;
 }
-.index_5 > div {
-	float      : right;
-	width      : 96%;
-	text-indent: 0.1em;
+.index_5 ul>li {
 	line-height: 2em;
-	padding     : 2%;
 }
 .index_5 ul>li:first-child>a {
 	font-size :20px;
@@ -241,8 +243,6 @@ a:hover {text-decoration: none;}
 @media(min-width:640px){
 	.index_1 img {margin:8%;width:50%;}
 	.index_2 h1,.index_4 h1{font-size:75px;}
-	.index_5 img {width:45%;}
-	.index_5>div {width:45%;}
 }
 
 
@@ -375,8 +375,8 @@ a:hover {text-decoration: none;}
 	padding:10px 30px;
 }
 .intro_4 button,.intro_2 button{
-	padding:0 20px;
-	margin:10px;
+	padding:5px 20px;
+	margin:0 20px 20px 20px;
 }
 
 /*CSS For Timeline in Intro_index*/
