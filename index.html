@@ -10,7 +10,7 @@ Bugs: ACM班班徽的位置待定；响应式有一些bug；内容似乎还不�
   <div id = "headingForIndex">
   {% include navigation.html %}
   </div>
-    <div class="index_1 fullh">
+      <div class="index_1 fullh">
       <img src="./images/handwriting.png" />
     </div>
     <div class="index_2">
@@ -27,12 +27,15 @@ Bugs: ACM班班徽的位置待定；响应式有一些bug；内容似乎还不�
     <div class="index_4">
       <h1>新闻中心</h1>
     </div>
-    <div class="index_5">
-      <img src = "./images/index_5.jpg" />
-      <div>
+    <div class="container-fluid">
+    <div class="index_5 row">
+      <div class="col-md-6">
+        <img src = "./images/index_5.jpg" />
+      </div>
+      <div class="col-md-6">
         <h1>最新新闻</h1>
         <ul>
-          <li><a href = "{{ "/news/John/" | prepend: site.baseurl }}">图灵奖得主John Hopcroft教授金婚庆祝活动成功举行</a></li>
+          <li><a href = "{{ "/news/John/" | prepend: site.baseurl }}">图灵奖得主John Hopcroft教授金婚庆祝活动</a></li>
           <li><a href = "{{ "/news/JingboShang/" | prepend: site.baseurl }}">商静波：我的ACM/ICPC奇幻漂流</a></li>
           <li><a href = "{{ "/news/ACMFinal2014/" | prepend: site.baseurl }}">ACM班学子获第38届ACM国际大学生程序设计竞赛总决赛银牌  </a></li>
           <li><a href = "{{ "/news/TopPlan/" | prepend: site.baseurl }}">教育部“拔尖计划”计算机科学方向国际化培养研讨会成功举行  </a></li>
@@ -42,5 +45,5 @@ Bugs: ACM班班徽的位置待定；响应式有一些bug；内容似乎还不�
         <button type="button" class="btn btn_new" onclick="window.open('./news/index.html')">点击查看更多</button>
       </div>
     </div>
-  </div>
+  </div></div>
 {% include footer.html %}
